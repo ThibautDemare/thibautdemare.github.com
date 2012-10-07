@@ -15,6 +15,18 @@ p {
 }*/
 
 /**
+  * Licence
+  */
+#licence {
+	margin : auto;
+	text-align: center;
+	width : 50%;
+	border-top : 1px solid #404040;
+	border-bottom : 1px solid #404040;
+	padding : 5px;
+}
+
+/**
   * Partie consacree au pied de page
   */
 #pied_de_page {
@@ -160,3 +172,24 @@ a.menu:hover, a.menu:focus, a.menu:active {
 	overflow: hidden;
 	position : relative;
 }
+
+/**
+  * Divers
+  */
+
+a:link {
+	color:#404040;
+}
+
+a:visited {
+	color:#404040;
+}
+
+a:hover {
+	color:#336CBF;
+}
+
+a:active {
+	color:#336CBF;
+}
+
