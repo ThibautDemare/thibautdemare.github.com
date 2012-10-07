@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blog
+---
+
+				<!-- Content -->
+				<div id="contenu">
+					{% for post in site.posts %}
+						{% if post.type == "blog" %}
+					<div id="description-{{ post.url }}" class="bloc_description">
+						<a href="{{ post.url }}" class="lien_description">
+							<div class="bloc_titre">
+								<img src="/img/miniature/{{ post.img }}" class="miniature" alt="{{ post.title }}">
+								<h1 class="titre">{{ post.title }}</h1>
+								<time datetime="{{ post.date | date: '%Y-%m-%d' }}"  class="date">
+									Publié le {{ post.date | date: "%d/%m/%Y" }}
+								</time>
+							</div>
+							<p class="description">
+								{{ post.abstract }}
+							</p>
+						</a>
+					</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+				<!-- End of content -->
+

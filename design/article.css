@@ -1,0 +1,190 @@
+/*
+ * Initialisation des compteurs
+ */
+body {
+	counter-reset : figure niveau01;
+}
+
+/*
+ * Partie concernant le titre
+ */
+
+.bloc_titre {
+	float : left;
+	width : 100%;
+	margin-top : 20px;
+	margin-bottom : 20px;
+	border-bottom : 1px solid #B3B3B3;
+}
+
+.miniature {
+	float : left;
+	margin: 5px;
+}
+
+.titre {
+	color : #336CBF; /*bleu */ /* #17CFEC; bleu turquoise */
+	margin : 5px;
+	margin-top : 0px;
+	font-size : 22px;
+}
+
+
+.date {
+	margin : 5px;
+	text-align : left;
+	font-size : 12px;
+}
+
+.separation_titre_texte {
+	border : none;
+	border-top : 1px solid #B3B3B3;
+}
+
+/*
+ * Partie concernant les paragraphes
+ */
+ 
+/* Correspond a un titre de paragraphe */
+h5 {
+	font-size : 14px;
+	margin : 0px;
+}
+
+p {
+	margin-left : 5px;
+	margin-right : 5px;
+	text-align : justify;
+	text-indent : 20px;
+	font-size : 14px;
+}
+
+/*
+ * Partie gerant les images
+ */
+
+.bloc_image_contenu {
+	text-align : center;
+}
+
+.legende_image {
+	font-size : 14px;
+}
+
+.legende_image:before {
+	counter-increment : figure;
+	content : "Figure " counter(figure) " : ";
+}
+
+/*
+ * Partie concernant les titres des sections/sous-section/...
+ */
+
+h2 {
+	counter-reset : niveau02 niveau03;
+	font-size : 20px;
+}
+
+h2:before{
+	counter-increment : niveau01;
+	content : counter(niveau01) ". ";
+}
+
+h3 {
+	font-size : 18px;
+	margin-left : 25px;
+	counter-reset : niveau03;
+}
+
+h3:before{
+	counter-increment : niveau02;
+	content : counter(niveau01) "." counter(niveau02) ". ";
+}
+
+h4 {
+	font-size : 16px;
+	margin-left : 65px;
+}
+
+h4:before{
+	counter-increment : niveau03;
+	content : counter(niveau01) "." counter(niveau02) "." counter(niveau03) ". ";
+}
+
+/*
+ * Partie gerant le sommaire
+ */
+
+#sommaire {
+	counter-reset : sommaire01;
+}
+
+#sommaire a{
+	text-decoration : none;
+	color : #545454;
+}
+
+#titre_sommaire {
+	line-height: 50px;
+}
+
+#titre_sommaire:hover #deplier_sommaire{
+	color : #336CBF; /*bleu */ /* #17CFEC; bleu turquoise */
+	text-shadow: 0px 0px 5px #545454;
+}
+
+#contenu_sommaire ul {
+	margin : 0;
+	list-style: none;
+}
+
+#deplier_sommaire {
+	float : right;
+	height: 50px;
+	width : 50px;
+}
+
+#deplier_sommaire:hover, #deplier_sommaire:focus, #deplier_sommaire:active {
+	background-position: 0px 50px;
+	outline: none;
+}
+
+#contenu_sommaire  li.level-2 {
+	counter-reset : sommaire02 sommaire03;
+	list-style : none;
+}
+
+#contenu_sommaire  li.level-2:before{
+	counter-increment : sommaire01;
+	content : counter(sommaire01) ". ";
+}
+
+#contenu_sommaire li.level-3 {
+	list-style : none;
+	display : block;
+	counter-reset : sommaire03;
+}
+
+
+#contenu_sommaire li.level-3:before{
+	counter-increment : sommaire02;
+	content : counter(sommaire01) "." counter(sommaire02) ". ";
+}
+
+#contenu_sommaire li.level-4 {
+	list-style : none;
+	display : block;
+}
+
+#contenu_sommaire li.level-4:before{
+	counter-increment : sommaire03;
+	content : counter(sommaire01) "." counter(sommaire02) "." counter(sommaire03) ". ";
+}
+
+/*
+ * Partie gerant les sources
+ */
+
+#sources h2 {
+	font-size : 20px;
+}

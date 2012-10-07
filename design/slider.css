@@ -1,0 +1,111 @@
+/*
+ * CSS du Slider
+ */
+
+
+#slider{
+	margin : 30px auto;
+	box-shadow: 0px 0px 25px black;
+	width:90%;
+	height : 402px;
+	background-color : #B3B3B3;
+	position : relative;
+}
+
+/*** Partie du navigateur ***/
+
+#actus {
+	list-style-type: none;
+	padding : 0px;
+	height : 290px;
+}
+
+#div_navigateur_actu{
+	padding : 5px 0px;
+	text-align : center;
+	width : 100%;
+}
+
+#navigateur_actu{
+	padding : 0px;
+	list-style : none;
+	display : inline-block;
+}
+
+
+#navigateur_actu .vers_actu{
+	list-style : none;
+	display : inline-block;
+	margin : 2px;
+}
+
+/*
+ * Navigateur avec balise button
+ */
+#navigateur_actu li.vers_actu button {
+	background : transparent;
+	border : 0px;
+	outline : none;
+}
+
+#navigateur_actu li.vers_actu button img{
+	display : block;
+	color : #fff;
+	border : 1px solid #B3B3B3;
+}
+
+#navigateur_actu li.vers_actu button:hover img{
+	box-shadow: 0px 0px 10px black;
+	border : 1px solid #336CBF; /*bleu */ /* #17CFEC; bleu turquoise */
+}
+
+button::-moz-focus-inner {
+	border : 0;
+}
+
+/*** Partie de l'actu ***/
+
+.actu{
+	width : 97%;/* garanti que l'actu prendra une place consequente, mais ne debordera pas du slider */
+	margin : 10px;
+	background-color: transparent;
+	float: left;
+	position : absolute;/* pour l'animation, lorsque une actu disparait et que l'autre apparait, les deux actu vont se cehvaucher un court instant. Visuellement cela ne semble pas poser de probleme. */
+}
+
+.actu_cache{
+	display : none;
+}
+
+/* L'image */
+.lien_actu{
+	margin-right : 10px;
+	float : left;
+}
+
+/* Le texte */
+.info {
+	color : #FFF;
+	font-size : 14px;
+}
+
+.info a, .info a:link, .info a:visited {
+	text-decoration: none;
+	outline: none;
+	color : #FFF;
+	display : block;
+}
+
+.info a:hover {
+	text-decoration: underline;
+}
+
+.lire_suite {
+	font-size:14px;
+}
+
+.opacite {
+	opacity : 0.8;
+}
+
+

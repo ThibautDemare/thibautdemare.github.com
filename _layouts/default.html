@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<!-- header -->
+	<head>
+		<title>
+		  Thibaut Démare - {{ title }} -
+		</title>
+        
+		<meta charset="UTF-8">
+		<meta name="author" content="Thibaut Démare">
+		
+		<link rel="shortcut icon" href="/img/design/favicon.png" />
+		
+		<!-- Integration of jQuery -->
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<!-- Integration of jQuery-UI -->
+		<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+
+		<!-- Design and script for slider -->
+		<script type="text/javascript" src="/js/slider.js"></script>
+		<link rel="stylesheet" type="text/css" href="/design/slider.css">
+		
+		<!-- Design and script for list blog post -->
+		<link rel="stylesheet" type="text/css" href="/design/description.css">
+		<link rel="stylesheet" type="text/css" href="/design/onglet.css">
+
+		<!-- Design and/or script for post (blog, projets or carnet de bord)-->
+		<script type="text/javascript" src="/js/sommaire.js"></script>
+		<link rel="stylesheet" type="text/css" href="/design/article.css">
+		
+		<!-- Global design -->
+		<link rel="stylesheet" type="text/css" href="/design/design.css" media="screen, handheld, tv, projection" />
+		<!--[if lte IE 10]>
+			<style type="text/css">
+				a.menu:hover, a.menu:focus, a.menu:active {
+					color : #17CFEC;
+				}
+			</style>
+		<![endif]-->
+		
+	</head>
+	
+	<!-- Body -->
+	<body>
+		<!-- Global div -->
+		<div id="global">
+		
+			<!-- Banner -->
+			<div id="banniere">
+				<a href="/index.html" class="banniere">
+					<!-- The png version of this image does not work properly. The blue color is not the same in firefox (and on LinuxMint, not tested on Windows). -->
+					<img src="/img/design/banniere.png" alt="Thibaut Démare" style="border : none;"/>
+				</a>
+			</div>
+			<!-- End of banner -->
+
+			<!-- Menu -->
+			<div id="menu">
+				<ul class="menu">
+					<li class="menu"><a href="/index.html" class="accueil"><span title="Accueil" style="display : block; text-indent:-99999px">Accueil</span></a></li>
+					<li class="menu"><a href="/blog_list.html" class="menu">Blog</a></li>
+					<li class="menu"><a href="/projets_list.html" class="menu">Projets</a></li>
+					<li class="menu"><a href="/carnet_bord_list.html" class="menu">Carnet de bord</a></li>
+					<li class="menu"><a href="/about.html" class="menu">À propos</a></li>
+				</ul>
+			</div>
+			<!-- End of menu -->
+			
+			<!-- This space allows to take in count the width the menu, positionned in absolute -->
+			<div id="espace"></div>
+			
+			<!-- sub_global -->
+			<div id="sub_global">
+			
+				{{ content }}
+				
+			</div>
+			<!-- End of sub_global -->
+	
+		</div>
+		<!-- End of global div -->
+		
+		<!-- Footer -->
+		<!--
+		<div id="pied_de_page">
+			<p class="pied_de_page">css et html valide</p>
+			<p class="pied_de_page">
+				<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr">
+					<img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
+				</a>
+				<br />
+				Le contenu de ce site est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 3.0 non transposé</a>.
+			</p>
+		</div>
+		-->
+		<!-- Footer -->
+	</body>
+</html>

@@ -1,0 +1,162 @@
+/**
+  * Style des balises en generale
+  */
+
+/* style du body */
+body {
+    background: #336CBF; /*bleu */ /* #17CFEC; bleu turquoise */
+    height: 100%;
+}
+
+/* Style des paragraphes. 
+p {
+	text-align : justify;
+	margin: 0px 0px 20px 0px;
+}*/
+
+/**
+  * Partie consacree au pied de page
+  */
+#pied_de_page {
+	background: none repeat scroll 0 0 white;/* fond blanc*/
+	color : #545454;/* gris ecriture grise */
+	/* effet d'arrondi des coins et de l'ombre */
+	border-radius: 50px 50px 50px 50px;
+	box-shadow: 0px 0px 25px black;/* ombre noir */
+	/* on laisse un espace en haut et en bas afin d'afficher les ombres */
+	margin-top: 30px;
+	margin-bottom: 30px;
+	/* on centre sur la largeur */
+	margin-right: auto;
+	margin-left: auto;
+	/* evite que le contenu ne tombe sur les arrondis */
+	padding: 30px;
+	/* largeur - largeur max et min */
+	width: 70%;
+	max-width : 1280px;
+	min-width : 700px;
+}
+
+.pied_de_page {
+	text-align : center;
+}
+
+/**
+  * Partie consacree a l'element central (global)
+  */
+#global {
+	/* couleurs general du contenu */
+	background: url(../img/design/deux_engrenages.png) no-repeat -100px -150px white;/* fond blanc*/
+	color : #545454;/* gris ecriture grise */
+	/* effet d'arrondi des coins et de l'ombre */
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 0px 0px 25px black;/* ombre noir */
+    /* on laisse un espace en haut et en bas afin d'afficher les ombres */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* on centre sur la largeur */
+    margin-right: auto;
+    margin-left: auto;
+    /* evite que le contenu ne tombe sur les arrondis */
+    padding: 30px;
+    /* largeur - largeur max et min */
+    width: 70%;
+    max-width : 1280px;
+    min-width : 700px;
+    /* la page prend toute la longueur necessaire */
+    min-height: 100%;
+}
+
+/**
+  * Partie consacree a la banniere
+  */
+/* la banniere est centree */
+#banniere {
+	margin : auto;
+	text-align : right;
+}
+
+.banniere{
+	outline: none;
+}
+
+.banniere:focus, .banniere:active {
+	outline: none;
+}
+
+/**
+  * Partie consacree au menu
+  */
+/* le menu est centre, tout comme son contenu */
+#menu {
+	position : absolute;
+	left : 0px;
+	height : 40px;
+	width : 100%;
+	background-color : #B3B3B3;
+	box-shadow: 0px 0px 20px black;
+	margin : 0;
+	padding : 0;
+	text-align : center;
+	margin-top:25px;
+}
+
+.menu {
+	margin : auto;
+	line-height : 40px;
+}
+
+/* La liste correspondant au menu est horyzontale. Chaque item du menu fais 20% de taille. */
+ul.menu {
+	margin : 0;
+	padding : 0;
+}
+
+li.menu {
+	list-style: none;
+	display : inline-block;
+	margin : 0;
+	padding : 0;
+	width : 15%;
+}
+
+a.menu, a.menu:link, a.menu:visited {
+	text-decoration: none;
+	outline: none;
+	color : white;
+	display : block;
+}
+
+a.menu:hover, a.menu:focus, a.menu:active {
+	color : white;
+	text-shadow: 0px 0px 20px #336CBF,
+		0px 0px 15px #336CBF,
+		0px 0px 10px #336CBF,
+		0px 0px 5px #336CBF; /*bleu */ /* #17CFEC; bleu turquoise */
+}
+
+.accueil{
+	display : block;
+	margin : auto;
+	background-image : url("../img/design/accueil.png");/* the png version of this image does not work properly. The blue color is not the same in firefox. */
+	height: 40px;
+	width : 50px;
+}
+
+.accueil:hover, .accueil:focus, .accueil:active {
+	background-position: 0px 40px;
+	outline: none;
+}
+
+#espace{
+	height : 100px;
+}
+
+/**
+  * Partie consacree au bloc contenant le contenu et les sous-parties.
+  */
+#sub_global {
+	min-height : 100%;
+	overflow: hidden;
+	position : relative;
+}

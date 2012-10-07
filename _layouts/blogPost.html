@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+				<article>
+					<!-- debut du titre -->
+					<header class="bloc_titre">
+						<img src="/img/miniature/{{ page.img }}" class="miniature" alt="{{ page.title }}">
+						<h1 class="titre">
+							{{ page.title }}
+						</h1>
+						<time datetime="{{ page.date | date: '%Y-%m-%d' }}"  class="date">
+							Publié le {{ page.date | date: "%d/%m/%Y" }}
+						</time>
+					</header>
+					<!-- fin du titre -->
+
+					<!-- debut de la description -->
+					<h5>Résumé :</h5>
+					<p>
+						{{ page.abstract }}
+					</p>
+					
+					<!-- fin de la description -->
+
+					<!-- debut du sommaire -->
+					<div id="sommaire">
+						<!-- generate by a JS script -->
+					</div>
+					<!-- fin du sommaire -->
+
+					<!-- debut du texte -->
+					{{ content }}
+					<!-- fin du texte -->
+
+				</article>
