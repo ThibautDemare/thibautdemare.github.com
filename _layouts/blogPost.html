@@ -5,7 +5,9 @@ layout: default
 				<article>
 					<!-- debut du titre -->
 					<header class="bloc_titre">
+						{% if page.img %}
 						<img src="/img/miniature/{{ page.img }}" class="miniature" alt="{{ page.title }}">
+						{% endif %}
 						<h1 class="titre">
 							{{ page.title }}
 						</h1>
