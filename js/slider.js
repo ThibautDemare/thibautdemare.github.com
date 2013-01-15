@@ -8,6 +8,7 @@ var opacite=false;
 var timing = 1700;
 
 $(document).ready(function() {
+	nbActu = $("#actus").children().length;
 	$(".vers_actu > button").each(
 		function(){
 			$(this).bind("click", function(){
@@ -16,13 +17,14 @@ $(document).ready(function() {
 			});
 		}
 	);
-	slide();
+	if(nbActu > 1)
+		slide();
 });
 
 function slide(){
 	if(!pause){
 		var from = numActu;
-		if(numActu<5)
+		if(numActu<nbActu)
 			numActu=numActu+1;
 		else
 			numActu=1;

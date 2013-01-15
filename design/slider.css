@@ -73,8 +73,20 @@ button::-moz-focus-inner {
 	position : absolute;/* pour l'animation, lorsque une actu disparait et que l'autre apparait, les deux actu vont se cehvaucher un court instant. Visuellement cela ne semble pas poser de probleme. */
 }
 
+.photos {
+	text-align : center;
+}
+
 .actu_cache{
 	display : none;
+}
+
+.source-photo {
+	display : none;
+}
+
+.photos:hover .source-photo {
+	display : block;
 }
 
 /* L'image */
