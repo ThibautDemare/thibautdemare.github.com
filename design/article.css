@@ -42,7 +42,7 @@ body {
 }
 
 /*
- * Partie concernant les paragraphes
+ * Partie concernant les font en général et les paragraphes
  */
  
 /* Correspond a un titre de paragraphe */
@@ -56,6 +56,10 @@ p {
 	margin-right : 5px;
 	text-align : justify;
 	text-indent : 20px;
+	font-size : 14px;
+}
+
+li {
 	font-size : 14px;
 }
 
@@ -80,35 +84,54 @@ p {
  * Partie concernant les titres des sections/sous-section/...
  */
 
-h2 {
+h2:not([class]) {
 	counter-reset : niveau02 niveau03;
 	font-size : 20px;
 }
 
-h2:before{
+h2:not([class]):before{
 	counter-increment : niveau01;
 	content : counter(niveau01) ". ";
 }
 
-h3 {
+h3:not([class]) {
 	font-size : 18px;
 	margin-left : 25px;
 	counter-reset : niveau03;
 }
 
-h3:before{
+h3:not([class]):before{
 	counter-increment : niveau02;
 	content : counter(niveau01) "." counter(niveau02) ". ";
 }
 
-h4 {
+h4:not([class]) {
 	font-size : 16px;
 	margin-left : 65px;
 }
 
-h4:before{
+h4:not([class]):before{
 	counter-increment : niveau03;
 	content : counter(niveau01) "." counter(niveau02) "." counter(niveau03) ". ";
+}
+
+/*
+ * Manage the quote
+ */
+blockquote:before {
+	content : "“";
+	color : #336CBF;
+    display: block;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman",serif;
+    height: 0;
+    margin-left: -45px;
+}
+
+blockquote {
+	border-left : 4px solid #B3B3B3;
+	min-height : 30px;
+	padding : 5px;
+	font-size : 14px;
 }
 
 /*
@@ -138,17 +161,7 @@ h4:before{
 	list-style: none;
 }
 
-#deplier_sommaire {
-	float : right;
-	height: 50px;
-	width : 50px;
-}
-
-#deplier_sommaire:hover, #deplier_sommaire:focus, #deplier_sommaire:active {
-	background-position: 0px 50px;
-	outline: none;
-}
-
+/* Generate numerotation of the overview */
 #contenu_sommaire  li.level-2 {
 	counter-reset : sommaire02 sommaire03;
 	list-style : none;
@@ -181,10 +194,4 @@ h4:before{
 	content : counter(sommaire01) "." counter(sommaire02) "." counter(sommaire03) ". ";
 }
 
-/*
- * Partie gerant les sources
- */
 
-#sources h2 {
-	font-size : 20px;
-}
