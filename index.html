@@ -4,9 +4,15 @@ title: Accueil
 ---
 
 <!-- Debut du slider -->
+
+
+<!--
+-----------------------
+Make a slider of actuality
+-----------------------
 <div id="slider">
 	<ul id="actus">
-		{% for post in site.posts limit:5 %}
+		{% for post in site.posts.blog limit:5 %}
 			{% if post == site.posts.first %}
 		<li id="actu-{{ forloop.index }}" class="actu">
 			{% else %}
@@ -28,7 +34,7 @@ title: Accueil
 	
 	<div id="div_navigateur_actu">
 		<ul id="navigateur_actu">
-			{% for post in site.posts limit:5 %}
+			{% for post in site.posts.blog limit:5 %}
 			<li class="vers_actu">
 				<button type="button" id="vers-actu-{{ forloop.index }}" data-idActu="{{ forloop.index }}">
 					<img src="/img/miniature/{{ post.img }}" alt="{{ post.title }}">
@@ -38,3 +44,40 @@ title: Accueil
 		</ul>
 	</div>
 </div>
+-->
+
+<div id="slider">
+	<ul id="actus">
+	{% assign i = 0 %}
+		{% for post in site.posts %}
+			{% if post.type == "photos" %}
+				{% if i == 0 %}
+		<li id="actu-{{ forloop.index }}" class="actu photos">
+				{% else %}
+  		<li id="actu-{{ forloop.index }}" class="actu actu_cache photos">
+  				{% endif %}
+  				{% assign i = {{ i | plus:1 }} %}
+  				<img src="/img/photos/{{ post.img }}" alt="{{ post.title }}">
+  				<span class="source-photo">Vu sur <a href="{{post.sourceURL }}">{{ post.sourceName }}</a></span>
+  			{% endif %}
+		</li>
+		{% endfor %}
+	</ul>
+	{% if i > 1 %}
+	<div id="div_navigateur_actu">
+		<ul id="navigateur_actu">
+			{% for post in site.posts %}
+				{% if post.type == "photos" %}
+			<li class="vers_actu">
+				<button type="button" id="vers-actu-{{ forloop.index }}" data-idActu="{{ forloop.index }}">
+					<img src="/img/photos/{{ post.img }}" alt="{{ post.title }}">
+				</button>
+			</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+	{% endif%} 
+</div>
+
+
