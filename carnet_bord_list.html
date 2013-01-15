@@ -32,7 +32,9 @@ title: Carnet de bord
 					<div id="description-{{ post.url }}" class="bloc_description">
 						<a href="{{ post.url }}" class="lien_description">
 							<div class="bloc_titre">
+							{% if page.img %}
 								<img src="/img/miniature/{{ post.img }}" class="miniature" alt="{{ post.title }}">
+							{% endif %}
 								<h1 class="titre">{{ post.title }}</h1>
 								<time datetime="{{ post.date | date: '%Y-%m-%d' }}"  class="date">
 									Publié le {{ post.date | date: "%d/%m/%Y" }}
