@@ -5,7 +5,7 @@
 var numActu=1;
 var pause=false;
 var opacite=false;
-var timing = 1700;
+var timing = 4000;
 
 $(document).ready(function() {
 	nbActu = $("#actus").children().length;
@@ -30,7 +30,7 @@ function slide(){
 			numActu=1;
 		//We do a transition every 6 secondes
 		transitionActu(from, numActu);
-		setTimeout("slide()", 6000);
+		setTimeout("slide()", 10000);
 	}
 	else{
 		//When someone clicks on a button, we freeze the animation for 30 secondes
