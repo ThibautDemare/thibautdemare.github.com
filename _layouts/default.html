@@ -11,30 +11,45 @@ View, California, 94041, USA. -->
 	<!-- header -->
 	<head>
 		<title>
-		  Thibaut Démare - {{ title }} -
+		  Thibaut Démare - {{ page.title }}
 		</title>
         
 		<meta charset="UTF-8">
 		<meta name="author" content="Thibaut Démare">
 		
-		<link rel="shortcut icon" href="/img/design/favicon.png" />
+		<link rel="shortcut icon" href="/img/design/favicon2.png" />
 		
 		<!-- Integration of jQuery -->
 		<script type="text/javascript" src="/js/jquery.min.js"></script>
 		<!-- Integration of jQuery-UI -->
 		<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
-
+		
+		<!-- Integration of MathJax -->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['\\[','\\]'], ['$$','$$']]}});
+		</script>
+		<script type="text/javascript"
+			src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		
 		<!-- Design and script for slider -->
 		<script type="text/javascript" src="/js/slider.js"></script>
 		<link rel="stylesheet" type="text/css" href="/design/slider.css">
 		
-		<!-- Design and script for list blog post -->
+		<!-- Design for list blog post -->
 		<link rel="stylesheet" type="text/css" href="/design/description.css">
 		<link rel="stylesheet" type="text/css" href="/design/onglet.css">
 
-		<!-- Design and/or script for post (blog, projets or carnet de bord)-->
+		<!-- Design and script for post (blog, projets or carnet de bord)-->
 		<script type="text/javascript" src="/js/sommaire.js"></script>
 		<link rel="stylesheet" type="text/css" href="/design/article.css">
+		
+		<!-- Design for definitions -->
+		<link rel="stylesheet" type="text/css" href="/design/definitions.css">
+		
+		<!-- Design for about page -->
+		<link rel="stylesheet" type="text/css" href="/design/about.css">
 		
 		<!-- Global design -->
 		<link rel="stylesheet" type="text/css" href="/design/design.css" media="screen, handheld, tv, projection" />
@@ -56,7 +71,6 @@ View, California, 94041, USA. -->
 			<!-- Banner -->
 			<div id="banniere">
 				<a href="/index.html" class="banniere">
-					<!-- The png version of this image does not work properly. The blue color is not the same in firefox (and on LinuxMint, not tested on Windows). -->
 					<img src="/img/design/banniere.png" alt="Thibaut Démare" style="border : none;"/>
 				</a>
 			</div>
@@ -66,9 +80,10 @@ View, California, 94041, USA. -->
 			<div id="menu">
 				<ul class="menu">
 					<li class="menu"><a href="/index.html" class="accueil"><span title="Accueil" style="display : block; text-indent:-99999px">Accueil</span></a></li>
-					<li class="menu"><a href="/blog_list.html" class="menu">Blog</a></li>
-					<li class="menu"><a href="/projets_list.html" class="menu">Projets</a></li>
+					<!--<li class="menu"><a href="/blog_list.html" class="menu">Blog</a></li>-->
+					<!--<li class="menu"><a href="/projets_list.html" class="menu">Projets</a></li>-->
 					<li class="menu"><a href="/carnet_bord_list.html" class="menu">Carnet de bord</a></li>
+					<li class="menu"><a href="/definitions.html" class="menu">Définitions</a></li>
 					<li class="menu"><a href="/about.html" class="menu">À propos</a></li>
 				</ul>
 			</div>
