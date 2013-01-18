@@ -6,6 +6,14 @@ body {
 }
 
 /*
+ * Gestion des marges de l'article
+ */
+article {
+	margin-top : 20px;
+	margin-left : 10px;
+}
+
+/*
  * Partie concernant le titre
  */
 
