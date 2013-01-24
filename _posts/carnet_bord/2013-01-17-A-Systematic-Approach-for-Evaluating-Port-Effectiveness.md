@@ -1,7 +1,7 @@
 ---
 layout: blogPost
 title: A Systematic Approach for Evaluating Port Effectiveness
-abstract: Quelques prises de notes sur mes lectures du moment.
+abstract: Quelques prises de notes sur mes lectures du moment. L'article décrit une méthode pour mesurer l'efficacité d'un port.
 type: carnet
 tag: notes
 ---
