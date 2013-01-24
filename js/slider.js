@@ -2,23 +2,24 @@
  * This script manage the animation of the presentation.
  * Author : Thibaut Démare
  */
-var numActu=1;
+var numActu=2;
 var pause=false;
 var opacite=false;
 var timing = 4000;
 
 $(document).ready(function() {
 	nbActu = $("#actus").children().length;
-	$(".vers_actu > button").each(
-		function(){
-			$(this).bind("click", function(){
-				boutonActu($(this).attr("data-idActu"));
-				return false;
-			});
-		}
-	);
-	if(nbActu > 1)
-		slide();
+	if(nbActu > 1){
+		$(".vers_actu > button").each(
+			function(){
+				$(this).bind("click", function(){
+					boutonActu($(this).attr("data-idActu"));
+					return false;
+				});
+			}
+		);
+		setTimeout("slide()", 10000);
+	}
 });
 
 function slide(){
