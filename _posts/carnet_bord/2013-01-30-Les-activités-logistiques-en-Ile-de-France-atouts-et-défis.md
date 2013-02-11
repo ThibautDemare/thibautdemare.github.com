@@ -1,7 +1,7 @@
 ---
 layout: blogPost
 title: Les activités logistiques en Île-de-France - atouts et défis
-abstract: Quelques prises de notes sur mes lectures du moment. 
+abstract: Quelques prises de notes sur mes lectures du moment. Le rapport décrit les caractéristiques de la logistique en Île-de-France; ses atouts et ses points faibles. L'intérêt est de mettre en avant des propositions pouvant consolider (voire accroître) la place de l'Île-de-France.
 type: carnet
 tag: notes
 ---
