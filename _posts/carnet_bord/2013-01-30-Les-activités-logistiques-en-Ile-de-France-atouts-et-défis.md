@@ -101,7 +101,7 @@ Le fret ferré est également porteur d'espoir et les emprises ferroviaires devr
 
 Les formalités administratives se font trop complexes/trop longues et donc handicapent les entreprises. Il serait donc judicieux de les réduire/simplifier.
 
-=> Le modèle devra donc proposer un paramétrage du temps nécessaire pour chaque formalité (et de son coût).
+- Le modèle pourrait donc proposer un paramétrage du temps nécessaire pour chaque formalité (et de son coût).
 
 La partie 2 met en avant les problèmes posés par la fiscalité. On notera donc l'importance de prendre en compte les taxes sur les locaux (à usage de bureaux, commerciaux, et de stockage) 
 dans le modèle. Ainsi il serait possible de voir l'impacte qu'aurait une modification de ces taxe sur l'attractivité de la région.
