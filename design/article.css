@@ -11,6 +11,7 @@ body {
 article {
 	margin-top : 20px;
 	margin-left : 10px;
+	text-align : justify;
 }
 
 /*
