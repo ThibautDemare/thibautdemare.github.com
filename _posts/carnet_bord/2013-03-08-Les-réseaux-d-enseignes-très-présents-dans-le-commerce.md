@@ -1,7 +1,7 @@
 ---
 layout: blogPost
 title: Les réseaux d’enseignes, très présents dans le commerce 
-abstract: Quelques prises de notes sur mes lectures du moment. L'article décrit le paysage des réseaux d'enseignes : la place qu'ils occupent et les différentes formes qu'ils peuvent prendre.
+abstract: Quelques prises de notes sur mes lectures du moment. L'article décrit le paysage des réseaux d'enseignes; la place qu'ils occupent et les différentes formes qu'ils peuvent prendre.
 type: carnet
 tag: notes
 ---
