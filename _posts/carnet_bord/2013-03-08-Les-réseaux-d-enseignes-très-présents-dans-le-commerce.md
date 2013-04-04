@@ -46,7 +46,11 @@ intégrés qui serviront de magasins pilotes.
 
 La part de ces réseaux varie en fonction du secteur. Toutefois la forme la plus répandue reste quand même les magasins possédés en propre.
 
+Les têtes de réseaux font souvent partie d'un groupe. Effectivement, ce dernier est facilement tenté de créer plusieurs enseignes pour que chacune
+adopte une stratégie commercial particulière (secteur, taille des magasins, gamme). Le groupe peut également être producteur et développer une 
+enseigne pour distribuer ses propres produits.
 
+Ainsi un très faible nombre de réseaux (14 groupe de réseaux) génère la quasi totalité du chiffre d'affaire correspondant à leur secteur d'activité.
 
 
 
