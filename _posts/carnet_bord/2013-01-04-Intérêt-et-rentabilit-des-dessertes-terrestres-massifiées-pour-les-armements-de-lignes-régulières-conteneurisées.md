@@ -1,6 +1,6 @@
 ---
 layout: blogPost
-title: Intérêt et rentabilité des dessertes terrestres massifiés pour les les armements de lignes régulières contenuerisées.
+title: Intérêt et rentabilité des dessertes terrestres massifiés pour les les armements de lignes régulières conteneurisées.
 abstract: Quelques prises de notes sur mes lectures du moment. L'auteur de cette article tente de comparer la rentabilité des modes de transport (combiné ou non).
 type: carnet
 tag: notes
@@ -8,7 +8,7 @@ tag: notes
 
 Attention : la suite de ce texte est une prise de notes sur un article que je n'ai pas écrit moi-même. Ainsi, les idées présentées ici sont la propriété de leur(s) auteur(s).
 
-## Intérêt et rentabilité des dessertes terrestres massifiés pour les les armements de lignes régulières contenuerisées.
+## Intérêt et rentabilité des dessertes terrestres massifiés pour les les armements de lignes régulières conteneurisées.
 
 ### L'article
 
@@ -38,3 +38,4 @@ Au travers son étude, l'auteur présente de façon détaillé, et à l'aide de 
 On peut également mieux comprendre le rôle de l'armateur : il est avant tout le propriétaire du navire et assure le transport maritime. Pourtant il doit également 
 se diversifier en intégrant dans ses offres le transport terrestre. Ainsi ses clients peuvent être livrés où ils le souhaitent et l'armateur est plus attractif car 
 son offre est plus complète.
+
