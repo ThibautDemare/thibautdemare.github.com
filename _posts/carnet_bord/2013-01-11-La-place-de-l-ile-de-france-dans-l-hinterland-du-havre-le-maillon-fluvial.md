@@ -6,7 +6,7 @@ type: carnet
 tag: notes
 ---
 
-Attention : la suite de ce texte est une prise de notes sur un article que je n'ai pas écrit moi-même. Ainsi, les idées présentées ici sont la propriété de leur(s) auteur(s).
+Attention &#58; la suite de ce texte est une prise de notes sur un article/livre/... que je n'ai pas écrit moi-même. Ainsi, les idées présentées ici sont la propriété de leur(s) auteur(s).
 
 ## La place de l'Île de France dans l'Hinterland du Havre : le maillon fluvial
 
