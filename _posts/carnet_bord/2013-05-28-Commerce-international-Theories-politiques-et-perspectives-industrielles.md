@@ -69,6 +69,7 @@ le nombre d'achat,... pouvaient varier.
 Ce cycle suit relativement la même évolution quelque soit le type de produit.
 
 L'auteur présente 4 phases : 
+
 - L'introduction du produit : coût de production important, prix de vente élevé, faible vente car peu de demande. Il n'y a qu'un seul fournisseur 
 ou très peu. Ces derniers sont d'origine du pays à la source de l'innovation (le plus souvent, un pas riche).
 - La croissance : les coûts de production se réduisent ce qui fait baisser le prix de vente. La quantité de produit vendu augmente progressivement. 
