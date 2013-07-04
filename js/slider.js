@@ -2,13 +2,14 @@
  * This script manage the animation of the presentation.
  * Author : Thibaut Démare
  */
-var numActu=2;
+var numActu=0;
 var pause=false;
 var opacite=false;
 var timing = 4000;
 
 $(document).ready(function() {
 	nbActu = $("#actus").children().length;
+	
 	if(nbActu > 1){
 		$(".vers_actu > button").each(
 			function(){
@@ -18,20 +19,20 @@ $(document).ready(function() {
 				});
 			}
 		);
-		setTimeout("slide()", 10000);
+		setTimeout("slide()", 5000);
 	}
 });
 
 function slide(){
 	if(!pause){
 		var from = numActu;
-		if(numActu<nbActu)
+		if(numActu<(nbActu-1))
 			numActu=numActu+1;
 		else
-			numActu=1;
+			numActu=0;
 		//We do a transition every 6 secondes
 		transitionActu(from, numActu);
-		setTimeout("slide()", 10000);
+		setTimeout("slide()", 5000);
 	}
 	else{
 		//When someone clicks on a button, we freeze the animation for 30 secondes
@@ -49,6 +50,7 @@ function transitionActu(from, to){
 }
 
 function boutonActu(num){
+	console.log(num+" et "+numActu);
 	pause=true;
 	transitionActu(numActu, num);
 	numActu = num;
