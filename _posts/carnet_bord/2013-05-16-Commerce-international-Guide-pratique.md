@@ -16,7 +16,7 @@ Ce livre a été écrit par Sylvie Graumann-Yettou et il a été publié par Lit
 
 ### Le résumé
 
-<blockquote cite="http://books.google.fr/books/about/Commerce_international.html?hl=fr&id=HsmlAAAACAAJ">
+<blockquote cite="http://books.google.fr/books/about/Commerce_international.html?hl=fr&amp;id=HsmlAAAACAAJ">
 <p>
 	Où s'informer, comment recenser les appuis au développement international, élaborer une stratégie de distribution, tirer profit des nouvelles 
 	formes de commerce, gérer ses expéditions, se protéger contre les risques de non-paiement, de contrefaçon ?
@@ -28,7 +28,7 @@ Ce livre a été écrit par Sylvie Graumann-Yettou et il a été publié par Lit
 	développement international.
 </p>
 </blockquote>
-[Source](http://books.google.fr/books/about/Commerce_international.html?hl=fr&id=HsmlAAAACAAJ)
+[Source](http://books.google.fr/books/about/Commerce_international.html?hl=fr&amp;id=HsmlAAAACAAJ)
 
 ### Les notes
 

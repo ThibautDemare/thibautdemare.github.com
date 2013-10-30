@@ -1,6 +1,6 @@
 ---
 layout: blogPost
-title: Les mesures globales d'un réseau
+title: Les mesures globales d'un reseau
 abstract: Quelques prises de notes sur mes lectures du moment. L'article liste de façon non-exhaustive les principales mesures globales d'un réseau.
 type: carnet
 ---
@@ -15,18 +15,18 @@ Ce papier a été écrit en 2010 par César Ducruet.
 
 ### Les mots clés
 
-<blockquote cite="http://halshs.archives-ouvertes.fr/view_by_stamp.php?&halsid=eqc3irp3r54j1fgmkpgvd8eq44&label=SHS&langue=fr&action_todo=view&id=halshs-00541902&version=1&view=extended_view">
+<blockquote cite='http://halshs.archives-ouvertes.fr/view_by_stamp.php?&amp;halsid=eqc3irp3r54j1fgmkpgvd8eq44&amp;label=SHS&amp;langue=fr&amp;action_todo=view&amp;id=halshs-00541902&amp;version=1&amp;view=extended_view'>
 	groupe fmr – réseau – graphe planaire – indices – mesures globales
 </blockquote>
-[Source](http://halshs.archives-ouvertes.fr/view_by_stamp.php?&halsid=d7rie9d0pmdaffnpd30npn4pr7&label=SHS&langue=fr&action_todo=view&id=halshs-00546814&version=2&view=extended_view)
+[Source](http://halshs.archives-ouvertes.fr/view_by_stamp.php?&amp;halsid=eqc3irp3r54j1fgmkpgvd8eq44&amp;label=SHS&amp;langue=fr&amp;action_todo=view&amp;id=halshs-00541902&amp;version=1&amp;view=extended_view)
 
 ### Le résumé
 
-<blockquote cite="http://halshs.archives-ouvertes.fr/view_by_stamp.php?&halsid=eqc3irp3r54j1fgmkpgvd8eq44&label=SHS&langue=fr&action_todo=view&id=halshs-00541902&version=1&view=extended_view">
+<blockquote cite='http://halshs.archives-ouvertes.fr/view_by_stamp.php?&amp;halsid=eqc3irp3r54j1fgmkpgvd8eq44&amp;label=SHS&amp;langue=fr&amp;action_todo=view&amp;id=halshs-00541902&amp;version=1&amp;view=extended_view'>
 	Ce document du groupe f.m.r. (flux, matrices, réseaux) propose une synthèse des mesures globales d'un réseau, qu'il s'agisse d'un réseau planaire ou non. 
 	Les mesures récentes proposées par les physiciens sont détaillées.
 </blockquote>
-[Source](http://halshs.archives-ouvertes.fr/view_by_stamp.php?&halsid=eqc3irp3r54j1fgmkpgvd8eq44&label=SHS&langue=fr&action_todo=view&id=halshs-00541902&version=1&view=extended_view)
+[Source](http://halshs.archives-ouvertes.fr/view_by_stamp.php?&amp;halsid=eqc3irp3r54j1fgmkpgvd8eq44&amp;label=SHS&amp;langue=fr&amp;action_todo=view&amp;id=halshs-00541902&amp;version=1&amp;view=extended_view)
 
 ### Les notes
 
