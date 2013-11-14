@@ -1,7 +1,17 @@
 ---
 layout: blogPost
 title: Toward a Spatially-Centered Approach to Integrate Heterogeneous and Multi-scales Urban Component Models
-abstract: Quelques prises de notes sur mes lectures du moment. Dans cette article, les auteurs expliquent comment ils ont procédé afin de coupler plusieurs modèles.
+abstract: "<blockquote cite='http://dx.doi.org/10.1007/978-3-642-28786-2_9'>
+	This article addresses a model coupling based approach (i.e reusing and combining spatial models) for modeling and simulating complex systems. 
+	Our research is conducted by a land use program of Métouia city (Tunisia) for which administration would study (by simulations) different 
+	planning scenarios to identify strategies of industrial development. These simulations should take into account demographic, socio-economic 
+	and environmental factors. Many urban models are available but they do not integrate these three aspects. This limitation could be solved by 
+	a model coupling based approach. In this paper, from an analysis of models and approaches presented in the literature, we identify key points, 
+	needs and the basis of an approach to couple models. Then, we introduce an original approach, based on agent paradigm, in which space is the 
+	coupling factor to interconnect heterogeneous models (mathematical models, stochastic models, individual based models, and so on). The pertinence 
+	of this coupling approach is also raised by the correlation to observe the impact of models on each other.
+</blockquote>
+<a href='http://dx.doi.org/10.1007/978-3-642-28786-2_9'>Source</a>"
 type: carnet
 ---
 

@@ -1,7 +1,43 @@
 ---
 layout: blogPost
 title: La logistique de la grande distribution
-abstract: Quelques prises de notes sur mes lectures du moment. La synthèse décrit le secteur de la grande distribution, et plus particulièrement les processus de logistique qui y sont rattachés.
+abstract: "<blockquote cite='http://www.setra.developpement-durable.gouv.fr/La-logistique-de-la-grande.html'>
+<p>
+L’analyse du fonctionnement des organisations logistiques du commerce et des filières industrielles est essentielle pour 
+comprendre les caractéristiques des flux de marchandises et leurs évolutions.
+<br>
+Ces organisations dépendent des stratégies des entreprises sur leurs niveaux de stocks, niveau de service client et 
+de bien d’autres paramètres.
+<br>
+<br>
+Cette synthèse propose d’améliorer la connaissance sur la demande de transport émanant des réseaux de distribution 
+dans le secteur du commerce de détail, dont la majorité est à classer dans ce qu’on appelle plus communément la grande distribution. 
+<br>
+L’objectif est d’éclairer les décideurs publics sur le fonctionnement et les caractéristiques de ces organisations, 
+sur les impacts des mesures prises par les puissances publiques, mais aussi sur les évolutions passées et les tendances à venir dans ces organisations logistiques, qui génèrent, sur le plan national, des flux de marchandises conséquents. 
+<br>
+<br>
+Elle est divisée en quatre parties&nbsp;:
+</p>
+<ul>
+	<li>une première partie est consacrée à l’analyse du marché de la grande distribution&nbsp;;</li>
+	<li>une deuxième décrit l’organisation des chaînes logistiques, en s’intéressant notamment à la place de la logistique, à l’évolution des chaînes, aux grandes caractéristiques des chaînes d’aujourd’hui et aux évolutions qui se dessinent&nbsp;;</li>
+	<li>une troisième partie présente l’influence des politiques publiques sur ces chaînes logistiques, ainsi que quelques exemples de réflexions menées par les services du MEEDDAT&nbsp;;</li>
+	<li>enfin la dernière partie fait la synthèse des enjeux que représentent ces chaînes, en termes de transport et d’aménagement du territoire.</li>
+</ul>
+
+<p>
+Cette synthèse est complétée par quatre cartes qui indiquent la répartition des entrepôts de la grande distribution en France métropolitaine en 2007&nbsp;:
+</p>
+<ul>
+	<li>répartition par commune </li>
+	<li>répartition par zone d’emploi</li>
+	<li>densité des surfaces d’entrepôt par zone d’emploi</li>
+	<li>densité des surfaces d’entrepôt par habitant de la zone d’emploi</li>
+</ul>
+
+</blockquote>
+<a href='http://www.setra.developpement-durable.gouv.fr/La-logistique-de-la-grande.html'>Source</a>"
 type: carnet
 tag: notes
 ---

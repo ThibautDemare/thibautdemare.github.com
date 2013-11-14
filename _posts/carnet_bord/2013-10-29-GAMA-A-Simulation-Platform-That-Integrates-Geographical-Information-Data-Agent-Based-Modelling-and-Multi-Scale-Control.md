@@ -1,7 +1,18 @@
 ---
 layout: blogPost
 title: GAMA &#58; A simulation Platform That Integrates Geographical Information Data, Agent-Based Modelling and Multi-Scale Control
-abstract: Quelques prises de notes sur mes lectures du moment. 
+abstract: "<blockquote cite='http://link.springer.com/chapter/10.1007%2F978-3-642-25920-3_17'>
+
+<p>
+	The agent-based modeling is now widely used to study complex systems. Its ability to represent several levels of interaction along a detailed (complex) environment representation favored such a development.
+	However, in many models, these capabilities are not fully used. Indeed, only simple, usually discrete, environment representation and one level of interaction (rarely two or three) are considered in most 
+	of the agent-based models. The major reason behind this fact is the lack of simulation platforms assisting the work of modelers in these domains. To tackle this problem, we developed a new simulation 
+	platform, GAMA. This platform allows modelers to define spatially explicit and multi-levels models. In particular, it integrates powerful tools coming from Geographic Information Systems (GIS) and Data 
+	Mining easing the modeling and analysis efforts. In this paper, we present how this platform addresses these issues and how such tools are available right out of the box to modelers.
+</p>
+
+</blockquote>
+<a href='http://link.springer.com/chapter/10.1007%2F978-3-642-25920-3_17'>Source</a>"
 type: carnet
 tag: notes
 ---

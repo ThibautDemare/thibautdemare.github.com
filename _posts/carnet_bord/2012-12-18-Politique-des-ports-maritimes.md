@@ -1,7 +1,7 @@
 ---
 layout: blogPost
 title: Politiques des ports maritimes - Guide pratique pour les décideurs politiques de l'UE
-abstract: Quelques prises de notes sur mes lectures du moment. L'auteur fait un état des lieux des problèmes que posent les administrations pour l'attractivité des port européens.
+abstract: L'auteur fait un état des lieux des problèmes que posent les administrations pour l'attractivité des port européens.
 type: carnet
 tag: notes
 ---

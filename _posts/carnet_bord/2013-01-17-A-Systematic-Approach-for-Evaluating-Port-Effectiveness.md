@@ -1,7 +1,16 @@
 ---
 layout: blogPost
 title: A Systematic Approach for Evaluating Port Effectiveness
-abstract: Quelques prises de notes sur mes lectures du moment. L'article décrit une méthode pour mesurer l'efficacité d'un port.
+abstract: "<blockquote cite='http://dx.doi.org/10.1080/03088839.2011.572702'>
+	The objective of this paper is to examine how users evaluate port effectiveness and identify those constructs relevant to that evaluation. The three user groups studied 
+	are carriers, cargo interests, and suppliers of services at the port. The study team developed an on-line survey instrument and delivered it to Canadian port users with 
+	the assistance of eight industry organizations. The findings of the research are based on the contributions of 57 decision makers with port usage experience, many of whom 
+	fit into more than one group of users. The study concludes that the evaluation criteria influencing users' perceptions of satisfaction, competitiveness, and service delivery 
+	effectiveness are different, and so while the determinants of these constructs have considerable overlap, they are different constructs. This paper also illustrates how 
+	independent (or third-party) evaluation of port performance might be used by a port to strategically improve its service to users, and therefore have value from a port 
+	perspective in its strategic planning.
+</blockquote>
+<a href='http://dx.doi.org/10.1080/03088839.2011.572702'>Source</a>"
 type: carnet
 tag: notes
 ---

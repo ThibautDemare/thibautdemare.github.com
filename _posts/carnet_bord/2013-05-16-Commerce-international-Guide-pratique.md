@@ -1,7 +1,19 @@
 ---
 layout: blogPost
 title: Commerce international - Guide pratique (5ème édition)
-abstract: Quelques prises de notes sur mes lectures du moment. 
+abstract: "<blockquote cite='http://books.google.fr/books/about/Commerce_international.html?hl=fr&amp;id=HsmlAAAACAAJ'>
+<p>
+	Où s'informer, comment recenser les appuis au développement international, élaborer une stratégie de distribution, tirer profit des nouvelles 
+	formes de commerce, gérer ses expéditions, se protéger contre les risques de non-paiement, de contrefaçon ?
+</p>
+
+<p>
+	En répondant à toutes ces questions de façon claire et pratique, l'objectif de la cinquième édition de ce guide est d'offrir aux entreprises une 
+	vision globale des mécanismes du commerce international ainsi qu'une série de conseils pratiques pour préparer toutes les étapes de leur 
+	développement international.
+</p>
+</blockquote>
+<a href='http://books.google.fr/books/about/Commerce_international.html?hl=fr&amp;id=HsmlAAAACAAJ'>Source</a>"
 type: carnet
 tag: notes
 ---

@@ -1,7 +1,12 @@
 ---
 layout: blogPost
 title: Modélisation multi-échelles des réseaux de transport - Vers une plus grande précision de l'accessibilité
-abstract: Quelques prises de notes sur mes lectures du moment. L'auteur propose la mise en interaction entre différentes échelles des réseaux de transport.
+abstract: <blockquote cite="http://www.mgm.fr/PUB/Mappemonde/Mappe396R.html">
+	Afin d'étudier les répercussions spatiales d'un projet d'aménagement des transports un processus de modélisation multi-échelles a été développé dans le cadre du logiciel NOD. 
+	Outre une description fine de la chaîne complète de déplacement, intégrant les trajets terminaux, les connexions entre modes, les horaires des transports en commun…, ce 
+	processus permet de déterminer les interactions existant entre niveaux d'organisation, locaux, départementaux, régionaux, nationaux et internationaux.
+</blockquote>
+<a href='http://www.mgm.fr/PUB/Mappemonde/Mappe396R.html'>Source</a>
 type: carnet
 tag: notes
 ---

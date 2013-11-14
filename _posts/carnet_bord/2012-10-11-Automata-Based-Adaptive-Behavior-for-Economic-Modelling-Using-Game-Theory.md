@@ -1,7 +1,13 @@
 ---
 layout: blogPost
 title: Automata-Based Adaptive Behavior for Economic Modelling Using Game Theory
-abstract: Quelques prises de notes sur mes lectures du moment. Les auteurs de cette article décrivent un modèle d'automate pour résoudre des problèmes issus de la théorie des jeux.
+abstract: "<blockquote cite='http://arxiv.org/abs/cs/0510089'>
+	In this paper, we deal with some specific domains of applications to game theory. This is one of the major class of models in the new approaches of modelling in the economic domain. 
+	For that, we use genetic automata which allow to build adaptive strategies for the players. We explain how the automata-based formalism proposed - matrix representation of automata 
+	with multiplicities - allows to define a semi-distance between the strategy behaviors. With that tools, we are able to generate an automatic processus to compute emergent systems 
+	of entities whose behaviors are represented by these genetic automata.
+</blockquote>
+<a href='http://arxiv.org/abs/cs/0510089'>Source</a>"
 type: carnet
 tag: notes
 ---

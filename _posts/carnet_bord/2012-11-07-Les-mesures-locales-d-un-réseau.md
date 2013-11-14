@@ -1,7 +1,10 @@
 ---
 layout: blogPost
 title: Les mesures locales d'un réseau
-abstract: Quelques prises de notes sur mes lectures du moment. L'article liste de façon non-exhaustive les principales mesures locales d'un réseau.
+abstract: "<blockquote cite='http://halshs.archives-ouvertes.fr/view_by_stamp.php?&amp;halsid=d7rie9d0pmdaffnpd30npn4pr7&amp;label=SHS&amp;langue=fr&amp;action_todo=view&amp;id=halshs-00546814&amp;version=2&amp;view=extended_view'>
+	Ce document du groupe f.m.r. (flux, matrices, réseaux) présente différents mesures locales utilisées pour l'analyse des réseaux.
+</blockquote>
+<a href='http://halshs.archives-ouvertes.fr/view_by_stamp.php?&amp;halsid=d7rie9d0pmdaffnpd30npn4pr7&amp;label=SHS&amp;langue=fr&amp;action_todo=view&amp;id=halshs-00546814&amp;version=2&amp;view=extended_view'>Source</a>"
 type: carnet
 ---
 

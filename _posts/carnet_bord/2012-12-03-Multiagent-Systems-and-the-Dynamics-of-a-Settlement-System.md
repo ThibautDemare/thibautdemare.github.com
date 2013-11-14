@@ -1,7 +1,16 @@
 ---
 layout: blogPost
 title: Multiagent System and the Dynamics of a Settlement System
-abstract: Quelques prises de notes sur mes lectures du moment. Les auteurs présentent le modèle multiagent "SIMPOP".
+abstract: "<blockquote cite='http://onlinelibrary.wiley.com/doi/10.1111/j.1538-4632.1996.tb00927.x/abstract'>
+	In order to simulate the evolution of a system of settlements with a dynamic model, many processes must be integrated: the spatial aggregation of population, 
+	the complexification of urban activities, and the increasing hierarchical differentiation of settlements. The model must also simulate the progressive structuration 
+	of the settlement system through a growing variety and enlarged range of interactions between its elements. “Multiagent systems” provides a flexible modeling method 
+	for dealing with the multiple spatial interactions of cooperation and competition and relations that generate and regulate the evolution of a settlement system. 
+	Its principles are described and applied to building an evolutionary model, including a simulation tool. The model combines economic and spatial rules to produce 
+	birth, growth, decline, and functional diversification of the towns. The “urban transition” from an agrarian settlement system toward a hierarchical system of trade
+	- and manufacturing-oriented towns and cities can be simulated
+</blockquote>
+"
 type: carnet
 tag: notes
 ---

@@ -1,7 +1,18 @@
 ---
 layout: blogPost
 title: Les conséquences de la réforme portuaire sur les entreprises de manutention
-abstract: Quelques prises de notes sur mes lectures du moment. Ce mémoire de master aborde différents points sur la réforme portuaire de 2008.
+abstract: "<blockquote cite='http://www.cdmt.droit.univ-cezanne.fr/fileadmin/CDMT/Documents/Memoires/Fanny_GUILLO.pdf'>
+	Ces dernières années,  le système portuaire français connaît une période de doutes quant à sa capacité à répondre aux besoins de l'économie française.
+	
+	Les causes du déclin des ports français sont connues de longue date et sont évoquées au travers de plusieurs rapports successifs. A titre principal, on note l'obsolescence des missions 
+	et des statuts des ports autonomes mais surtout l'absence d'unité de commandement dans les opérations de manutention des terminaux.
+	Et c'est une des raisons de la réforme portuaire concrétisée par l'adoption de la loi du 4 Juillet 2008 qui vise la gestion portuaire et sa modernisation. Le vrai cœur du problème est 
+	l'impact de cette réforme sur la manutention. Le sujet est tellement sensible, que l'application même de la loi portant sur la réforme est gardé dans le secret.
+	
+	A l'heure des négociations avec les opérateurs privés, il convient de déterminer les perspectives d'évolution envisagées par la réforme, en vue d'une rationalisation de l'organisation de la 
+	manutention portuaire.
+</blockquote>
+<a href='http://www.cdmt.droit.univ-cezanne.fr/fileadmin/CDMT/Documents/Memoires/Fanny_GUILLO.pdf'>Source</a>"
 type: carnet
 tag: notes
 ---

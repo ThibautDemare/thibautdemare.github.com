@@ -1,7 +1,19 @@
 ---
 layout: blogPost
 title: Les réseaux d’enseignes, très présents dans le commerce 
-abstract: Quelques prises de notes sur mes lectures du moment. L'article décrit le paysage des réseaux d'enseignes; la place qu'ils occupent et les différentes formes qu'ils peuvent prendre.
+abstract: "<blockquote cite='http://www.insee.fr/fr/themes/document.asp?ref_id=ip1140'>
+<p>
+Depuis une trentaine d’années, les réseaux d’enseignes occupent largement le paysage commercial français. Trois formes de réseaux prédominent 
+dans le commerce de détail : en 2006, 52 % du chiffre d’affaires des réseaux est réalisé par les points de vente possédés en propre par la tête 
+de réseau, 33 % par des membres d’un groupement et 9 % par des indépendants sous contrat de franchise. Certains secteurs commerciaux sont 
+organisés selon une forme de réseau préférentiel : les réseaux intégrés dominent en termes de chiffre d’affaires dans l’aménagement de l’habitat 
+et l’équipement du foyer, tandis que le groupement d’indépendants est majoritaire dans les grandes surfaces alimentaires ; le commerce et 
+réparation automobile fonctionne avec des réseaux de licence de marque. En revanche, les réseaux mixtes franchisés sont présents dans tous les 
+secteurs. Dans la plupart des cas, les têtes de réseaux appartiennent à des groupes de sociétés, confirmant l’imbrication de ces choix 
+d’organisation au sein des circuits de distribution.
+</p>
+</blockquote>
+<a href='http://www.insee.fr/fr/themes/document.asp?ref_id=ip1140'>Source</a>"
 type: carnet
 tag: notes
 ---

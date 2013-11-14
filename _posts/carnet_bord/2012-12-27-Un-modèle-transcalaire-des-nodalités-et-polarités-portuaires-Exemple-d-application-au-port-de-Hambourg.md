@@ -1,7 +1,11 @@
 ---
 layout: blogPost
 title: Un modèle transcalaire des nodalités et polarités portuaires. Exemple d'application au port de Hambourg
-abstract: Quelques prises de notes sur mes lectures du moment. Les auteurs de cette article proposent un modèle d'interaction entre différentes échelles d'un port et de son hinterland.
+abstract: "<blockquote cite='http://mappemonde.mgm.fr/num7/articles/res05304.html'>
+	Un modèle général d'articulation des différentes échelles du transport maritime, du terminal portuaire à l'espace mondial, est proposé puis appliqué au cas du port de 
+	Hambourg. On voit que l'inscription d'un port dans un processus de desserte maritime et terrestre se fait en fonction d'une double logique de nodalité et de polarité.
+</blockquote>
+<a href='http://mappemonde.mgm.fr/num7/articles/res05304.html'>Source</a>"
 type: carnet
 tag: notes
 ---

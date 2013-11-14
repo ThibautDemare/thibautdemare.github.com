@@ -1,7 +1,18 @@
 ---
 layout: blogPost
 title: Analyse de l'évolution urbaine par automate cellulaire - le modèle Spacelle
-abstract: Quelques prises de notes sur mes lectures du moment. Les auteurs présentent "Spacelle" qui permet de modéliser l'évolution d'une région urbaine à l'aide d'automate cellulaire.
+abstract: "<blockquote cite='http://www.citeulike.org/user/MBrasebin/article/10288333'>
+	Le travail que nous présentons repose sur l'idée selon laquelle la croissance urbaine, mais aussi de nombreux autres processus géographiques, peuvent s'expliquer par des 
+	règles spatiales simples, formulées à partir de nos connaissances empiriques mais néanmoins explicatives de la dynamique spatiale si elles résultent de la pratique sociale. 
+	L'automate cellulaire SpaCelle, est construit sur un paradigme très général, qui déborde du cadre de la modélisation urbaine, celui de la concurrence spatiale entre 
+	diverses sous-populations cellulaires en interaction avec leur environnement. Chaque individu cellulaire utilise sa force vitale qui varie de sa naissance à sa mort pour 
+	résister aux forces environnementales résultant des individus voisins agissant dans des auréoles de plus en plus larges autour de lui. Le logiciel, basé sur ce principe 
+	général (son méta-modèle), doit être alimenté par l'utilisateur à travers une base de connaissances, constituée des différentes classes d'états cellulaires, des règles de 
+	vie et de mort des individus, ainsi que des règles de transition. La disposition des cellules peut être importée depuis un grid ArcView ou saisi directement. La pertinence 
+	géographique de ce modèle a été testée à travers une expérimentation concernant les règles d'évolution de l'espace urbain de Rouen pendant les cinquante dernières années. 
+	Les résultats sont très proches de la situation observée, validant ainsi le modèle général et la base de règles pour l'agglomération rouennaise.
+</blockquote>
+<a href='http://www.citeulike.org/user/MBrasebin/article/10288333'>Source</a>"
 type: carnet
 tag: notes
 ---
@@ -25,15 +36,15 @@ Cet article a été publié en 2003 dans L'Espace géographique et a été écri
 ### Le résumé
 
 <blockquote cite="http://www.citeulike.org/user/MBrasebin/article/10288333">
-	Le travail que nous présentons repose sur l’idée selon laquelle la croissance urbaine, mais aussi de nombreux autres processus géographiques, peuvent s’expliquer par des 
+	Le travail que nous présentons repose sur l'idée selon laquelle la croissance urbaine, mais aussi de nombreux autres processus géographiques, peuvent s'expliquer par des 
 	règles spatiales simples, formulées à partir de nos connaissances empiriques mais néanmoins explicatives de la dynamique spatiale si elles résultent de la pratique sociale. 
-	L’automate cellulaire SpaCelle, est construit sur un paradigme très général, qui déborde du cadre de la modélisation urbaine, celui de la concurrence spatiale entre 
+	L'automate cellulaire SpaCelle, est construit sur un paradigme très général, qui déborde du cadre de la modélisation urbaine, celui de la concurrence spatiale entre 
 	diverses sous-populations cellulaires en interaction avec leur environnement. Chaque individu cellulaire utilise sa force vitale qui varie de sa naissance à sa mort pour 
 	résister aux forces environnementales résultant des individus voisins agissant dans des auréoles de plus en plus larges autour de lui. Le logiciel, basé sur ce principe 
-	général (son méta-modèle), doit être alimenté par l’utilisateur à travers une base de connaissances, constituée des différentes classes d’états cellulaires, des règles de 
+	général (son méta-modèle), doit être alimenté par l'utilisateur à travers une base de connaissances, constituée des différentes classes d'états cellulaires, des règles de 
 	vie et de mort des individus, ainsi que des règles de transition. La disposition des cellules peut être importée depuis un grid ArcView ou saisi directement. La pertinence 
-	géographique de ce modèle a été testée à travers une expérimentation concernant les règles d’évolution de l’espace urbain de Rouen pendant les cinquante dernières années. 
-	Les résultats sont très proches de la situation observée, validant ainsi le modèle général et la base de règles pour l’agglomération rouennaise.
+	géographique de ce modèle a été testée à travers une expérimentation concernant les règles d'évolution de l'espace urbain de Rouen pendant les cinquante dernières années. 
+	Les résultats sont très proches de la situation observée, validant ainsi le modèle général et la base de règles pour l'agglomération rouennaise.
 </blockquote>
 [Source](http://www.citeulike.org/user/MBrasebin/article/10288333)
 

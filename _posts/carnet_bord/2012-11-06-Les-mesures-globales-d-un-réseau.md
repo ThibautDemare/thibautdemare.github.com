@@ -1,7 +1,11 @@
 ---
 layout: blogPost
 title: Les mesures globales d'un reseau
-abstract: Quelques prises de notes sur mes lectures du moment. L'article liste de façon non-exhaustive les principales mesures globales d'un réseau.
+abstract: "<blockquote cite='http://halshs.archives-ouvertes.fr/view_by_stamp.php?&amp;halsid=eqc3irp3r54j1fgmkpgvd8eq44&amp;label=SHS&amp;langue=fr&amp;action_todo=view&amp;id=halshs-00541902&amp;version=1&amp;view=extended_view'>
+	Ce document du groupe f.m.r. (flux, matrices, réseaux) propose une synthèse des mesures globales d'un réseau, qu'il s'agisse d'un réseau planaire ou non. 
+	Les mesures récentes proposées par les physiciens sont détaillées.
+</blockquote>
+<a href='http://halshs.archives-ouvertes.fr/view_by_stamp.php?&amp;halsid=eqc3irp3r54j1fgmkpgvd8eq44&amp;label=SHS&amp;langue=fr&amp;action_todo=view&amp;id=halshs-00541902&amp;version=1&amp;view=extended_view'>Source</a>"
 type: carnet
 ---
 

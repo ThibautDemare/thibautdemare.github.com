@@ -19,7 +19,6 @@ article {
  */
 
 .bloc_titre {
-	float : left;
 	width : 100%;
 	margin-bottom : 20px;
 	border-bottom : 1px solid #B3B3B3;
@@ -140,6 +139,7 @@ blockquote {
 	min-height : 30px;
 	padding : 5px;
 	font-size : 14px;
+	text-align: justify;
 }
 
 /*

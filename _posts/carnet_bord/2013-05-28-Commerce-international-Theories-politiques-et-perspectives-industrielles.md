@@ -1,7 +1,44 @@
 ---
 layout: blogPost
 title: Le commerce international - Théories, politiques et perspectives industrielles
-abstract: Quelques prises de notes sur mes lectures du moment. 
+abstract: "<blockquote cite='http://www.puq.ca/catalogue/themes/commerce-international-edition-5583.html'>
+<p>
+	De nos jours, les questions commerciales occupent plus que jamais une place prépondérante dans l’actualité internationale en raison de leurs 
+	incidences économiques, sociales, géographiques et politiques considérables.
+</p>
+
+<p>
+	Le présent ouvrage propose donc une approche adaptée de l’analyse économique qui, tout en suivant une perspective historique, tient compte des 
+	réalités institutionnelles actuelles. De plus, la théorie est fermement ancrée dans la réalité par le biais d’analyses sectorielles 
+	(agriculture, pétrole, services, <i>outsourcing</i>, automobile, textiles et vêtements, etc.),  et s’attarde aux institutions internationales 
+	déterminantes (OMC, ALENA, Espace économique européen) ainsi qu’aux ensembles politiques (Union européenne, États-Unis, Canada, pays en voie 
+	de développement, nouveaux pays industrialisés, etc.). Les auteurs souhaitent que ce livre contribue à développer chez les lecteurs une 
+	capacité d’analyse qui leur permettra d’aborder de façon adéquate tous les enjeux relatifs au commerce international.
+</p>
+
+<p>
+	<i>Tout un livre&nbsp;! Les deux auteurs  ont explicité de façon intéressante l’ensemble  des théories du commerce international, nouvelles 
+	comme classiques, et analysé de façon efficace la réalité de l’économie internationale aussi bien au niveau macro que méso.</i>
+</p>
+	
+<div>
+	ZHAN SU, Ph. D., professeur titulaire de management international,  titulaire de la Chaire Stephen-A.-Jarislowsky en gestion des affaires 
+	internation
+</div>
+
+<p>
+	<i>Un texte clair, complet et bien documenté,  bien adapté à l’étudiant qui s’intéresse au commerce international, 
+	en particulier dans les relations internationales. L’histoire, la géographie, les institutions, la théorie et les preuves empiriques abordées 
+	dans  ce livre interpelleront à la fois les spécialistes et ceux qui ont un intérêt sérieux envers un aspect clé de l'économie  mondiale 
+	contemporaine.</i>
+</p>
+
+<div>
+	JOHN M. CURTIS, Distinguished Fellow, Centre for International Governance Innovation – CIGI
+</div>
+
+</blockquote>
+<a href='http://www.puq.ca/catalogue/themes/commerce-international-edition-5583.html'>Source</a>"
 type: carnet
 tag: notes
 ---
@@ -17,8 +54,6 @@ Ce livre, édité par Presses de l'Université du Québec, a été écrit par Em
 ### Le résumé
 
 <blockquote cite="http://www.puq.ca/catalogue/themes/commerce-international-edition-5583.html">
-
-
 <p>
 	De nos jours, les questions commerciales occupent plus que jamais une place prépondérante dans l’actualité internationale en raison de leurs 
 	incidences économiques, sociales, géographiques et politiques considérables.

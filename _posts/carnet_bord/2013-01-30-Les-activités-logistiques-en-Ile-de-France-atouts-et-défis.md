@@ -1,7 +1,49 @@
 ---
 layout: blogPost
 title: Les activités logistiques en Île-de-France - atouts et défis
-abstract: Quelques prises de notes sur mes lectures du moment. Le rapport décrit les caractéristiques de la logistique en Île-de-France; ses atouts et ses points faibles. L'intérêt est de mettre en avant des propositions pouvant consolider (voire accroître) la place de l'Île-de-France.
+abstract: "<blockquote cite='http://www.etudes.cci-paris-idf.fr/rapport/82'>
+<p>
+	La logistique représente une des clés du développement économique. La région francilienne ne pourra se prévaloir d'une économie compétitive que 
+	si elle demeure un pôle logistique majeur. Le rapport de la Chambre de commerce et d'industrie de Paris relève six points qui handicapent les 
+	activités logistiques.
+	La CCIP formule dès lors trois propositions essentielles afin de consolider la place de l'Île-de-France :
+	<ul>
+		<li> mieux prendre en compte les contraintes des activités logistiques dans les documents de planification: améliorer la qualité des infrastructures 
+		existantes ; développer l'intermodalité ; harmoniser la réglementation des livraisons à l'échelle de l'agglomération parisienne ;</li>
+		<li> alerter les pouvoirs publics sur l'éloignement des sites logistiques destinés à l'approvisionnement et à la distribution en zone dense et 
+		empêcher la mutation des emprises foncières logistiques vers d'autres usages ;</li>
+		<li> plus globalement, accompagner le développement des activités logistiques afin de participer au dynamisme économique en Ile-de-France :
+			<ul>
+				<li> en revalorisant l'image de ce secteur stratégique auprès des élus et de la population,</li>
+				<li> en développant les instances de concertation entre acteurs privés et publics.</li>
+				<li> et en remédiant au développement inquiétant de l'insécurité sur les sites et lors des transports (grande délinquance, vols de marchandises,...).</li>
+			</ul>
+		</li>
+	</ul>
+</p>
+
+<p>
+	Par ailleurs la CCIP avance d'autres propositions qui lui paraissent importantes :
+	<ul>
+		<li> sensibiliser les pouvoirs publics sur les conséquences de l'élargissement européen et le " risque " de marginalisation de la façade atlantique ; 
+		tendre vers une harmonisation européenne dans les domaines suivants : normes de sécurité, transports routiers, taxes,…pour parvenir à une plus 
+		saine concurrence entre les différents acteurs des pays européens ;</li>
+		<li> réduire la pression fiscale trop pénalisante (taxe sur les entrepôts, TP, …) et simplifier les procédures administratives (suppression de 
+		l'agrément constructeur,…) ;</li>
+		<li> devant une pénurie de main d'œuvre dans les métiers de manutention et de livraison, viser une adéquation entre l'offre et la demande.</li>
+	</ul>
+</p>
+
+<p>
+	La région Île-de-France doit entretenir et valoriser ses atouts afin de conserver sa place de pôle logistique majeur, le développement des 
+	activités logistiques constituant un élément stratégique de la relance économique. L'élaboration d'un Schéma Régional de Développement Économique 
+	(SRDE) et la révision du Schéma Directeur d'Île-de-France (SDRIF) qui s'engagent actuellement seront l'occasion pour la CCIP, ainsi que pour les 
+	professionnels du transport et de la logistique, d'intervenir dans les débats qui se dérouleront en 2005, afin qu'une place plus importante soit 
+	accordée aux activités logistiques dans les orientations retenues.
+</p>
+
+</blockquote>
+<a href='http://www.etudes.cci-paris-idf.fr/rapport/82'>Source</a>"
 type: carnet
 tag: notes
 ---

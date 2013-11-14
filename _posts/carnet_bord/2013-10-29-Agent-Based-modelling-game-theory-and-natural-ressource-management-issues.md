@@ -1,7 +1,7 @@
 ---
 layout: blogPost
 title: Agent-based modelling, game theory and natural resource management issues
-abstract: Quelques prises de notes sur mes lectures du moment. 
+abstract: Il s'agit d'une prise de notes d'un article introduisant un workshop sur la théorie des jeux et l'utilisation de SMA.
 type: carnet
 tag: notes
 ---

@@ -1,7 +1,16 @@
 ---
 layout: blogPost
 title: Acteurs et pratiques spatiales des dessertes terrestres portuaires - axes ou réseaux européens?
-abstract: Quelques prises de notes sur mes lectures du moment. L'auteur tente de mettre en avant certaines pratiques des acteurs du transport (coopération, investissements,...). Les exemples considérés sont plutôt issus du transport ferroviaire. 
+abstract: "<blockquote cite='http://www.cairn.info/revue-flux-2004-1-page-6.htm'>
+	Les pratiques des opérateurs privés et publics assurant la desserte terrestre des ports européens tendent à recomposer certaines 
+	conditions du transport de marchandises. De nouvelles offres fondées sur un système de navettes ferroviaires produisent une multiplication 
+	des connexions existantes reliant les interfaces maritimes du sud et du nord de l’Europe aux arrière-pays continentaux. L’analyse de quelques 
+	exemples de services révèle des relations croisées entre des acteurs qui valident une logique de coopération plus que d’intégration des 
+	activités nécessaires à la mise en place d’une offre complète de desserte terrestre des chaînes maritimes. Cette forme coopérative valorisant 
+	l’outil ferroviaire et le transport combiné semble configurer, dans une logique axiale centrée sur les principaux ports, le développement 
+	d’une armature européenne du fret.
+</blockquote>
+<a href='http://www.cairn.info/revue-flux-2004-1-page-6.htm'>Source</a>"
 type: carnet
 tag: notes
 ---

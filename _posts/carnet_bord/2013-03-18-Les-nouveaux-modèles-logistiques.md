@@ -1,7 +1,15 @@
 ---
 layout: blogPost
 title: Textile - Les nouveaux modèles logistiques 
-abstract: Quelques prises de notes sur mes lectures du moment. L'article décrit la logistique du textile. Elle s'avère relativement hétérogène puisqu'il n'y a pas qu'une seule chaîne mais plusieurs (dépendant de certains critères expliqués dans l'article). De plus, on voit plus clairement à quels niveaux elle se montre différente de la chaîne logistique de la grande distribution. 
+abstract: "<blockquote cite='http://www.supplychainmagazine.fr/TOUTE-INFO/Archives/SCM023/Enquete-23.pdf'>
+<p>
+L'accroissement des volumes d'achats textile en Asie, les renouvellements de plus en plus rapides des collections dans les magasins, les 
+tensions sur les prix et l’augmentation des coûts d’exploitation obligent les marques et les enseignes à repenser leurs organisations
+logistiques. Si chacune adopte sa propre recette, cette nouvelle donne profite aux prestataires logistiques qui semblent tirer leur épingle 
+du jeu... 
+</p>
+</blockquote>
+<a href='http://www.supplychainmagazine.fr/TOUTE-INFO/Archives/SCM023/Enquete-23.pdf'>Source</a>"
 type: carnet
 tag: notes
 ---

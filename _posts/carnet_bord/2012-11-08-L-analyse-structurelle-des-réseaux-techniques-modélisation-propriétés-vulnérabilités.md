@@ -1,7 +1,12 @@
 ---
 layout: blogPost
 title: L'analyse structurelle des réseaux techniques modélisation, propriétés, vulnérabilités
-abstract: Quelques prises de notes sur mes lectures du moment. Les thèmes abordés ici portent sur l'analyse structurelle des graphes dans un contexte géographique.
+abstract: "<blockquote cite='http://halshs.archives-ouvertes.fr/halshs-00664023'>
+	L'objectif de ce papier du groupe fmr (flux, matrices, réseaux) est de synthétiser les développements concernant l'analyse structurelle des réseaux techniques. Ces analyses s'appuient sur un 
+	postulat important : l'étude structurelle des réseaux techniques permet de faire émerger des éléments de compréhension concernant le fonctionnement, les forces et les faiblesses de ces réseaux. 
+	Cette synthèse présente les différentes modélisations de ces réseaux sous forme de graphe, les principaux indicateurs d'étude des propriétés structurelles et les principes d'étude de leur vulnérabilité.
+</blockquote>
+<a href='http://halshs.archives-ouvertes.fr/halshs-00664023'>Source</a>"
 type: carnet
 ---
 

@@ -1,13 +1,28 @@
 ---
 layout: blogPost
-title: Le nouveau rôle des autorités portuaires dans l’adaptation des clusters aux enjeux de la globalisation
-abstract: Quelques prises de notes sur mes lectures du moment. L'article aborde la réforme portuaire de 2008 en décrivant le nouveau rôle des autorités portuaires.
+title: Le nouveau rôle des autorités portuaires dans l'adaptation des clusters aux enjeux de la globalisation
+abstract: "<blockquote cite='http://espacepolitique.revues.org/index2210.html'>
+	À l'image de ce qui s'est passé dans la plupart des pays européens, les ports français sont entrés dans une phase de transition de leurs activités correspondant 
+	au passage du modèle du 'Toolport' vers celui du 'Landlord'. Ce mouvement, inscrit dans la loi par la réforme portuaire de 2008, devrait les  conduire à 
+	recentrer leurs missions sur des activités de coordination stratégique impliquant une grande diversité d'acteurs, locaux mais également extérieurs à la 
+	circonscription portuaire. Du côté des entreprises, la place portuaire est devenue un lieu de coexistence entre des groupes mondialisés à forte intensité 
+	capitalistique où la massification et la rationalisation des procès logistiques sont poussées au maximum et des PME, souvent familiales, historiquement 
+	implantées dans le port, qui ont tissé un réseau de relations internes aux familles professionnelles, et externes qui leur permet de traiter des niches 
+	commerciales, de proposer des solutions logistiques sur mesure et de fournir aux clients une forte réactivité par rapports aux aléas du commerce mondial 
+	(grèves, conflits armés, piraterie, évènements climatiques). L'article envisage comment les deux termes de cette évolution pourraient se rejoindre : d'une part 
+	le maintien de la cohésion du cluster portuaire comme 'système adaptatif' face aux aléas de la globalisation et d'autre part le nouveau rôle des autorités 
+	portuaires dans le domaine de la coordination stratégique, de la régulation, de la gouvernance territoriale et environnementale, du pilotage et de l'adoption des 
+	innovations par les entreprises. Enfin est étudiée l'hypothèse de l'intégration beaucoup plus effective d'une nouvelle catégorie d'acteurs dans la gouvernance des 
+	ports maritimes français ; les collectivités locales qui disposent des outils de maîtrise foncière, une ressource de plus ne plus essentielle pour le développement 
+	des activités portuaires et logistiques.
+</blockquote>
+<a href='http://espacepolitique.revues.org/index2210.html'>Source</a>"
 type: carnet
 ---
 
 Attention &#58; la suite de ce texte est une prise de notes sur un article/livre/... que je n'ai pas écrit moi-même. Ainsi, les idées présentées ici sont la propriété de leur(s) auteur(s).
 
-## Le nouveau rôle des autorités portuaires dans l’adaptation des clusters aux enjeux de la globalisation
+## Le nouveau rôle des autorités portuaires dans l'adaptation des clusters aux enjeux de la globalisation
 
 ### L'auteur
 
@@ -23,17 +38,17 @@ Ce papier a été écrit en 2012 par Laurent Lévêque.
 ### Le résumé
 
 <blockquote cite="http://espacepolitique.revues.org/index2210.html">
-	À l’image de ce qui s’est passé dans la plupart des pays européens, les ports français sont entrés dans une phase de transition de leurs activités correspondant 
+	À l'image de ce qui s'est passé dans la plupart des pays européens, les ports français sont entrés dans une phase de transition de leurs activités correspondant 
 	au passage du modèle du « Toolport » vers celui du «Landlord ». Ce mouvement, inscrit dans la loi par la réforme portuaire de 2008, devrait les  conduire à 
-	recentrer leurs missions sur des activités de coordination stratégique impliquant une grande diversité d’acteurs, locaux mais également extérieurs à la 
+	recentrer leurs missions sur des activités de coordination stratégique impliquant une grande diversité d'acteurs, locaux mais également extérieurs à la 
 	circonscription portuaire. Du côté des entreprises, la place portuaire est devenue un lieu de coexistence entre des groupes mondialisés à forte intensité 
 	capitalistique où la massification et la rationalisation des procès logistiques sont poussées au maximum et des PME, souvent familiales, historiquement 
 	implantées dans le port, qui ont tissé un réseau de relations internes aux familles professionnelles, et externes qui leur permet de traiter des niches 
 	commerciales, de proposer des solutions logistiques sur mesure et de fournir aux clients une forte réactivité par rapports aux aléas du commerce mondial 
-	(grèves, conflits armés, piraterie, évènements climatiques). L’article envisage comment les deux termes de cette évolution pourraient se rejoindre : d’une part 
-	le maintien de la cohésion du cluster portuaire comme « système adaptatif » face aux aléas de la globalisation et d’autre part le nouveau rôle des autorités 
-	portuaires dans le domaine de la coordination stratégique, de la régulation, de la gouvernance territoriale et environnementale, du pilotage et de l’adoption des 
-	innovations par les entreprises. Enfin est étudiée l’hypothèse de l’intégration beaucoup plus effective d’une nouvelle catégorie d’acteurs dans la gouvernance des 
+	(grèves, conflits armés, piraterie, évènements climatiques). L'article envisage comment les deux termes de cette évolution pourraient se rejoindre : d'une part 
+	le maintien de la cohésion du cluster portuaire comme « système adaptatif » face aux aléas de la globalisation et d'autre part le nouveau rôle des autorités 
+	portuaires dans le domaine de la coordination stratégique, de la régulation, de la gouvernance territoriale et environnementale, du pilotage et de l'adoption des 
+	innovations par les entreprises. Enfin est étudiée l'hypothèse de l'intégration beaucoup plus effective d'une nouvelle catégorie d'acteurs dans la gouvernance des 
 	ports maritimes français ; les collectivités locales qui disposent des outils de maîtrise foncière, une ressource de plus ne plus essentielle pour le développement 
 	des activités portuaires et logistiques.
 </blockquote>

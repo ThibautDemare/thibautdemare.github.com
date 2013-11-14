@@ -8,6 +8,7 @@
 	margin-right: auto;
 	margin-top: 0px;
 	margin-bottom: 10px;
+	padding : 10px;
 }
 
 .bloc_description:hover{
@@ -16,7 +17,6 @@
 }
 
 .bloc_titre {
-	float : left;
 	width : 100%;
 }
 
@@ -53,7 +53,7 @@
 
 .date {
 	margin : 5px;
-	text-align : left;
+	text-align : justify;
 	font-size : 12px;
 }
 

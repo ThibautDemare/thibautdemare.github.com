@@ -1,7 +1,14 @@
 ---
 layout: blogPost
 title: Scale-Free and Smal-World Networks in Geographical Research a Critical Examination
-abstract: Quelques prises de notes sur mes lectures du moment. L'article présenté décrit les scale-free graph et les small-world utilisés dans un contexte géographique.
+abstract: "<blockquote cite='http://halshs.archives-ouvertes.fr/halshs-00623927/'>
+	A rapid surge of interest for networks in the late 1990s throughout natural and social sciences has witnessed the emergence and the diffusion of new concepts and measures. In this paper, we wish 
+	to examine how two recent models of networks (i.e. scale-free and small-world) have been integrated in the works of geographers, what have been the benefits, and whether such concepts are likely 
+	to increase their influence in further works on networks. First, we propose a critical review of the 'scale-free' and 'small-world' concepts, notably based on a review of the physics literature. 
+	The second section examines the spatial dimension in networks studies, and the third one evaluates how geographers have used these measures and concepts in their works. In conclusion, we question 
+	the benefits of these two models of networks to geography compared with other approaches such as the ones developed in sociology.
+</blockquote>
+<a href='http://halshs.archives-ouvertes.fr/halshs-00623927/'>Source</a>"
 type: carnet
 ---
 

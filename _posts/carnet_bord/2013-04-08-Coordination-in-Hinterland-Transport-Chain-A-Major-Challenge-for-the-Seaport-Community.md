@@ -1,7 +1,22 @@
 ---
 layout: blogPost
 title: Coordination in Hinterland Transport Chains - A Major Challenge for the Seaport Community
-abstract: Quelques prises de notes sur mes lectures du moment. Cette article présente les problèmes de coordination entre les acteurs du transport de la marchandise. 
+abstract: "<blockquote cite='http://www.palgrave-journals.com/mel/journal/v10/n1/full/9100194a.html'>
+
+<p>
+Many different private companies – shipping lines, terminal operating companies, forwarders, hinterland transport providers, and inland terminal 
+operators – are involved in hinterland transport. In addition, different public actors such as the port authority, customs, and infrastructure 
+managers are involved. Creating effective hinterland transport chains requires the coordination between all these actors; coordination does not 
+come about spontaneously. Its development may be hindered by free-riding problems, a lack of contractual relationships, information asymmetry, 
+and a lack of incentives for cooperation. This paper presents analyses of the coordination problems in hinterland chains of seaports and 
+arrangements to resolve these problems. The most relevant coordination problems in hinterland chains are discussed. Based on insights from 
+institutional economics, four main categories of arrangements to improve coordination are identified: the introduction of incentives, the creation 
+of an interfirm alliance, changing the scope of the organisation, and collective action. An analysis is presented of a substantial number of 
+coordination arrangements in hinterland transport to and from the port of Rotterdam, thereby indicating how coordination could be improved.
+</p>
+
+</blockquote>
+<a href='http://www.palgrave-journals.com/mel/journal/v10/n1/full/9100194a.html'>Source</a>"
 type: carnet
 tag: notes
 ---

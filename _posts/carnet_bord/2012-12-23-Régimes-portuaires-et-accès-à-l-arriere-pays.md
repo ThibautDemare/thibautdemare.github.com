@@ -1,7 +1,17 @@
 ---
 layout: blogPost
 title: Régimes portuaires et accès à l'arrière pays.
-abstract: Quelques prises de notes sur mes lectures du moment. Ici, les auteurs mettent en valeurs des hypothèses influant les performances d'un port. Il s'agit principalement d'une volonté de la part des acteurs du port de se coordonner. Les trois cas d'étude utilisé par les auteurs semblent donner raisons à ces hypothèses.
+abstract: "<blockquote cite='http://afitl.ish-lyon.cnrs.fr/index.php/contenu-des-precedents-numeros.html?id_CST=16'>
+	Une des fonctions des ports maritimes est de desservir l'arrière-pays. Différents modes d'accès tels que la route, le rail, les voies fluviales et les pipelines sont 
+	utilisés pour atteindre l'arrière-pays. La qualité d'accès de l'arrière-pays diffère d'un port à l'autre et affecte leur compétitivité. La qualité de l'accès de 
+	l'arrière-pays dépend d'une grande variété d'acteurs, tels que les armements de lignes régulières, les transitaires, l'autorité portuaire, et les pouvoirs publics. 
+	Ensemble, ses acteurs forment 'le régime d'accès à l'arrière-pays'. L'analyse de ce régime est le sujet principal de cet article. En premier lieu, l'importance de 
+	l'accès à l'arrière-pays pour les ports est brièvement étudiée. En deuxième lieu, le terme 'régime d'accès à l'arrière-pays' est défini et un cadre d'analyse de la 
+	qualité de ce régime est présenté. En troisième lieu sont comparés les résultats de l'enquête sur la qualité du régime d'accès à l'arrière-pays dans trois clusters de 
+	ports maritimes, Rotterdam, Durban et le cluster du port du Mississippi inférieure (LMPC). En quatrième lieu, des pistes d'amélioration du régime d'accès à l'arrière-pays 
+	sont discutées pour ces trois cas.
+</blockquote>
+<a href='http://afitl.ish-lyon.cnrs.fr/index.php/contenu-des-precedents-numeros.html?id_CST=16'>Source<a/>"
 type: carnet
 tag: notes
 ---
@@ -18,13 +28,13 @@ Cet article est paru en 2003 dans "Les Cahiers scientifiques du Transport" et a 
 ### Le résumé
 
 <blockquote cite="http://afitl.ish-lyon.cnrs.fr/index.php/contenu-des-precedents-numeros.html?id_CST=16">
-	Une des fonctions des ports maritimes est de desservir l’arrière-pays. Différents modes d’accès tels que la route, le rail, les voies fluviales et les pipelines sont 
-	utilisés pour atteindre l’arrière-pays. La qualité d’accès de l’arrière-pays diffère d’un port à l’autre et affecte leur compétitivité. La qualité de l’accès de 
-	l’arrière-pays dépend d’une grande variété d’acteurs, tels que les armements de lignes régulières, les transitaires, l’autorité portuaire, et les pouvoirs publics. 
-	Ensemble, ses acteurs forment " le régime d’accès à l’arrière-pays ". L’analyse de ce régime est le sujet principal de cet article. En premier lieu, l’importance de 
-	l’accès à l’arrière-pays pour les ports est brièvement étudiée. En deuxième lieu, le terme " régime d’accès à l’arrière-pays " est défini et un cadre d’analyse de la 
-	qualité de ce régime est présenté. En troisième lieu sont comparés les résultats de l’enquête sur la qualité du régime d’accès à l’arrière-pays dans trois clusters de 
-	ports maritimes, Rotterdam, Durban et le cluster du port du Mississippi inférieure (LMPC). En quatrième lieu, des pistes d’amélioration du régime d’accès à l’arrière-pays 
+	Une des fonctions des ports maritimes est de desservir l'arrière-pays. Différents modes d'accès tels que la route, le rail, les voies fluviales et les pipelines sont 
+	utilisés pour atteindre l'arrière-pays. La qualité d'accès de l'arrière-pays diffère d'un port à l'autre et affecte leur compétitivité. La qualité de l'accès de 
+	l'arrière-pays dépend d'une grande variété d'acteurs, tels que les armements de lignes régulières, les transitaires, l'autorité portuaire, et les pouvoirs publics. 
+	Ensemble, ses acteurs forment " le régime d'accès à l'arrière-pays ". L'analyse de ce régime est le sujet principal de cet article. En premier lieu, l'importance de 
+	l'accès à l'arrière-pays pour les ports est brièvement étudiée. En deuxième lieu, le terme " régime d'accès à l'arrière-pays " est défini et un cadre d'analyse de la 
+	qualité de ce régime est présenté. En troisième lieu sont comparés les résultats de l'enquête sur la qualité du régime d'accès à l'arrière-pays dans trois clusters de 
+	ports maritimes, Rotterdam, Durban et le cluster du port du Mississippi inférieure (LMPC). En quatrième lieu, des pistes d'amélioration du régime d'accès à l'arrière-pays 
 	sont discutées pour ces trois cas.
 </blockquote>
 [Source](http://afitl.ish-lyon.cnrs.fr/index.php/contenu-des-precedents-numeros.html?id_CST=16)
