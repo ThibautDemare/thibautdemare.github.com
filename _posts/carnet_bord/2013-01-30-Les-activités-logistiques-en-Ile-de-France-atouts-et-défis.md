@@ -25,7 +25,7 @@ abstract: "<blockquote cite='http://www.etudes.cci-paris-idf.fr/rapport/82'>
 <p>
 	Par ailleurs la CCIP avance d'autres propositions qui lui paraissent importantes :
 	<ul>
-		<li> sensibiliser les pouvoirs publics sur les conséquences de l'élargissement européen et le " risque " de marginalisation de la façade atlantique ; 
+		<li> sensibiliser les pouvoirs publics sur les conséquences de l'élargissement européen et le 'risque' de marginalisation de la façade atlantique ; 
 		tendre vers une harmonisation européenne dans les domaines suivants : normes de sécurité, transports routiers, taxes,…pour parvenir à une plus 
 		saine concurrence entre les différents acteurs des pays européens ;</li>
 		<li> réduire la pression fiscale trop pénalisante (taxe sur les entrepôts, TP, …) et simplifier les procédures administratives (suppression de 
