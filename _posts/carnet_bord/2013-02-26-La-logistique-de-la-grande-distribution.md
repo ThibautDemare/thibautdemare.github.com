@@ -100,18 +100,14 @@ encore son poids dans l'économie national.
 On distingue plusieurs types de magasins eux même classés dans trois catégories :
 
 - La grande distribution alimentaire :
-
    * L'hypermarché : supérieur ou égale à 2500m².
    * Le supermarché : entre 400 et 2500m².
    * Le magasin de hard discount : superficie similaire au supermarché, mais la présentation des produits est moins travaillée : ils sont souvent directement sur les palettes. Par contre les prix sont plus compétitifs.
    * Les magasins populaires : équivalent au supermarché mais en centre-ville.
    * Les petits supermarchés : entre 120 et 400m².
-   
 - La grande distribution non alimentaire :
-
    * Les grands magasins : supérieur ou égale à 2500m². Ils réalisent, au plus, moins du tiers de leur ventes en alimentation.
    * Les grandes surfaces spécialisées : électroménager, articles et vêtements de sport, bricolage, ameublement, matériel informatique, produits culturels,...
-   
 - Les cybermarchés : site de e-commerce proposant de livrer des produits de la grande distribution directement chez le client.
 
 
@@ -127,6 +123,7 @@ Les grands distributeurs passent leur commandes via des centrales d'achats (cell
 Ils ne sont pas en contact direct avec les fournisseurs (sauf éventuellement les fournisseurs locaux).
 
 Via un schémas, la synthèse distingue différentes infrastructures de la chaîne logistique dans la grande distribution :
+
 - Unité de production
 - Centre de distribution national/international
 - centre de transformation
@@ -155,7 +152,8 @@ périssabilité, sensibilité aux vols,...)
 On estime que les entrepôts alimentaires sont régionaux car ils ont un rayon d'emprise d'environ 300km maximum, pour les entrepôts 
 non-alimentaire c'est plus variables.
 
-On distingue 4 stratégies de la localisation des structures logistiques : 
+On distingue 4 stratégies de la localisation des structures logistiques :
+
 - Logistique concentrée : une seule base sans spécialisation par région logistique, situé au barycentre des magasins.
 - Logistique répartie : plusieurs bases par région, spécialisées par produits (ou autre type de spécialisation) et réparties de façon homogènes 
 sur le territoire en vue de desservir les points de vente de façon optimale. C'est dans ce type d'organisation que l'on trouve le plus de 
