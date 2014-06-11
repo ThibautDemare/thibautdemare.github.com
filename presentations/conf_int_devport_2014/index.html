@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Agent-Based Model and Networks</title>
+
+        <!-- 
+Stylesheets
+-->
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/simple.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Ubuntu fonts -->
+        <link rel="stylesheet" type="text/css" href="css/ubuntu_font.css">
+
+
+    </head>
+
+    <body>
+
+        <div  id="header">
+            <div id="presenter_name">
+                Thibaut Démare<br />
+                LITIS - thibaut.demare@univ-lehavre.fr
+            </div>
+            <div id="title">
+                Agent-Based Model and Networks <br />
+                The Modelling of the Maritime and Metropolitan Interfaces of the Seine Axis
+            </div>
+            <div id="conf_name_date">
+                Devport Conference <br />
+                12 &amp; 13 June 2014
+            </div>
+            <div class="clear_div"></div>
+        </div>
+
+        <div id="slideChartNumberOfBatch">
+            <h3 class="frame_title">The number of batches between provider, warehouses (national, regional, local), and final destination</h3>
+            <div id="chartNumberOfBatch"></div>
+        </div>
+
+        <div id="slideChartStockOnRoads">
+            <h3 class="frame_title">The quantity of goods between provider, warehouses (national, regional, local), and final destination</h3>
+            <div id="chartStockOnRoads"></div>
+        </div>
+
+        <div id="slideChartSizeConnectedComponentsDistribution">
+            <h3 class="frame_title">The distribution of connected components according to their sizes of the previous graph</h3>
+            <div id="chartSizeConnectedComponentsDistribution"></div>
+        </div>
+        
+        <div class="reveal">
+
+            <div id="slides" class="slides">
+
+                <!-- Title -->
+                <section id="main_title">
+                    <h1>Agent-Based Model and Networks</h1>
+                    <h2>The Modelling of the Maritime and Metropolitan Interfaces of the Seine Axis</h2>
+
+                    <br />
+                    Thibaut Démare
+                    <br />
+                    Cyrille Bertelle, Antoine Dutot, and Laurent Lévêque
+                    <br />
+                    LITIS - Université du Havre
+                    <br />
+                    Devport International Conference for Ports, Maritime Transport and Regional Development
+                    <br />
+                    12 &amp; 13 June 2014
+                    <br />
+                </section>
+
+                <!-- Introduction -->
+                <section>
+                    <section data-background="rgb(32, 33, 34)" class="section_title">
+                        <h1>Introduction</h1>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">A little bit of context</h3>
+                        <p>
+                            A thesis' work from a collaboration between :
+                            <ul>
+                                <li>The members of the Devport project who want to model ports organisations and their hinterland.</li>
+                                <li class="fragment" data-fragment-index="1">And the LITIS whose his RI²C team (Réseaux d'Interaction et Intelligence Collective) works on complex system and on dynamic interaction networks.</li>
+                            </ul>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">What is the Seine Axis?</h3>
+                        
+                        <p class="centered">It is a geographical space...</p>
+                        <div id="div_seine_axis_frontiers" class="figure">
+                            <img id="seine_axis_frontiers" src="img/presentation/seine_axis.png" alt="The Seine axis frontiers" />
+                            <span class="legend">Figure 1 : The Seine axis frontiers</span>
+                        </div>
+                    </section>
+                
+                    <section>
+                        <h3 class="frame_title">What is the Seine Axis?</h3>
+                        
+                        <p class="centered">...with a huge population whose inhabitants consume goods.</p>
+                        <div id="div_population_density" class="figure">
+                            <img id="population_density" src="img/presentation/population_density.png" alt="The population density of the Seine axis in 2007" />
+                            <span class="legend">Figure 2 : The population density of the Seine axis in 2007</span>
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">What do we want to do?</h3>
+                        
+                        <p class="centered"> 
+                            We want to model how the goods are carried from providers to these consumers thanks to actors of logistic who must organise themselves.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">What is the matter?</h3>
+                        
+                        <p>
+                            <ul>
+                                <li>At a micro level : we observe numerous and heterogeneous actors strongly interacting with each others. They organise themselves in order to build many uniques supply chains.</li>
+                                <li class="fragment" data-fragment-index="1">At a macro level : there is an overall pattern where goods come from foreign providers and go through the Seine axis to urban areas (mainly through Le Havre and to Paris' region).</li>
+                                <li class="fragment" data-fragment-index="2">But we can't understand the overall process only with the study of the auto-organisation of the micro level.</li>
+                            </ul>
+                        </p>
+                        <p class="highlighted fragment" data-fragment-index="3">It is a complex system !</p>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">What will we do?</h3>
+                        
+                        <p class="centered">We want to use tools from the complex system theory in order to model this environment.</p>
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">Individual centred based model : multi agent system.</li>
+                            <li class="fragment" data-fragment-index="2">Graph theory : dynamic network and analysis tools.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">Overview</h3>
+                        
+                        <p>
+                            <ol>
+                                <li class="fragment frag-current">The Seine axis logistics.</li>
+                                <li class="fragment frag-current">Agents and graphs</li>
+                                <li class="fragment frag-current">Conceptual Model</li>
+                                <li class="fragment frag-current">The Simulation</li>
+                                <li class="fragment frag-current">The First Results</li>
+                            </ol>
+                        </p>
+                    </section>
+                </section>
+
+                <!-- The Seine Axis Logistic -->
+                <section>
+                    <section data-background="rgb(32, 33, 34)" class="section_title">
+                        <h1>The Seine Axis Logistic</h1>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">Importers and exporters</h3>
+                        <ul>
+                            <li>Initiate the transportation of goods.</li>
+                            <li>Negotiate international sales contracts including the Incoterms (International Commercial Terms).</li>
+                        </ul>
+                        
+                        <h3 class="frame_title fragment" data-fragment-index="1">Forwarding agents</h3>
+                        <ul class="fragment" data-fragment-index="1">
+                            <li>Organise the transportation on behalf of his customer.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">Transport operators</h3>
+                        <ul>
+                            <li>Provide vehicles to transport goods from a place to another.</li>
+                            <li>Are responsible of goods during the transportation.</li>
+                        </ul>
+                        
+                        <h3 class="frame_title fragment" data-fragment-index="1">Logistic providers</h3>
+                        <ul class="fragment" data-fragment-index="1">
+                            <li>Provide a way to manage goods within and between warehouses of a supply chain.</li>
+                            <li>4PL provide softwares and 3PL physically handle goods.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">A network made of networks...</h3>
+                        <ul>
+                            <li>Maritime lines.</li>
+                            <li>Road network.</li>
+                            <li>River network.</li>
+                            <li>Rail network.</li>
+                        </ul>
+                        
+                        <h3 class="frame_title fragment" data-fragment-index="1">... with multi-modal interfaces : the maritime and river terminals</h3>
+                        <ul class="fragment" data-fragment-index="1">
+                            <li>Allow to load (resp. unload) goods on (resp. from) a ship.</li>
+                            <li>Connected to the hinterland by others transportation mode</li>
+                            <li>Could stock temporarily goods.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">Warehouses and logistics platforms</h3>
+                        <ul>
+                            <li>Outsource the stock of another building.</li>
+                            <li>Could provide another logistics activities such as :</li>
+                            <ul>
+                                <li>Cross-docking.</li>
+                                <li>Container packing/unpacking.</li>
+                                <li>Quality control.</li>
+                                <li>Repackaging...</li>
+                            </ul>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">Warehouses and logistics platforms</h3>
+                        
+                        <div id="div_entonnoir" class="figure">
+                            <img src="img/presentation/reseau_entrepot_entonnoir_en.v2.0.svg" id="entonnoir"/>
+                            <span class="legend">Figure 3 : Logistics buildings in a "funnel" network (sometimes called join network)</span>
+                        </div>
+                        <div id="div_trompette" class="figure">
+                            <img src="img/presentation/reseau_entrepot_trompette_en.v2.0.svg" id="trompette"/>
+                            <span class="legend">Figure 4 : Logistics buildings in a "trumpet" network (sometimes called fork network)</span>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div id="div_physical_flow" class="figure">
+                            <img id="physical_flow" src="img/presentation/diagramme_flux_physique_plus_acteurs_horizontal_en.svg"/>
+                            <span class="legend">Figure 5 : Each actor manages a part of the flow</span>
+                        </div>
+                    </section>
+
+                </section>
+
+                <!-- Graphs and agents -->
+                <section>
+                    <section data-background="rgb(32, 33, 34)" class="section_title">
+                        <h1>Agents and graphs</h1>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">What is an agent?</h3>
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">It is an entity modelling either an object, an individual, a system,...</li>
+                            <li class="fragment" data-fragment-index="2">It can have some properties which characterised it, such as : a weight, or a size, or a surface, or a shape,...</li>
+                            <li class="fragment" data-fragment-index="3">It can have some capacities such as :</li>
+                                <ul>
+                                    <li class="fragment" data-fragment-index="4">to perceive his environment</li>
+                                    <li class="fragment" data-fragment-index="5">to manipulate his environment</li>
+                                    <li class="fragment" data-fragment-index="6">to interact with others agents</li>
+                                </ul>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">What is a graph?</h3>
+                        
+                        <img src="img/presentation/graph_without_edges.svg" class="graph"/>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">What is a graph?</h3>
+                        
+                        <img src="img/presentation/graph_undirected.svg" class="graph"/>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">What is a graph?</h3>
+                        
+                        <img src="img/presentation/graph_directed.svg" class="graph"/>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">What is a graph?</h3>
+                        
+                        <img src="img/presentation/graph_directed_valued.svg" class="graph"/>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">What is a graph?</h3>
+                        <div id="div_le_havre" class="figure">
+                            <img src="img/presentation/graph_Le_Havre.svg" id="le_havre"/>
+                            <span class="legend">Figure 6 : The road network of le Havre and his region</span>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- Conceptual Model -->
+                <section>
+                    <section data-background="rgb(32, 33, 34)" class="section_title">
+                        <h1>Conceptual Model</h1>
+                    </section>
+                    
+                    <section>
+                        <ul>
+                            <li>An agent-based model, coupled with graphs.</li>
+                            <li class="fragment" data-fragment-index="1">Each actor from the reality his modelled by an agent (disaggregated model).</li>
+                            <li class="fragment" data-fragment-index="2">Generalisation of agent concept to infrastructures.</li>
+                            <li class="fragment" data-fragment-index="3">The model can be easily coupled with other model through agents' behaviours.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">Some kind of agents are actors</h3>
+                        <div>
+                            <img src="img/presentation/modele_relation_entre_acteur_v3.0_en_simplified.svg" id="model_actors"/>
+                            <span class="legend">Figure 7 : Network representation of possible interactions between agents</span>
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">Some kind of agents are actors</h3>
+                        <div>
+                            <img src="img/presentation/modele_relation_entre_acteur_v3.0_en_simplified_zoom1.svg" id="model_actors_zoom1"/>
+                            <span class="legend">Figure 7a : Network representation of possible interactions between agents</span>
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">Some kind of agents are actors</h3>
+                        <div>
+                            <img src="img/presentation/modele_relation_entre_acteur_v3.0_en_simplified_zoom2.svg" id="model_actors_zoom2"/>
+                            <span class="legend">Figure 7b : Network representation of possible interactions between agents</span>
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">Some kind of agents are actors</h3>
+                        <div>
+                            <img src="img/presentation/modele_relation_entre_acteur_v3.0_en_simplified_zoom3.svg" id="model_actors_zoom3"/>
+                            <span class="legend">Figure 7c : Network representation of possible interactions between agents</span>
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">Some kind of agents are actors</h3>
+                        <div>
+                            <img src="img/presentation/modele_relation_entre_acteur_v3.0_en_simplified_zoom4.svg" id="model_actors_zoom4"/>
+                            <span class="legend">Figure 7d : Network representation of possible interactions between agents</span>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">Some kind of agents are infrastructures</h3>
+                        
+                        <ul>
+                            <li>Some agents model physical network (road, river, ...) and have particular characteristics (max speed,...).</li>
+                            <li class="fragment" data-fragment-index="1">Some others represent terminals. They are connected to different networks and have a surface.</li>
+                            <li class="fragment" data-fragment-index="2">Others represent a building such as warehouses, and they have also a surface.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">Goods need to follow a determined supply chain</h3>
+                        <div id="div_model_supply" class="figure">
+                            <img src="img/presentation/diagramme_modele_reseaux_physique_vertical_en.svg" id="model_supply"/>
+                            <span class="legend">Figure 8 : Simplified representation of the international flow of containerised goods</span>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- The Simulation -->
+                <section>
+                    <section data-background="rgb(32, 33, 34)" class="section_title">
+                        <h1>The Simulation</h1>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">The GAMA platform</h3>
+                        <div class="centered">
+                            <video controls muted loop preload="auto">
+                                <source src="video/demo_gama.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video> 
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">The infrastructures</h3>
+                        <ul>
+                            <li><b>Road</b> agents : goods move on a directed and valued graph made of these Road agents, according to shortest path.</li>
+                            <li class="fragment" data-fragment-index="1"><b>Building</b> agents : they represent the final consignees, and can receive and stock goods (in the limit of the free surface).</li>
+                            <li class="fragment" data-fragment-index="2"><b>Warehouse</b> agents : they can stock, as Building agents, but can also send goods.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h3>The actors</h3>
+                        <ul>
+                            <li><b>Provider</b> agent : it is the unique provider. It has the capacity to satisfy every order.</li>
+                            <li class="fragment" data-fragment-index="1"><b>FinalDestinationManager</b> agents : theirs stocks (within a Building) are regularly consumed, so, they make some orders to restock to his LogisticProvider.</li>
+                            <li class="fragment" data-fragment-index="2"><b>LogisticProvider</b> agents : they define a supply chain to each of their customers and satisfy the orders to restock. If they can not, they make an order to the Provider.</li>
+                        </ul>
+                    </section>
+    
+                    <section>
+                        <h3>The goods</h3>
+                        <ul>
+                            <li><b>Stock</b> agents : they characterise the amount of goods within a Building or a Warehouse.</li>
+                            <li class="fragment" data-fragment-index="1"><b>Order</b> agents : they model how many goods an actor must moved from a place to another </li>
+                            <li class="fragment" data-fragment-index="2"><b>Batch</b> agents : they represent the moving goods. They have a position on the network, a speed, a destination and can have break bulks.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3>Analysis tools</h3>
+                        <ul>
+                            <li>Charts of evolution of variables of the simulation such as : overall stock within warehouses or final destination, number of Batch agents on road...</li>
+                            <li class="fragment" data-fragment-index="1">Neighbourhood graphs, the whole supply chains graph, collaboration graph between FinalDestinationManager and LogisticProvider.</li>
+                            <li class="fragment" data-fragment-index="2">Computation of different measures on these graphs.</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <!-- The First Results -->
+                <section>
+                    <section data-background="rgb(32, 33, 34)" class="section_title">
+                        <h1>The First Results</h1>
+                    </section>
+
+                    <section>
+                        <div id="div_neighbourhood_warehouse" class="figure">
+                            <img src="img/presentation/neighbourhood_warehouse.svg" id="neighbourhood_warehouse"/>
+                            <span class="legend">Figure 9 : 
+                                The neighbourhood graph of warehouses with a maximal distance of 1km
+                                <br /><br />
+                                In grey : Ile-de-France;
+                                <br />
+                                In orange : Picardie;
+                                <br />
+                                In green : Centre;
+                                <br />
+                                In violet : Haute-Normandie;
+                                <br />
+                                In blue : Basse-Normandie
+                            </span>
+                        </div>
+                    </section>
+                    
+                    <section id="sectionChartSizeConnectedComponentsDistribution">
+
+                    </section>
+                    
+                    <section id="sectionChartNumberOfBatch">
+
+                    </section>
+
+                    <section id="sectionChartStockOnRoads">
+
+                    </section>
+                    
+                </section>
+
+                <!-- Conclusion -->
+                <section>
+                    <section data-background="rgb(32, 33, 34)" class="section_title">
+                        <h1>Conclusion</h1>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">What have we done?</h3>
+                        
+                        <ul>
+                            <li>Describe the logistic of the Seine axis : an environment seen as a complex system.</li>
+                            <li class="fragment" data-fragment-index="1">Define a conceptual model based on tools often used to model complex systems.</li>
+                            <ul>
+                                <li class="fragment" data-fragment-index="1">A multi agent system, coupled with graphs.</li>
+                                <li class="fragment" data-fragment-index="1">Agents built from geographical data (Shapefile).</li>
+                            </ul>
+                            <li class="fragment" data-fragment-index="2">Develop an agent based simulation platform in order to test and study this model.</li>
+                            <li class="fragment" data-fragment-index="3">Develop measures of this simulation in order to improve our understanding.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">What do we want to do?</h3>
+                        <ul>
+                            <li>Add multi-modal network and unimplemented actors such as forwarding agent.</li>
+                            <li class="fragment" data-fragment-index="1">Add algorithms of community detection in order to reveal stable cluster of collaborating agents.</li>
+                            <li class="fragment" data-fragment-index="2">Confront simulation results to real data.</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h3 class="frame_title">Thank you for your attention!</h3>
+                    </section>
+                </section>
+            </div>
+
+
+        </div>
+
+        <script src="js/reveal.js"></script>
+        <script type="text/javascript">
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                width: 1920,
+                height: 1200,
+                margin: 0,
+                minScale: 0.0,
+                maxScale: 1.0,
+                transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+                slideNumber: true
+            });
+        </script>
+
+        <!-- 
+Javascripts
+-->
+        <!-- JQuery -->
+        <script src="js/plugin/jquery-2.1.0.min.js"></script>
+        <script src="js/plugin/jquery-ui-1.10.4.custom.js"></script>
+        <!-- AmCharts -->
+        <script src="js/plugin/amcharts.js" type="text/javascript"></script>
+        <script src="js/plugin/serial.js" type="text/javascript"></script>
+        <!-- Script to import CSV to javascript object/array/... -->
+        <script src="js/plugin/jquery.csv-0.71.min.js"></script>
+        <!-- Custom script to display charts -->
+        <script src="js/main_simulation_measures.js"></script>
+
+    </body>
+</html>	
