@@ -80,7 +80,7 @@ Stylesheets
                     <section>
                         <h3 class="frame_title">A little bit of context</h3>
                         <p>
-                            A thesis' work from a collaboration between :
+                            A work of thesis from a collaboration between :
                             <ul>
                                 <li>The members of the Devport project who want to model ports organisations and their hinterland.</li>
                                 <li class="fragment" data-fragment-index="1">And the LITIS whose his RI²C team (Réseaux d'Interaction et Intelligence Collective) works on complex system and on dynamic interaction networks.</li>
@@ -134,8 +134,8 @@ Stylesheets
                         
                         <p class="centered">We want to use tools from the complex system theory in order to model this environment.</p>
                         <ul>
-                            <li class="fragment" data-fragment-index="1">Individual centred based model : multi agent system.</li>
-                            <li class="fragment" data-fragment-index="2">Graph theory : dynamic network and analysis tools.</li>
+                            <li class="fragment" data-fragment-index="1">Individual centred based models : multi agent systems.</li>
+                            <li class="fragment" data-fragment-index="2">Graph theory : dynamic networks and analysis tools.</li>
                         </ul>
                     </section>
 
@@ -167,7 +167,7 @@ Stylesheets
                             <li>Negotiate international sales contracts including the Incoterms (International Commercial Terms).</li>
                         </ul>
                         
-                        <h3 class="frame_title fragment" data-fragment-index="1">Forwarding agents</h3>
+                        <h3 class="frame_title fragment" data-fragment-index="1">Freight forwarders</h3>
                         <ul class="fragment" data-fragment-index="1">
                             <li>Organise the transportation on behalf of his customer.</li>
                         </ul>
@@ -249,13 +249,13 @@ Stylesheets
                     <section>
                         <h3 class="frame_title">What is an agent?</h3>
                         <ul>
-                            <li class="fragment" data-fragment-index="1">It is an entity modelling either an object, an individual, a system,...</li>
-                            <li class="fragment" data-fragment-index="2">It can have some properties which characterised it, such as : a weight, or a size, or a surface, or a shape,...</li>
-                            <li class="fragment" data-fragment-index="3">It can have some capacities such as :</li>
+                            <li>It is an entity modelling either an object, an individual, a system,...</li>
+                            <li class="fragment" data-fragment-index="1">It can have some properties which characterised it, such as : a weight, or a size, or a surface, or a shape,...</li>
+                            <li class="fragment" data-fragment-index="2">It can have some capacities such as :</li>
                                 <ul>
-                                    <li class="fragment" data-fragment-index="4">to perceive his environment</li>
-                                    <li class="fragment" data-fragment-index="5">to manipulate his environment</li>
-                                    <li class="fragment" data-fragment-index="6">to interact with others agents</li>
+                                    <li class="fragment" data-fragment-index="3">to perceive his environment</li>
+                                    <li class="fragment" data-fragment-index="4">to manipulate his environment</li>
+                                    <li class="fragment" data-fragment-index="5">to interact with others agents</li>
                                 </ul>
                         </ul>
                     </section>
@@ -354,7 +354,7 @@ Stylesheets
                         <ul>
                             <li>Some agents model physical network (road, river, ...) and have particular characteristics (max speed,...).</li>
                             <li class="fragment" data-fragment-index="1">Some others represent terminals. They are connected to different networks and have a surface.</li>
-                            <li class="fragment" data-fragment-index="2">Others represent a building such as warehouses, and they have also a surface.</li>
+                            <li class="fragment" data-fragment-index="2">Others represent buildings such as warehouses, and they have also a surface.</li>
                         </ul>
                     </section>
                     
@@ -427,6 +427,20 @@ Stylesheets
                     </section>
 
                     <section>
+                        <h3 class="frame_title">Video of the simulation</h3>
+                        <div class="centered" id="div_vid_simu">
+                            <video controls muted loop preload="auto" id="vid_simu">
+                                <source src="video/simulation.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video> 
+                        </div>
+                        <span>
+                        Blue squares : warehouses; green square : provider; oranges squares : final consignees; 
+                        triangles : batches of goods (colours depend on their origin and destination)
+                        </span>
+                    </section>
+                    
+                    <section>
                         <div id="div_neighbourhood_warehouse" class="figure">
                             <img src="img/presentation/neighbourhood_warehouse.svg" id="neighbourhood_warehouse"/>
                             <span class="legend">Figure 9 : 
@@ -473,7 +487,7 @@ Stylesheets
                             <li class="fragment" data-fragment-index="1">Define a conceptual model based on tools often used to model complex systems.</li>
                             <ul>
                                 <li class="fragment" data-fragment-index="1">A multi agent system, coupled with graphs.</li>
-                                <li class="fragment" data-fragment-index="1">Agents built from geographical data (Shapefile).</li>
+                                <li class="fragment" data-fragment-index="1">Agents built from actors defined and positioned in geographical data (Shapefiles).</li>
                             </ul>
                             <li class="fragment" data-fragment-index="2">Develop an agent based simulation platform in order to test and study this model.</li>
                             <li class="fragment" data-fragment-index="3">Develop measures of this simulation in order to improve our understanding.</li>
@@ -483,7 +497,7 @@ Stylesheets
                     <section>
                         <h3 class="frame_title">What do we want to do?</h3>
                         <ul>
-                            <li>Add multi-modal network and unimplemented actors such as forwarding agent.</li>
+                            <li>Add multi-modal network and unimplemented actors such as freight forwarder.</li>
                             <li class="fragment" data-fragment-index="1">Add algorithms of community detection in order to reveal stable cluster of collaborating agents.</li>
                             <li class="fragment" data-fragment-index="2">Confront simulation results to real data.</li>
                         </ul>
@@ -491,6 +505,7 @@ Stylesheets
                     
                     <section>
                         <h3 class="frame_title">Thank you for your attention!</h3>
+                        
                     </section>
                 </section>
             </div>

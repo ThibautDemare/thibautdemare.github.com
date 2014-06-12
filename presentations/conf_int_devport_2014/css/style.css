@@ -3,16 +3,6 @@ body{
     color: rgb(32, 33, 34);
 }
 
-img {
-    display : block;
-    margin: auto;
-}
-
-video {
-    width : 1366px;
-    height : 768px;
-}
-
 .reveal ul {
     margin-bottom: 10px;   
 }
@@ -31,8 +21,26 @@ video {
 }
 
 /*
+* Video
+*/
+
+video {
+    width : 1366px;
+    height : 768px;
+}
+
+#div_vid_simu {
+    float : left;
+}
+
+/*
 * Images
 */
+
+img {
+    display : block;
+    margin: auto;
+}
 
 #div_seine_axis_frontiers {
     margin: auto;

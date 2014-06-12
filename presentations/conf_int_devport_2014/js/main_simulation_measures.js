@@ -36,6 +36,16 @@ var colorAxis = "#333333";
  * Init
  */
 $(document).ready(function() {
+    
+    /*
+     * Accelerate the speed of the video on the simulation
+     */
+    vid=document.getElementById("vid_simu");
+    vid.playbackRate=3.0;
+    
+    /*
+     * Charts management
+     */
     Reveal.addEventListener( 'slidechanged', function( event ) {
         displayChart(event);
     });
