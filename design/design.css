@@ -8,11 +8,12 @@ body {
     height: 100%;
 }
 
-/* Style des paragraphes. 
-p {
-	text-align : justify;
-	margin: 0px 0px 20px 0px;
-}*/
+/* Design of social icon */
+.social_icon{
+    background: #404040;
+    border-radius: 5px;
+    margin-right: 10px;
+}
 
 /**
   * Licence
