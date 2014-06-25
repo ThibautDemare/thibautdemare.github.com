@@ -10,9 +10,10 @@ body {
 
 /* Design of social icon */
 .social_icon{
-    background: #404040;
+    background: #b3b3b3;
     border-radius: 5px;
     margin-right: 10px;
+    padding: 3px;
 }
 
 /**
