@@ -19,7 +19,7 @@ $(document).ready(function() {
 				});
 			}
 		);
-		setTimeout("slide()", 5000);
+		setTimeout("slide()", 10000);
 	}
 });
 
@@ -32,12 +32,12 @@ function slide(){
 			numActu=0;
 		//We do a transition every 6 secondes
 		transitionActu(from, numActu);
-		setTimeout("slide()", 5000);
+		setTimeout("slide()", 10000);
 	}
 	else{
 		//When someone clicks on a button, we freeze the animation for 30 secondes
 		pause=false;
-		setTimeout("slide()", 30000);
+		setTimeout("slide()", 45000);
 	}
 }
 
