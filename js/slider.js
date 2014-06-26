@@ -43,9 +43,9 @@ function slide(){
 
 function transitionActu(from, to){
 	//firstly we hide the current article
-	$("#actu-"+from).hide("slide", { direction: "right" }, timing);
+	$("#actu-"+from).hide("slide", { direction: "left" }, timing);
 	//Secondly  we show the next article
-	$("#actu-"+to).show("slide", { direction: "left" }, timing);
+	$("#actu-"+to).show("slide", { direction: "right" }, timing);
 
 }
 
