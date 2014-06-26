@@ -72,8 +72,13 @@ Make a slider of actuality
   		<li id="actu-{{ i }}" class="actu actu_cache photos">
   				{% endif %}
   				{% assign i=i | plus:1  %}
+                {% if post.type == "null" %}
   				<img src="/img/photos/{{ post.img }}" alt="{{ post.title }}" height="400px">
+  				<span class="source-photo">{{ post.title }}</span>
+                {% else %}
+                <img src="/img/photos/{{ post.img }}" alt="{{ post.title }}" height="400px">
   				<span class="source-photo">Vu sur <a href="{{post.sourceURL }}">{{ post.sourceName }}</a></span>
+                {% endif %}
   			{% endif %}
 		</li>
 		{% endfor %}
