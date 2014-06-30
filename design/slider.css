@@ -21,6 +21,9 @@
 	/*height : 290px;*/
 }
 
+#actus img {
+    max-width: 100%;
+}
 #div_navigateur_actu{
 	padding : 5px 0px;
 	text-align : center;
