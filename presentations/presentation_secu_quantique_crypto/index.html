@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Ordinateur quantique et avenir de la cryptographie</title>
+        <meta charset="UTF-8">
+        
+        <!-- 
+            Stylesheets
+        -->
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/simple.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Ubuntu fonts -->
+        <link rel="stylesheet" type="text/css" href="css/ubuntu_font.css">
+    </head>
+
+    <body>
+
+        <div  id="header">
+            <div id="presenter_name">
+                Thibaut Démare<br />
+                LITIS - thibaut.demare@univ-lehavre.fr
+            </div>
+            <div id="title">
+                Ordinateur quantique <br />et avenir de la cryptographie
+            </div>
+            <div id="conf_name_date">
+                Cours de sécu <br />
+                21 Février 2015
+            </div>
+            <div class="clear_div"></div>
+        </div>
+
+        <div class="reveal">
+
+            <div id="slides" class="slides">
+
+                <!-- Title -->
+                <section id="main_title">
+                    <h1>Ordinateur quantique <br />et avenir de la cryptographie</h1>
+
+                    <br />
+                    Thibaut Démare
+                    <br />
+                    LITIS - Université du Havre
+                    <br />
+                    <br />
+                    Cours de sécurité
+                    <br />
+                    21 Février 2015
+                    <br />
+                </section>
+
+                <!-- Introduction -->
+                <section>
+                    <section data-background="rgb(32, 33, 34)" class="section_title">
+                        <h1>Introduction</h1>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">Contexte</h3>
+                        <p>
+                            Aujourd'hui, une part importante de la sécurité informatique consiste à s'assurer que:
+                            <ul>
+                                <li>les messages que j'envoie ne puissent être lus que par le "bon" destinataire.</li>
+                                <li class="fragment" data-fragment-index="1">l'information stockée sur mon ordinateur ne puissent être lue par quelqu'un qui n'y est pas autorisé.</li>
+                            </ul>
+                        </p>
+                        <p  class="fragment" data-fragment-index="2">
+                            Cette sécurité repose sur la confiance que l'on a envers les algorithmes de cryptage: a priori, personne n'est en mesure de casser les clés de sécurité dans un temps raisonnable.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">Sommaire</h3>
+                        <p>
+                            <ol>
+                                <li class="fragment frag-current">Les ordinateurs quantiques</li>
+                                <li class="fragment frag-current">Impacts des ordinateurs quantiques sur la cryptographie</li>
+                                <li class="fragment frag-current">Pourquoi s'en inquiéter?</li>
+                            </ol>
+                        </p>
+                    </section>
+                </section>
+
+                <!-- Partie 1 - Description des OQ -->
+                <section>
+                    <section data-background="rgb(32, 33, 34)" class="section_title">
+                        <h1>Les ordinateurs quantiques</h1>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">La mécanique quantique</h3>
+                        
+                        <ul>
+                            <li>Une particule quantique peut être dans plusieurs états à la fois : on appel cela la superposition d'état.</li>
+                            <li class="fragment" data-fragment-index="1">Si on observe une telle particule, elle apparaîtra dans un seul état avec une certaine probabilité.</li>
+                            <li class="fragment" data-fragment-index="2">On peut néanmoins déterminer la probabilité qu'une particule sera dans un état particulier si on l'observe à une date t.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">La mécanique quantique</h3>
+                        
+                        <ul>
+                            <li>La décohérence permet d'expliquer pourquoi le phénomène ondulatoire de l'état d'une particule quantique finit par se stabiliser.</li>
+                            <li class="fragment" data-fragment-index="1">L'intrication est le fait que deux particules soient liées d'une manière que leurs états sont corrélés, qu'importe la distance qui les sépare.</li>
+                        </ul>
+
+                        <p class="fragment" data-fragment-index="2">
+                        Un ordinateur quantique est donc un ordinateur qui utilise les propriétés de la mécanique quantique pour effectuer des calculs. L'unité utilisé dans un tel ordinateur n'est alors plus le bit, mais le qubit.
+                        </p>
+                    </section>
+                </section>
+
+                <!-- Partie 2 - Impacts des ordinateurs quantiques sur la cryptographie -->
+                <section>
+                    <section data-background="rgb(32, 33, 34)" class="section_title">
+                        <h1>Impacts des ordinateurs quantiques sur la cryptographie</h1>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">Quels sont les atouts des ordinateurs quantiques?</h3>
+                        
+                        <ul>
+                            <li>Alors que deux bits peuvent stocker une seule des quatre configurations binaires (00, 01, 10, 11), 2 qubits peuvent stocker les 4 simultanément.</li>
+                            <li class="fragment" data-fragment-index="1">Il en résulte alors qu'un ordinateur quantique pourrait en théorie effectuer 2<sup>n</sup> opérations par étape de calcul (avec n, le nombre de qubits utilisés) contre une seule opération pour un processeur classique non parallèle.</li>
+                            <li class="fragment" data-fragment-index="2">Parmi les algorithmes quantiques, celui de Shor permet, en un temps polynomial, de trouver les facteurs premiers d'un entier, rendant ainsi caduc un nombre important d'algorithme de cryptage tel que RSA.</li>
+                            <li class="fragment" data-fragment-index="3">Néanmoins, les lois de la physique quantique permettent également d'apporter de la sécurité notamment en apportant la garantie de savoir si un message a été intercepté.</li>
+                            <li class="fragment" data-fragment-index="4">D'autres algorithmes connus sont déjà réputés résistant aux capacités des ordinateurs quantiques (lattice-based cryptography).</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <!-- Partie 3 - pourquoi s'en inquiéter ? -->
+                <section>
+                    <section data-background="rgb(32, 33, 34)" class="section_title">
+                        <h1>Pourquoi s'en inquiéter?</h1>
+                    </section>
+
+                    <section>
+                        <h3 class="frame_title">Les risques</h3>
+
+                        <ul>
+                            <li>Les messages cryptés aujourd'hui seront décryptés demain : des personnes, ou des organisations pourraient être tentés de conserver les messages cryptés en vue de les décrypté plus tard à l'aide d'un ordinateur quantique.</li>
+                            <li class="fragment" data-fragment-index="1">Les outils fiables pour se protéger ne seront peut être pas en place lors de l'arrivée des ordinateurs quantiques, et on ne sera pas à égalité pour se protéger d'éventuelles personnes malveillantes.</li>
+                            <li class="fragment" data-fragment-index="2">Il y a donc des risques d'atteintes à la vie privée pour les particuliers, des risques d'espionnage industrielle pour les entreprises, et de crises diplomatiques entre certains pays.</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3 class="frame_title">Merci de votre attention! :-)</h3>
+                    </section>
+                </section>
+            </div>
+
+
+        </div>
+
+               <!-- 
+        Javascripts
+        -->
+        <script src="js/reveal.js"></script>
+        <script type="text/javascript">
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                width: 1920,
+                height: 1200,
+                margin: 0,
+                minScale: 0.0,
+                maxScale: 1.0,
+                transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+                slideNumber: true
+            });
+        </script>
+
+    </body>
+</html>	

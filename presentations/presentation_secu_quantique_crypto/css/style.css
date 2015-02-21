@@ -1,0 +1,105 @@
+body{
+    font-family: Ubuntu, sans-serif;
+    color: rgb(32, 33, 34);
+}
+
+.reveal ul {
+    margin-bottom: 10px;   
+}
+
+.reveal ol {
+    margin-left: 150px;   
+}
+
+.centered {
+    text-align: center;
+}
+
+.reveal p.highlighted  {
+    text-align: center;
+    font-size: 2em;
+}
+
+/*
+* Overwritte Reveal.js CSS
+*/
+.reveal h1, .reveal h2{
+    font-style: bold;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    margin: 15px;
+}
+
+/*
+* HEADER
+*/
+
+#header{
+    background-color: rgb(32, 33, 34);
+    color: white;
+    margin: auto;
+    width: 100%;
+    padding : 10px;
+    font-size: 20px;
+    text-shadow: 0px 0px 5px rgb(7,95,157);
+    border-bottom : solid 15px rgb(7,95,157);
+}
+
+#presenter_name {
+    float: left;
+    text-align: left;
+    width : 33%;
+}
+
+#title {
+    float: left;
+    text-align: center;
+    width : 33%;
+}
+
+#conf_name_date {
+    float: left;
+    text-align: right;
+    width : 33%;
+}
+
+.clear_div{
+    display: block;
+    clear: both;
+}
+
+
+/*
+* Main title
+*/
+#main_title br {
+   // margin: 10px;
+}
+
+#main_title {
+    color: rgb(7,95,157);
+    text-align: center;
+}
+
+/*
+* Section title
+*/
+.section_title {
+    color: white;
+    text-align: center;
+}
+
+.section_title h1{
+    color: white;
+    text-shadow: 0px 0px 10px white;
+}
+
+/*
+* Frame title
+*/
+.reveal h3,
+.frame_title {
+    color : rgb(7,95,157);
+    text-shadow: 0px 0px 2px rgb(32, 33, 34);
+    text-align: center;
+    margin-bottom : 10px;
+}
