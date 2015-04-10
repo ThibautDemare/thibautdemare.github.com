@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h1>Reveal.js</h1>
+					<h3>Présentations et technos Web</h3>
+					<p>
+						<small>Thibaut Démare - 10 Avril 2015</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>En bref</h2>
+					<p>
+Reveal.js est un framework Javascript qui permet de réaliser des présentations à l'aide de technos Web.
+
+Le triplet HTML, CSS et Javascript est à la base de cet outil.
+					</p>
+				</section>
+
+				<section>
+					<h2>Avantages qu'apportent les technos Web</h2>
+					<ul>
+                        <li>Le concept du Responsive Design permet la compatibilité de la présentation avec différentes configurations (résolution, type de matériel,...).</li>
+                        <li class="fragment" data-fragment-index="1">Le Web apporte de la dynamique (les animations CSS ou les scripts JS).</li>
+                        <li class="fragment" data-fragment-index="2">C'est aussi facile que $\LaTeX$.</li>
+                        <li class="fragment" data-fragment-index="3">On peut intégrer des composants Web comme des graphiques, des vidéos (Youtube ou pas),...</li>
+                    </ul>
+				</section>
+
+
+				<section>
+					<h2>Y a-t-il d'autres frameworks?</h2>
+					<p>
+						<ul>
+	                    	<li><a href="http://markdalgleish.com/presentations/jquerymobile/">Fathom.js</a></li>
+	                    	<li class="fragment" data-fragment-index="1"><a href="http://imakewebthings.com/deck.js/">Deck.js</a></li>
+	                    	<li class="fragment" data-fragment-index="2"><a href="http://flowtime-js.marcolago.com/">Flowtime.js</a></li>
+	                    	<li class="fragment" data-fragment-index="3"><a href="http://bartaz.github.io/impress.js">Impress.js</a> <a href="http://regebro.github.io/hovercraft">(Demo 2)</a></li>
+	                    </ul>
+	                </p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Que propose vraiment Reveal.js?</h2>
+						<p>
+							<ul>
+		                    	<li>La coloration syntaxique de code source grâce à highlight.js (y compris du code Matlab ou du R).</li>
+		                    	<li class="fragment" data-fragment-index="1">La personne qui présente peut avoir un affichage dédié avec un compteur, et des notes.</li>
+		                    	<li class="fragment" data-fragment-index="2">Les formules de mathématiques peuvent être écrites en $\LaTeX$.</li>
+		                    	<li class="fragment" data-fragment-index="3">On peut écrire le contenu en Markdown.</li>
+		                    </ul>
+		                </p>
+					</section>
+
+					<section>
+						<h2>Que propose vraiment Reveal.js?</h2>
+						<p>
+							<ul>
+		                    	<li>On peut contrôler la présentation depuis un autre appareil tel qu'un téléphone.</li>
+		                    	<li class="fragment" data-fragment-index="1">Il existe un plugin pour contrôler la présentation comme dans Minority Report.</li>
+		                    	<li class="fragment" data-fragment-index="2">Et plein d'autres plugin, de thèmes,...</li>
+		                    </ul>
+		                </p>
+					</section>
+				</section>
+				<section>
+					<h2>Existe-t-il un environnement WYSIWYG?</h2>
+					<p>
+					<p>
+						Oui ! <a href="http://slides.com/">slides.com</a>
+						<ul>
+	                    	<li>Facile d'utilisation.</li>
+	                    	<li class="fragment" data-fragment-index="1">Mais...</li>
+	                    	<li class="fragment" data-fragment-index="2">il y a moins de libertés.</li>
+	                    	<li class="fragment" data-fragment-index="3">Une version gratuite et une payante : gratuit = il faut rester connecté, et sa présentation est forcément publique.</li>
+	                    </ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>Et en vrai ça donne quoi?</h2>
+					<p>
+						<ul>
+	                    	<li><a href="http://thibautdemare.github.io/presentations/conf_int_devport_2014/index.html">Une présentation qui intègre des graphiques.</a></li>
+	                    	<li class="fragment" data-fragment-index="1"><a href="http://lab.hakim.se/reveal-js/#/">La démo officiel de Reveal.js</a>.</li>
+	                    </ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>Structure du code</h2>
+					<pre><code data-trim contenteditable>
+&lt;!doctype html>
+&lt;html lang="en">
+	&lt;head>
+		&lt;title>Titre de la présentation&lt;/title>
+
+		&lt;link rel="stylesheet" href="css/reveal.css">
+		&lt;link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		&lt;link rel="stylesheet" href="lib/css/zenburn.css">
+	&lt;/head>
+	&lt;body>
+		&lt;div class="reveal">
+			&lt;div class="slides">
+				&lt;section>
+					Une slide....
+				&lt;/section>
+			&lt;/div>
+		&lt;/div>
+
+		&lt;script src="lib/js/head.min.js">&lt;/script>
+		&lt;script src="js/reveal.js">&lt;/script>
+
+		&lt;script>
+			Reveal.initialize({
+				transition: 'slide'
+			});
+		&lt;/script>
+	&lt;/body>
+&lt;/html>
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Have fun with it :)</h2>
+					<p>
+Téléchargez la dernière release à cette adresse : 
+<br />
+<a href="https://github.com/hakimel/reveal.js/releases">https://github.com/hakimel/reveal.js/releases</a>
+<br />
+...et essayer de faire ou refaire une présentation en utilisant reveal.js
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // default/cube/page/concave/zoom/linear/fade/none
+                slideNumber: true,
+
+			    math: {
+			        mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+			        config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+			    },
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
