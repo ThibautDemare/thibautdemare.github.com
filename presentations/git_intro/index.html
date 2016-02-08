@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>English Session - An Introduction to Git</title>
+
+		<meta name="description" content="Talk for the Weekly English Sessions - February 8th, 2016">
+		<meta name="author" content="Thibaut Démare">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/design.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/github.css">
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div  id="header">
+				<div id="presenter_name">
+					Thibaut Démare - LITIS<br />
+					thibaut.demare@univ-lehavre.fr
+				</div>
+				<div id="title_div">
+					<span id="title">An Introduction to Git</span>
+				</div>
+				<div id="conf_name_date">
+					February 8th, 2016
+				</div>
+				<div class="clear_div"></div>
+			</div>
+
+			<div class="slides">
+				<section data-state="no-toc-progress">
+					<h1 class="no-toc-progress">An Introduction to Git</h1>
+					<p class="center">
+						Thibaut Démare
+						<br />
+						LITIS - Université du Havre
+						<br />
+						February 8th, 2016
+					</p>
+				</section>
+
+
+				<!-- ============ -->
+				<!-- = Overview = -->
+				<!-- ============ -->
+				<section data-state="no-toc-progress">
+				  <h2 class="no-toc-progress">Overview</h2>  
+					<ol>
+					  <li>What is Git?</li>
+					  <li>The main commands</li>
+					  <li>Some Git Platforms</li>
+					</ol>
+				</section>
+
+
+				<!-- =============== -->
+				<!-- = What is Git = -->
+				<!-- =============== -->
+				<section>
+					<section data-background="#2B2B2B" class="section_title" data-state="no-toc-progress">
+						<h1>What is Git?</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">The Issues at the Origin of Git</h3>
+						<ul>
+							<li>You want to have a backup of your files.</li>
+							<li class="fragment" data-fragment-index="1">You want to keep a trace of the evolution of your project.</li>
+							<li class="fragment" data-fragment-index="2">You want to work with colleagues on the same project.</li>
+							<li class="fragment" data-fragment-index="3">You want to try new features or try another structure of an article but you are not sure to keep these changes later.</li>
+						</ul>
+
+						<p class="fragment" data-fragment-index="4">
+							Git has been designed by the man behind Linux to provide solutions to these problems.
+						</p>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Architecture</h3>
+
+						<div class="center">
+							<img src="images/git.png" id="architecture"/>
+							<br/>
+							<span class="legend">Figure 1: Interactions with the Git server</span>
+						</div>
+					</section>
+
+				</section>
+
+				<!-- ===================== -->
+				<!-- = The main commands = -->
+				<!-- ===================== -->
+				<section>
+					<section data-background="#2B2B2B" class="section_title" data-state="no-toc-progress">
+						<h1>The main commands</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">The First Command to Know</h3>
+
+						<ul>
+							<li><pre><code data-trim>git init</code></pre>it is used to create a new repository.</li>
+							<li class="fragment" data-fragment-index="1"><pre><code data-trim>git clone an_existing_repository</code></pre>it is used to create locally a repository from an existing but distant one.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Add changes</h3>
+
+						<ul>
+							<li><pre><code data-trim>git status</code></pre>It is used to list files which have changed.</li>
+							<li class="fragment" data-fragment-index="1"><pre><code data-trim>git add file_name</code></pre>it is used to add a file to a future commit.</li>
+							<li class="fragment" data-fragment-index="2"><pre><code data-trim>git commit -m "your commit message"</code></pre>it is used to confirm the modifications applied to your files.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Interact with the server</h3>
+
+						<ul>
+							<li><pre><code data-trim>git pull</code></pre>It is used to get the modifications published by other.</li>
+							<li class="fragment" data-fragment-index="1"><pre><code data-trim>git push</code></pre>it is used to publish your own modifications and make them available to your co-workers.</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- ====================== -->
+				<!-- = Some Git Platforms = -->
+				<!-- ====================== -->
+				<section>
+					<section data-background="#2B2B2B" class="section_title" data-state="no-toc-progress">
+						<h1>Some Git Platforms</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Platforms</h3>
+						<p>
+							<ul>
+								<li><a href="https://github.com/">Github</a>: probably the most famous and active git platform.</li>
+								<li class="fragment" data-fragment-index="1"><a href="https://bitbucket.org/">Bitbucket</a>: a serious concurrent to Github.</li>
+								<li class="fragment" data-fragment-index="2"><a href="https://about.gitlab.com/">Gitlab</a>: mostly used on private servers (like Gitlab on the LITIS' server).</li>
+								<li class="fragment" data-fragment-index="3">And so many more ! <a href="https://git.framasoft.org/public/projects">Framasoft (it uses Gitlab)</a>, <a href="https://www.codebasehq.com/">Codebase</a>, <a href="www.cloudforge.com">Cloudforge</a>...</li>
+							</ul>
+						</p>
+
+					</section>
+
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress">Thank you for your attention !</h2>
+					<br /><br />
+
+					<h3 class="center no-toc-progress">Any questions?</h3>
+
+					<p class="center">
+					thibaut.demare@univ-lehavre.fr
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				width: 1366,
+				height: 768,
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				transition: 'slide',
+
+				math: {
+			        mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+			        config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+			    },
+
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } },
+
+				]
+			});
+		</script>
+
+	</body>
+</html>
