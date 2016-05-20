@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Colloque International Devport - A Systemic Approach with Agent-based Model and Dynamic Graphs to Understand the Organization of a Logistic System</title>
+
+		<meta name="description" content="Talk for Colloque International Devport - May 19-20, 2016">
+		<meta name="author" content="Thibaut Démare">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/design.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div  id="header">
+				<div id="presenter_name">
+					Thibaut Démare - LITIS<br />
+					thibaut.demare@univ-lehavre.fr
+				</div>
+				<div id="title_div">
+					<span id="title">A Systemic Approach with Agent-based Model and Dynamic Graphs to Understand the Organization of a Logistic System</span>
+				</div>
+				<div id="conf_name_date">
+					Colloque International Devport
+					<br />
+					Le Havre, France
+					<br />
+					May 19-20, 2016
+				</div>
+				<div class="clear_div"></div>
+			</div>
+
+			<div class="slides">
+				<section data-state="no-toc-progress">
+					<h1 class="no-toc-progress">A Systemic Approach with Agent-based Model and Dynamic Graphs to Understand the Organization of a Logistic System</h1>
+					<p class="center">
+						Thibaut Démare
+						<br />
+						Cyrille Bertelle, Antoine Dutot and Laurent Lévêque
+						<br />
+						LITIS and UMR-IDEES - Université du Havre
+						<br />
+						Colloque International Devport - Le Havre, France
+						<br />
+						May 19-20, 2016
+					</p>
+				</section>
+
+
+				<!-- ============ -->
+				<!-- = Overview = -->
+				<!-- ============ -->
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress frame_title">Overview</h2>  
+					<ol>
+						<li>Context</li>
+						<li>Model</li>
+						<li>Implementation</li>
+						<li>Results</li>
+					</ol>
+				</section>
+
+
+				<!-- =========== -->
+				<!-- = CONTEXT = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Context</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">How do we define a logistic system?</h3>
+						<ul>
+							<li>It is a geographical territory composed of urban areas and of logistic structures.</li>
+							<li class="fragment" data-fragment-index="1">These structures support organised flows of goods which mainly move between the urban areas, forming the logistic corridor.</li>
+							<li class="fragment" data-fragment-index="2">The goods enter and leave the system through well-known access nodes.</li>
+							<li class="fragment" data-fragment-index="3">Different constraints (spatial, economical, political, or ecological) act over the system.</li>
+							<li class="fragment" data-fragment-index="4">There are numerous and heterogeneous actors (importers, exporters, freight forwarders, logistic providers,...). Their behaviours and interactions with each other allow to organise the flows of goods. They are auto-organised.</li>
+						</ul>
+
+						<div class="center fragment" data-fragment-index="4">
+							<!-- <img src="images/diagramme_flux_physique_plus_acteurs_horizontal_en.svg" id="actors_manage_flow"/> -->
+							<object type="image/svg+xml" data="images/diagramme_flux_physique_plus_acteurs_horizontal_en.svg" id="DiagFluxPlusActors">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 1: Each actor manages a part of the flow</span>
+						</div>
+
+						<aside class="notes">
+						Definition d'un corridor logistique : 
+						- c'est un espace géographique composé d'aires urbaines et de structures logistiques permettent de supporter des flux organisés de marchandises. Ces flux se déplacent principalement entre des zones particulières de ce territoire, ils entrent et sortent du territoire par des noeuds d'accès connus
+						- il y a différents type d'acteurs : certains sont demandeurs de marchandises, d'autres sont fournisseur, et enfin les autres organisent le transport de la marchandise
+						- ses différentes contraintes (spatiales, économiques, politiques, écologiques,...)
+						</aside>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Problematic</h3>
+
+						<p class="fragment" data-fragment-index="1">
+							<ul>
+								<li>We want to understand how actors with different goals, are organised around all the logistic infrastructures to manage flows of goods despite all the constraints of the system.</li>
+								<li class="fragment" data-fragment-index="1">We are looking for an individual-based model which can reproduce the working of a logistic system thanks to the simulation.</li>
+								<li class="fragment" data-fragment-index="2">And then we could test different scenarios on this simulation to understand how the local decisions impact the system.</li>
+							</ul>
+						</p>
+
+						<aside class="notes">
+							context + problématique :
+							Il exsite plusieurs corridors logistiques, parfois très proche les uns des autres tel que les corridors logistiques de range nord européens.
+							cette superposition des corridors entraîne une compétition importante entre eux.
+							Il faut donc trouver un moyen de comprendre comment ces systèmes logistiques sont organisés et structurés afin d'en dévoiler les avantages et inconvénients. Cela permettrait de mettre en oeuvre des solutions pour améliorer la performance logistique d'un corridor.
+						</aside>
+					</section>
+
+					<section>
+						<h3 class="frame_title">A Complex System Approach</h3>
+
+						<p>
+							We can perceive logistic systems as complex and we will use the concepts of the complexity science to model such a system.
+						</p>
+
+						<p>
+							<ul>
+								<li>A Multi-agent approach : we model the numerous and heterogeneous actors and infrastructures by agents with their own local behaviours and properties.</li>
+								<li>A multi-scale approach : we want to observe how the macro properties of the system emerge from these local properties and behaviours.</li>
+							</ul>
+						</p>
+
+						<aside class="notes">
+							On considère le système comme complexe
+							on souhaite proposer un modèle multi-agent and multi échelle
+							multi-agent car : acteur nombreux et hétérogène, avec chacun leur propre comportement locaux.
+							multi-echelle : car on souhaite observé comment ces propriétés et comportements locaux font emerger des propriétés globals du système.
+						</aside>
+					</section>
+
+				</section>
+
+				<!-- =================================== -->
+				<!-- = MODELLING OF LOGISTIC CORRIDORS = -->
+				<!-- =================================== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Model</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">A model in two main parts</h3>
+
+						<ul>
+							<li>Each actors and logistic structures from the reality are modelled as reactive agents (individual-based model) :
+								<ul>
+									<li>They have defined rules about how they can interact with each other and how they must behave.</li>
+									<li>Agents bring flexibility since they can be adapted to different logistic system.</li>
+									<li>A dynamic graph represents the interactions between the agents.</li>
+								</ul>
+							</li>
+							<li class="fragment" data-fragment-index="1">The transportation network :
+								<ul>
+									<li>It is made of dynamic sub-graphs in order to integrate multi-modality.</li>
+									<li>Vehicles move over the network and leave a dynamic trace on their way in order to represent the traffic's evolution.</li> 
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<div class="center">
+							<img src="images/resume_model_simplifie.svg" id="ModelResume"/>
+							<br/>
+							<span class="legend">Figure 2: Model representation</span>
+						</div>
+					</section>
+					
+				</section>
+
+				<!-- ================== -->
+				<!-- = Implementation = -->
+				<!-- ================== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Implementation</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">The implementation</h3>
+						<ul>
+							<li>We implemented the model as a step-by-step simulation into the agent-based simulation platform GAMA. </li>
+							<li class="fragment" data-fragment-index="1">We use real data on the Seine axis to check its validity and to make measures.</li>
+							<li class="fragment" data-fragment-index="2">The Seine axis is mostly represented by the road (around 90% of the traffic is by road).</li>
+							<li class="fragment" data-fragment-index="3">The implemented agents:
+							<ul>
+								<li>Final consignees: consume stocks and choose logistic providers.</li>
+								<li>Logistic providers: build and manage supply chain to outsource stocks.</li>
+								<li>Warehouses: spread over territory, they provide storage surface.</li>
+								<li>Providers: they play the role of access nodes to the territory.</li>
+							</ul>
+							</li>
+						</ul>
+					</section>
+					
+					<section>
+						<div class="center">
+							<img src="images/seine_axis_simulation.png" id="simulation"/>
+							<br/>
+							<span class="legend">Figure 5: the territory and some agents of the simulation</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 style="display:none;">Configuration and analysis</h3>
+						<h3 class="frame_title no-toc-progress">How to configure the simulation?</h3>
+						<p>
+							<ul>
+								<li>The input data: the transportation network, the position and properties of each agent,...</li>
+								<li>We can set locally the consumption of the population.</li>
+								<li>We can set the restock strategy of logistics providers.</li>
+								<li>Logistics providers can use different strategies to build supply chains.</li>
+								<li>...</li>
+							</ul>
+						</p>
+						<h3 class="frame_title no-toc-progress fragment" data-fragment-index="1">What can be analysed?</h3>
+						<p>
+							<ul class="fragment" data-fragment-index="1">
+								<li>Observe the effects of disrupting events (such as road accidents).</li>
+								<li>Highlight paths with the highest values of traffic.</li>
+								<li>Detection of spatial cluster (logistic areas) thanks to neighbourhood graphs.</li>
+								<li>Measure accessibility of agents thanks to Schimbel's index.</li>
+								<li>Measures of logistics performances: time to deliver goods and number of stock shortages. These measures can be computed for each agent, for regions, or for the whole system.</li>
+								<li>...</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+				<!-- =========== -->
+				<!-- = Results = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Results</h1>
+					</section>
+
+					<section>
+                        <h3 class="frame_title">How do restock strategies affect stocks shortages?</h3>
+                        <div class="centered">
+                            <video controls muted loop preload="auto">
+                                <source src="video/two_simulations_of_logistic_system.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video> 
+                        </div>
+                    </section>
+
+                    <section>
+						<h3 class="frame_title">How do best strategies emerge from local decisions?</h3>
+						<div class="center">
+							<!-- <img src="images/strategies_adoption.png" id="model_actors"/> -->
+							<object type="image/svg+xml" data="images/strategies_adoption.svg" id="StrategiesAdoption">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 2: Strategies adoption</span>
+						</div>
+					</section>
+
+				</section>
+
+				<!-- ============== -->
+				<!-- = CONCLUSION = -->
+				<!-- ============== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Conclusion</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">To sum up</h3>
+						<p>
+							<ul>
+								<li>Logistic systems can be seen as complex systems.</li>
+								<li class="fragment" data-fragment-index="1">We used an agent based model and dynamic graphs to represent such a system.</li>
+								<li class="fragment" data-fragment-index="2">It brings the possibility to represent the dynamics of such a system and the adaptability to different logistic systems.</li>
+							</ul>
+						</p>
+
+						<p class="fragment" data-fragment-index="2">
+							<ul>
+								<li class="fragment" data-fragment-index="3">The model has been implemented on GAMA and we can experiment it on the Seine axis.</li>
+								<li class="fragment" data-fragment-index="4">We can observe the effect of different strategies adopted by agents and how the best ones emerge from local decisions.</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Perspectives</h3>
+						<p>
+							<ul>
+								<li>We would like to implement new measures of logistic performance based on cost in order to observe the competition between Le Havre and Antwerp.</li>
+								<li class="fragment" data-fragment-index="1">We want to implement new disrupting events in order to observe how the agents restructure their organisation.</li>
+								<li class="fragment" data-fragment-index="2">We want to study the interaction network in order to detect special communities of actors.</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress">Thank you for your attention !</h2>
+					<br /><br />
+
+					<h3 class="center no-toc-progress">Any questions?</h3>
+
+					<p class="center">
+					thibaut.demare@univ-lehavre.fr
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				width: 1366,
+				height: 768,
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				transition: 'slide',
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } }
+
+				]
+			});
+		</script>
+
+	</body>
+</html>
