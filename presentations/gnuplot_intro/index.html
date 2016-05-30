@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>English Session - An Introduction to GnuPlot</title>
+
+		<meta name="description" content="Talk for the Weekly English Sessions - March 29th, 2016">
+		<meta name="author" content="Thibaut Démare">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/design.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/github.css">
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div  id="header">
+				<div id="presenter_name">
+					Thibaut Démare - LITIS<br />
+					thibaut.demare@univ-lehavre.fr
+				</div>
+				<div id="title_div">
+					<span id="title">An Introduction to GnuPlot</span>
+				</div>
+				<div id="conf_name_date">
+					March 29th, 2016
+				</div>
+				<div class="clear_div"></div>
+			</div>
+
+			<div class="slides">
+				<section data-state="no-toc-progress">
+					<h1 class="no-toc-progress">An Introduction to GnuPlot</h1>
+					<p class="center">
+						Thibaut Démare
+						<br />
+						LITIS - Université du Havre
+						<br />
+						March 29th, 2016
+					</p>
+				</section>
+
+
+				<!-- ============ -->
+				<!-- = Overview = -->
+				<!-- ============ -->
+				<section data-state="no-toc-progress">
+				  <h2 class="no-toc-progress">Overview</h2>  
+					<ol>
+					  <li>What is GnuPlot and When do You Need to Use it?</li>
+					  <li>The main commands</li>
+					  <li>Example</li>
+					  <li>Plot it online!</li>
+					</ol>
+				</section>
+
+
+				<!-- =============== -->
+				<!-- = What is Git = -->
+				<!-- =============== -->
+				<section>
+					<section data-background="#2B2B2B" class="section_title" data-state="no-toc-progress">
+						<h1>What is GnuPlot and When do You Need to Use it?</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">What?</h3>
+						<ul>
+							<li>GnuPlot allows to generate 2D and 3D plots of functions and data.</li>
+							<li class="fragment" data-fragment-index="1">It is a command-line program.</li>
+							<li class="fragment" data-fragment-index="2">You can run it on Windows, Mac or Linux and it is free.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title">When?</h3>
+
+						<ul>
+							<li>When you need something very specific.</li>
+							<li class="fragment" data-fragment-index="1">When you need to automize the process.</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<!-- ===================== -->
+				<!-- = The main commands = -->
+				<!-- ===================== -->
+				<section>
+					<section data-background="#2B2B2B" class="section_title" data-state="no-toc-progress">
+						<h1>The main commands</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">The First Commands to Know</h3>
+
+						<ul>
+							<li><pre><code data-trim>set terminal [options]</code></pre><pre><code data-trim>set output [options]</code></pre>it defines the output format.</li>
+							<li class="fragment" data-fragment-index="1"><pre><code data-trim>set xrange [options]</code></pre><pre><code data-trim>set yrange [options]</code></pre>it defines the ranges of the function to plot.</li>
+							<li class="fragment" data-fragment-index="2"><pre><code data-trim>plot [options]</code></pre>the main command which draws the function or data.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title">The "plot" Command</h3>
+
+						<ul>
+							<li><pre><code data-trim>plot sin(x)</code></pre>to plot a classic math function.</li>
+							<li class="fragment" data-fragment-index="1"><pre><code data-trim>plot  "data.txt" using 1:2</code></pre>to plot data from a CSV file.</li>
+							<li class="fragment" data-fragment-index="2"><pre><code data-trim>plot  "data.txt" using 1:5 title 'My data' with linespoints linewidth 2 pointinterval -100 
+      pointtype 13 pointsize 1 linecolor rgb "#228B22"</code></pre>a more customized version.</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- ====================== -->
+				<!-- = Example = -->
+				<!-- ====================== -->
+				<section>
+					<section data-background="#2B2B2B" class="section_title" data-state="no-toc-progress">
+						<h1>Example</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Example</h3>
+						
+							<pre><code data-trim contenteditable>
+# First, we tell to gnuplot what it the output
+# Here, it is a SVG file called "output.svg", with a "times new roman" font
+set terminal svg size 1473,824 enhanced fname 'Times New Roman' fsize 24 butt solid
+set output 'output.svg'
+
+# We define where to place the legend
+set key inside bottom right
+# Put a title to the x-axis
+set xlabel 'Time'
+# And a title to the y-axis
+set ylabel 'Number of Logistics Service Provider'
+# And the main title
+set title 'Strategies Adoption'
+# Eventually we plot the four curves
+plot  "data.txt" using 1:5 title 'Strategy 1' with linespoints lw 2 pi -100 pt 13 ps 1 lc rgb "#228B22",\
+      "data.txt" using 1:4 title 'Strategy 2' with linespoints lw 2 pi -100 pt 9 ps 1 lc rgb "#FF8C00",\
+      "data.txt" using 1:2 title 'Strategy 3' with linespoints lw 2 pi -100 pt 11 ps 1 lc rgb "#003B6F",\
+      "data.txt" using 1:3 title 'Strategy 4' with linespoints lw 2 pi -100 pt 7 ps 1 lc rgb "#CC0000"
+						</code></pre>
+
+					</section>
+
+					<section>
+						<h3 class="frame_title">Example</h3>
+						
+						<div class="center">
+							<img src="images/strategies_adoption.png" id="output"/>
+							<br/>
+							<span class="legend">Figure 1: The output</span>
+						</div>
+
+					</section>
+				</section>
+
+				<!-- ====================== -->
+				<!-- = Plot it online! = -->
+				<!-- ====================== -->
+				<section>
+					<section data-background="#2B2B2B" class="section_title" data-state="no-toc-progress">
+						<h1>Some links</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Some links</h3>
+						
+						<p>
+							<ul>
+								<li><a href="http://www.gnuplot.info/">Gnuplot's official website.</a></li>
+								<li class="fragment" data-fragment-index="1"><a href="http://gnuplot.respawned.com/">Gnuplot it online!</a></li>
+								<li class="fragment" data-fragment-index="2"><a href="https://www.desmos.com/calculator/eg5he4xpg9">Desmos</a> : It is not Gnuplot, but it is useful.</li>
+							</ul>
+						</p>
+
+					</section>
+
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress">Thank you for your attention !</h2>
+					<br /><br />
+
+					<h3 class="center no-toc-progress">Any questions?</h3>
+
+					<p class="center">
+					thibaut.demare@univ-lehavre.fr
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				width: 1366,
+				height: 768,
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				transition: 'slide',
+
+				math: {
+			        mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+			        config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+			    },
+
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } },
+
+				]
+			});
+		</script>
+
+	</body>
+</html>
