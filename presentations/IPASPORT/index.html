@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Modèle multi-agent des flux dans les corridors logistiques</title>
+
+		<meta name="description" content="Modèle multi-agent des flux dans les corridors logistiques">
+		<meta name="author" content="Thibaut Démare">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/design.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div  id="header">
+				<div id="presenter_name">
+					Thibaut Démare - LITIS<br />
+					thibaut.demare@univ-lehavre.fr
+				</div>
+				<div id="title_div">
+					<span id="title">Modèle multi-agent des flux dans les corridors logistiques</span>
+				</div>
+				<div id="conf_name_date">
+					IPASPORT
+					<br />
+					Le Havre
+					<br />
+					9 Septembre 2016
+				</div>
+				<div class="clear_div"></div>
+			</div>
+
+			<div class="slides">
+				<section data-background="#fff" data-state="no-toc-progress">
+					<h1 class="no-toc-progress">Modèle multi-agent des flux dans les corridors logistiques</h1>
+					<p class="center">
+						Thibaut Démare
+						<br />
+						Normandie Université - LITIS
+						<br />
+						IPASPORT
+						<br />
+						9 Septembre 2016
+					</p>
+
+					<p>
+						<br />
+						<b>Directeur de thèse :</b> Cyrille Bertelle
+						<br />
+						<b>Encadrants :</b> Antoine Dutot et Laurent Lévêque
+					</p>
+				</section>
+
+
+				<!-- ============ -->
+				<!-- = Overview = -->
+				<!-- ============ -->
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress frame_title">Plan</h2>  
+					<ol>
+						<li>Les systèmes logistiques</li>
+						<li>Le modèle</li>
+						<li>Les résultats</li>
+					</ol>
+				</section>
+
+
+				<!-- =========== -->
+				<!-- = CONTEXT = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Les systèmes logistiques</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Des caractéristiques synonymes de complexité</h3>
+						<ul>
+							<li>Le territoire se compose de métropoles, et offre de nombreuses structures logistiques de différentes natures.</li>
+							<li class="fragment" data-fragment-index="1">Ces structures permettent de supporter des flux organisés de marchandises entre les métropoles.</li>
+							<li class="fragment" data-fragment-index="2">Les marchandises entrent et sortent du territoire par des nœuds d'accès connus.</li>
+							<li class="fragment" data-fragment-index="3">Le système et ses acteurs subissent différentes contraintes (spatiales, économiques, politique, ou écologique).</li>
+							<li class="fragment" data-fragment-index="4">Un nombre important d'acteurs aux méthodes et objectifs variés doivent interagir ensemble. Leurs comportements autonomes leur permettent d'organiser globalement les flux de marchandises de manière auto-organisée.</li>
+						</ul>
+
+						<div class="center fragment" data-fragment-index="4">
+							<object type="image/svg+xml" data="images/diagramme_flux_physique_plus_acteurs_horizontal_en.svg" id="DiagFluxPlusActors">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 1: Un flux auto-organisé par de nombreux acteurs.</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Problématique</h3>
+						<p class="fragment" data-fragment-index="1">
+							<ul>
+								<li>On cherche à comprendre, à de multiples échelles, comment des acteurs, autonomes et très hétérogènes, s'organisent collectivement autour des infrastructures à leurs dispositions pour gérer des flux de marchandises soumis à un ensemble de contraintes.</li>
+								<li class="fragment" data-fragment-index="1">Pour cela, nous proposons un modèle individus-centrés qui vise à reproduire le fonctionnement d'un système logistique au travers de la simulation.</li>
+								<li class="fragment" data-fragment-index="2">La simulation permet alors de tester différents scénarios pour comprendre comment des décisions locales impactent l'ensemble du système.</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+				<!-- =================================== -->
+				<!-- = MODELLING OF LOGISTIC CORRIDORS = -->
+				<!-- =================================== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Le modèle</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Une approche système complexe de la modélisation</h3>
+
+						<ul>
+							<li>Un modèle multi-agent qui représente chaque acteur et infrastructure par une entité autonome et réactive.
+							<li class="fragment" data-fragment-index="1">Ces agents ont des règles prédéfinies qui décrivent comment ils se comportent et interagissent entre eux en fonction de leurs perceptions de leurs besoins et de leur environnement.</li>
+						</ul>
+
+						<ul>	
+							<li class="fragment" data-fragment-index="2">Des graphes dynamiques représentent le réseau de transport multi-modal.</li>
+							<li class="fragment" data-fragment-index="3">Il se compose d'un sous-graphe pour chaque type de transport.</li>
+							<li class="fragment" data-fragment-index="4">On peut suivre le déplacement en temps réel de chaque véhicule et observer l'évolution global du trafic.
+							</li>
+						</ul>
+
+						<p class="fragment" data-fragment-index="5">L'approche se veut multi échelle : on veut observer comment les propriétés macroscopiques du système émergent des propriétés et comportements locaux.</li>
+					</section>
+
+					<section>
+						<div class="center">
+							<img src="images/resume_model_simplifie.svg" id="ModelResume"/>
+							<br/>
+							<span class="legend">Figure 2: représentation du modèle</span>
+						</div>
+					</section>
+					
+				</section>
+
+				<!-- =========== -->
+				<!-- = Results = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Les résultats</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">L'implémentation</h3>
+						<ul>
+							<li>La simulation, qui concerne l'axe Seine, évolue heure par heure au sein de la plateforme orientée agent GAMA.</li>
+							<li class="fragment" data-fragment-index="3">Les agents implémentés sont :
+							<ul>
+								<li>Les destinataires finaux : possèdent des stocks qui baissent régulièrement.</li>
+								<li>Les prestataires logistiques : organisent et gèrent des chaînes logistiques pour leurs clients.</li>
+								<li>Les entrepôts : ils regroupent les plateformes logistiques ou encore les centres de distribution. Ils offrent notamment des surfaces d'entreposage.</li>
+								<li>Les fournisseurs : il existe un fournisseur par nœud d'accès au système.</li>
+							</ul>
+							</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h3 style="display:none;">Configuration et analyses</h3>
+						<h3 class="frame_title no-toc-progress">Configurations possibles de la simulation</h3>
+						<p>
+							<ul>
+								<li>Modifications des données initiales (le réseau de transport, la localisation des infrastructures ou des acteurs,...).</li>
+								<li>Modifications locales des niveaux de consommation de la population.</li>
+								<li>Modifications des stratégies de réapprovisionnement.</li>
+								<li>Modifications des stratégies de construction des chaînes logistiques.</li>
+								<li>...</li>
+							</ul>
+						</p>
+						<h3 class="frame_title no-toc-progress fragment" data-fragment-index="1">Méthodes d'analyses existantes</h3>
+						<p class="fragment" data-fragment-index="1">
+							La plupart des méthodes d'analyses peuvent s'appliquer globalement ou localement.
+							<ul class="fragment" data-fragment-index="1">
+								<li>Observations du trafic global.</li>
+								<li>Observations de mesures de performance logistique : délai de livraison, quantité de produits en rupture de stock,...</li>
+								<li>...</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Effets d'une perturbation locale sur le trafic global</h3>
+						<div class="center">
+							<img src="images/trafic_normal.png" id="TraficNormal"/>
+							<br/>
+							<span class="legend">Figure 3: État du trafic dans des conditions normales</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">Effets d'une perturbation locale sur le trafic global</h3>
+						<div class="center">
+							<img src="images/trafic_peu_perturbe.png" id="TraficPeuPerturbe"/>
+							<br/>
+							<span class="legend">Figure 4: État du trafic dans des conditions peu perturbées</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">Effets d'une perturbation locale sur le trafic global</h3>
+						<div class="center">
+							<img src="images/trafic_tres_perturbe.png" id="TraficTresPerturbe"/>
+							<br/>
+							<span class="legend">Figure 5: État du trafic dans des conditions très perturbées</span>
+						</div>
+					</section>
+				</section>
+
+				<!-- ============== -->
+				<!-- = CONCLUSION = -->
+				<!-- ============== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Conclusion</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Pour résumer</h3>
+						<p>
+							<ul>
+								<li>Nous avons proposé un modèle multi-agent et des graphes dynamiques pour représenter un système logistique.</li>
+								<li class="fragment" data-fragment-index="1">C'est une approche multi-échelle : on peut observer les effets globaux de perturbations locales.</li>
+								<li class="fragment" data-fragment-index="2">L'implémentation a été réalisé au sein de la plateforme de simulation GAMA et utilise des données sur l'axe Seine.</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress">Merci pour votre attention !</h2>
+					<br /><br /><br />
+
+					
+					<p class="center">
+					thibaut.demare@gmail.com
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				width: 1366,
+				height: 768,
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				transition: 'slide',
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } }
+
+				]
+			});
+		</script>
+
+	</body>
+</html>
