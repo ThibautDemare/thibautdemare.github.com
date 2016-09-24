@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Soutenance de thèse - Une approche systémique à base d'agents et de graphes dynamiques pour modéliser l'interface logistique port-métropole</title>
+
+		<meta name="description" content="Soutenance de thèse - Une approche systémique à base d'agents et de graphes dynamiques pour modéliser l'interface logistique port-métropole">
+		<meta name="author" content="Thibaut Démare">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/design.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div  id="header">
+				<div id="presenter_name">
+					Thibaut Démare - LITIS<br />
+					thibaut.demare@univ-lehavre.fr
+				</div>
+				<div id="title_div">
+					<span id="title">Une approche systémique à base d'agents et de graphes dynamiques pour modéliser l'interface logistique port-métropole</span>
+				</div>
+				<div id="conf_name_date">
+					Soutenance de thèse
+					<br />
+					Le Havre
+					<br />
+					26 Septembre 2016
+				</div>
+				<div class="clear_div"></div>
+			</div>
+
+			<!-- => faire plus de transition quand on passe d'une slide à l'autre -->
+			<div class="slides">
+				<section data-background="#fff" data-state="no-toc-progress">
+					<h1 class="no-toc-progress">Une approche systémique à base d'agents et de graphes dynamiques pour modéliser l'interface logistique port-métropole</h1>
+					<p class="center">
+						Thibaut Démare
+						<br />
+						Normandie Université - LITIS
+						<br />
+						Soutenance de thèse
+						<br />
+						26 Septembre 2016
+					</p>
+
+					<p>
+						<br />
+						<b>Directeur de thèse :</b> Cyrille Bertelle
+						<br />
+						<b>Encadrants :</b> Antoine Dutot et Laurent Lévêque
+						<br />
+						<b>Rapporteurs :</b> Abderrafiaa Koukam et Guy Melançon
+						<br />
+						<b>Examinateur :</b> César Ducruet
+						<br />
+						<b>Invité :</b> Robin Poté
+					</p>
+				</section>
+
+
+				<!-- ============ -->
+				<!-- = Overview = -->
+				<!-- ============ -->
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress frame_title">Plan</h2>  
+					<ol>
+						<li>Systèmes logistiques et problématique</li>
+						<li>Modélisation</li>
+						<li>Implémentation</li>
+						<li>Résultats et analyses</li>
+						<li>Conclusion et perspectives</li>
+					</ol>
+				</section>
+
+
+				<!-- =========== -->
+				<!-- = CONTEXT = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Systèmes logistiques et problématique</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Présentation d'un système logistique</h3>
+						<ul>
+							<li>C'est une composante essentielle d'un système spatial dans lequel les acteurs s'organisent autour d'infrastructures pour faire circuler des flux de marchandises, d'information et financier sur un territoire.</li>
+							<li class="fragment" data-fragment-index="1">Ces systèmes possèdent des nœuds d'accès par lesquels la marchandise entre ou sort.</li>
+							<li class="fragment" data-fragment-index="2">Des métropoles, ou aires urbaines, attirent et génèrent les flux de marchandises.</li>
+							<li class="fragment" data-fragment-index="3">Le système subit plusieurs contraintes de nature différente (spatiale, économique, politique, ou écologique).</li>
+							<li class="fragment" data-fragment-index="4">L'organisation logistique conduit les flux de marchandises à emprunter des axes préférentiels.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">Un organisation distribuée du flux</h3>
+							<div class="center">
+								<object type="image/svg+xml" data="images/diagramme_flux_physique_plus_acteurs_horizontal_fr.svg" id="DiagFluxPlusActors">
+								  Your browser does not support SVG
+								</object>
+								<br/>
+								<span class="legend">Figure 1 : Chaque acteur est responsable d'une partie seulement du flux auto-organisé de marchandises. Leurs interactions et méthodes de travail permettent une organisation cohérente.</span>
+							</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">L'interface port-métropole</h3>
+						<!-- 
+							On *propose* l'interface 
+							Logistique métropolitaine = logistique urbaine
+						-->
+							<div class="center">
+								<object type="image/svg+xml" data="images/interface_port_metropole.svg" id="InterfacePortMetro">
+								  Your browser does not support SVG
+								</object>
+								<br/>
+								<span class="legend">Figure 2 : L'interface qui connecte les logistiques portuaire et métropolitaine.</span>
+							</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Problématique</h3>
+						<p class="fragment" data-fragment-index="1">
+							<ul>
+								<li>On cherche à comprendre, à de multiples échelles, comment des acteurs, autonomes et très hétérogènes, s'organisent collectivement autour des infrastructures à leurs dispositions pour gérer des flux de marchandises soumis à un ensemble de contraintes.</li>
+								<li class="fragment" data-fragment-index="1">On souhaite reconstruire un système logistique par la modélisation.</li>
+								<li class="fragment" data-fragment-index="2">Nous proposons un modèle agent qui représente les propriétés, contraintes et comportements <em>locaux</em> d'un système logistique pour en reproduire le fonctionnement <em>global</em> grâce à la simulation.</li>
+								<li class="fragment" data-fragment-index="3">La simulation permet alors de tester différents scénarios pour comprendre comment des décisions locales impactent l'ensemble du système.</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<div class="center">
+							<object type="image/svg+xml" data="images/exemple_trois_resultats_simu.svg" id="TroisExemples">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 3 : Exemples de résultats obtenus grâce au modèle.</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Modèles de trafic de marchandises</h3>
+						<h4>Modèles de trafic international et national</h4>
+						<p>
+							<ul>
+								<li>Modèles agrégés : considèrent des données agrégées de quantité produite et consommée au sein de zones d'un territoire pour estimer la part des flux transitant entre ces zones. (Tavasszy et al., 1998) (Zondag et al., 2010)</li>
+								<li class="fragment" data-fragment-index="1">Modèles non agrégés : une partie des données est désagrégée et permet d'obtenir des résultats plus réalistes et précis. (Samini et al., 2010)</li>
+							</ul>
+						</p>
+
+						<h4 class="fragment" data-fragment-index="2">Modèles de trafic local</h4>
+						<p>
+							<ul>
+								<li class="fragment" data-fragment-index="2">Modèles portuaires : ils fonctionnent sur des territoires beaucoup plus petits dont l'accès aux données est simplifié. Ces modèles permettent souvent de mettre en avant les capacités d'absorption d'un trafic plus soutenu au sein du port. (Parola et al., 2005)</li>
+								<li class="fragment" data-fragment-index="3">Modèles urbains : ces modèles sont le plus souvent liés à des problématiques d'occupation des routes et de congestion. L'accès aux données reste délicat du fait d'une compétition entre les acteurs de la logistique présents sur ces territoires. (Gonzalez-Feliu et al. 2012)</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Contribution</h3>
+						<p>
+							<ul>
+								<li>On veut avoir la capacité d'observer comment les propriétés macroscopiques du système émergent des propriétés et comportements locaux (ex: apparition d'axes préférentiels).</li>
+								<li class="fragment" data-fragment-index="1">Les modèles multi-agents sont adaptés : ils permettent de modéliser chaque acteur et infrastructure par des agents définis individuellement et localement par leurs propres propriétés et comportements.</li>
+								<li class="fragment" data-fragment-index="2">Cette approche permettra de mettre en avant la complexité du système au travers du modèle et de la simulation.</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">Contribution</h3>
+						<p>
+							<ul>
+								<li>Les flux de marchandises sont créés par les décisions des acteurs. Ils ne proviennent pas d'une base de données pré-établie.</li>
+								<li class="fragment" data-fragment-index="1">Ce sont les comportements internes et autonomes des agents qui sont à l'origine de l'organisation logistique.</li>
+								<li class="fragment" data-fragment-index="2">Le système évolue dans le temps (création et disparition d'agents, dynamisme du réseau de transport).</li>
+								<li class="fragment" data-fragment-index="3">Les agents s'adaptent en temps réel à ces évolutions.</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+				<!-- =================================== -->
+				<!-- = MODELLING OF LOGISTIC CORRIDORS = -->
+				<!-- =================================== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Modélisation</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Architecture générale</h3>
+						<!-- 
+						=> insister sur la rétro-action entre les trois niveaux
+						=> insister aussi sur la multi-modalité
+						=> citer quelques types d'acteur pour être plus concret
+						=> des structures/organisations émergent
+						-->
+						<div class="center">
+							<img src="images/resume_model_simplifie.svg" id="ModelResume"/>
+							<br/>
+							<span class="legend">Figure 4 : Représentation générale du modèle</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Les agents</h3>
+						<ul>
+							<li>Chaque acteur et infrastructure de la réalité est représenté par un agent.</li>
+							<li>Ils ont des règles prédéfinies décrivant comment ils peuvent interagir entre eux et comment ils doivent se comporter en fonction de leurs perceptions.</li>
+							<li>Un graphe dynamique représente les interactions entre chaque agent.</li>
+						</ul>
+					</section>
+
+					<section>
+						<!-- NOUS proposons ça -->
+						<!-- => prendre plus le temps de décrire les schémas -->
+						<div class="center">
+							<img src="images/modele_relation_entre_acteur_v4.0_fr_zoom1.svg" id="model_actors_zoom1"/>
+							<br />
+							<span class="legend">Figure 5a : Graphe des interactions possibles entre les différents agents.</span>
+						</div>
+					</section>
+					
+					<section>
+						<!-- => montrer d'où on vient, comment se fait l'enchainement -->
+						<div class="center">
+							<img src="images/modele_relation_entre_acteur_v4.0_fr_zoom2.svg" id="model_actors_zoom2"/>
+							<br/>
+							<span class="legend">Figure 5b : Graphe des interactions possibles entre les différents agents.</span>
+						</div>
+					</section>
+					
+					<section>
+						<!-- => tous les agents ne sont pas implémentés -->
+						<div class="center">
+							<img src="images/modele_relation_entre_acteur_v4.0_fr_zoom3.svg" id="model_actors_zoom3"/>
+							<br/>
+							<span class="legend">Figure 5c : Graphe des interactions possibles entre les différents agents.</span>
+						</div>
+					</section>
+					
+					<section>
+						<div class="center">
+							<img src="images/modele_relation_entre_acteur_v4.0_fr_zoom4.svg" id="model_actors_zoom4"/>
+							<br/>
+							<span class="legend">Figure 5d : Graphe des interactions possibles entre les différents agents.</span>
+						</div>
+					</section>
+
+					<section>
+						<!-- attention "sous-graphe"
+						modérer sur le côté multi car on l'a pas implémenté 
+						insister plus sur la dynamique de topo-->
+						<h3 class="frame_title">Le réseau de transport</h3>
+						<div class="center">
+							<img src="images/multi-modal_network_en.svg" id="multi-modal_network"/>
+							<br/>
+							<span class="legend">Figure 6 : Un réseau multi-modal et dynamique</span>
+						</div>
+					</section>
+				</section>
+
+				<!-- ================== -->
+				<!-- = Implementation = -->
+				<!-- ================== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Implémentation</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">La plateforme de simulation</h3>
+						<ul>
+							<li>Le modèle a été implémenté dans une plateforme de simulation orientée agent et appelée GAMA.</li>
+							<li class="fragment" data-fragment-index="1">L'implémentation simule l'évolution du système heure par heure grâce à des agents réactifs.</li>
+							<li class="fragment" data-fragment-index="2">On utilise des données réelles qui concernent l'axe Seine afin d'effectuer des analyses et de permettre de confronter le modèle à des données réelles.</li>
+							<li class="fragment" data-fragment-index="3">Cet axe est principalement représenté par le trafic routier (environ 90% du trafic). L'implémentation n'est donc pas encore multi-modale.</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h3 class="frame_title">Les agents</h3>
+						<div class="center">
+							<object type="image/svg+xml" data="images/agents_implementes_reseau_fr.svg" id="AgentsImpl">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 7 : Les agents implémentés.</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Stratégies et dynamisme d'interactions</h3>
+						<ul>
+							<li>Quatre stratégies possibles pour concevoir un réseau d'approvisionnement.</li>
+							<li class="fragment" data-fragment-index="1">Un seuil de réapprovisionnement comme stratégie de contrôle des stocks.</li>
+							<li class="fragment" data-fragment-index="2">Une compétition entre les prestataires.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Paramétrage de la simulation</h3>
+						<p>
+							<ul>
+								<li>Les données en entrée : le réseau de transport, la localisation et les propriétés de chaque agent,...</li>
+								<li>La population locale (qui détermine le volume de la consommation).</li>
+								<li>Les agents prennent des décisions qui s'appuient sur différentes stratégies.</li>
+								<li>La mise en place de perturbations du système.</li>
+								<li>...</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+				<!-- =========== -->
+				<!-- = Results = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Résultats et analyses</h1>
+					</section>
+
+					<section>
+						<!-- => prendre moins de temps sur ce résultat -->
+						<h3 class="frame_title">Détection de clusters spatiaux</h3>
+						<div class="center">
+							<img src="images/clusters_spatiaux.png" id="SpatailClusters"/>
+							<br/>
+							<span class="legend">Figure 8 : Détection de clusters spatiaux grâce aux composantes connexes d'un graphe de voisinage.</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">Processus d'atomisation des flux de marchandises</h3>
+						<div class="center">
+							<object type="image/svg+xml" data="images/cumulative_number_batch.svg" id="CumulativeBatchNumber">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 9 : Le nombre cumulé d'agents Véhicules sur les routes.</span>
+						</div>
+					</section>
+
+					<section>
+					<!-- 
+					=> parler du carroyage
+					=> expliquer ce que c'est
+					expliquer ce que montre la figure
+					-->
+						<h3 class="frame_title">Impacts des stratégies de réapprovisionnement sur les ruptures de stock</h3>
+						<div class="center">
+							<video controls muted loop preload="auto" id="VideoReappro">
+								<source src="video/two_simulations_of_logistic_system.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+					</section>
+
+					<section>
+					<!-- 
+					=> expliquer les axes, ce que représente les courbes...
+					=> être plus clair sur comment les stratégies sont choisis
+					=> être plus rapide dans la description de la figure (dabord les axe, et ensuite description des stratégies)
+					-->
+						<h3 class="frame_title">Émergence des meilleures stratégies de sélection des entrepôts à partir de décisions locales</h3>
+						<div class="center">
+							<!-- <img src="images/strategies_adoption.png" id="model_actors"/> -->
+							<object type="image/svg+xml" data="images/strategies_adoption.svg" id="StrategiesAdoption">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 10 : Adoption des stratégies les plus efficaces adoption</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Compétition entre les ports du Havre et d'Anvers</h3>
+						<div class="center">
+							<img src="images/CompetitiviteAttr28.png" id="compAttr28"/>
+							<br/>
+							<span class="legend">Figure 11 : Scénario 1 - Le port d'Anvers est 2,8 fois plus attractif que le port du Havre</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">Compétition entre les ports du Havre et d'Anvers</h3>
+						<div class="center">
+							<img src="images/CompetitiviteAttr4.png" id="compAttr4"/>
+							<br/>
+							<span class="legend">Figure 12 : Scénario 2 - Le port d'Anvers est 4 fois plus attractif que le port du Havre</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">Compétition entre les ports du Havre et d'Anvers</h3>
+						<div class="center">
+							<img src="images/CompetitiviteAttr2.png" id="compAttr2"/>
+							<br/>
+							<span class="legend">Figure 13 : Scénario 3 - Le port d'Anvers est 2 fois plus attractif que le port du Havre</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Impacts de l'attractivité des ports sur le trafic</h3>
+						<div class="center">
+							<video controls muted loop preload="auto" id="VideoEffectsAttr">
+								<source src="video/effects_attractivity.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+					</section>
+				</section>
+
+				<!-- ============== -->
+				<!-- = CONCLUSION = -->
+				<!-- ============== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Conclusion et perspectives</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Points importants</h3>
+						<p>
+							<ul>
+								<li>On a mis en évidence la nécessité de prendre en compte la complexité du fonctionnement d'un système logistique (multi-échelle, rétro-action, interactions multiples, fonctionnement distribué,...).</li>
+								<li class="fragment" data-fragment-index="1">Nous avons utilisé un modèle orienté agent et des graphes dynamiques.</li>
+								<li class="fragment" data-fragment-index="2">Cette méthode se veut flexible car elle nous permet de proposer des implémentations pour plusieurs systèmes logistiques différents.</li>
+								<li class="fragment" data-fragment-index="3">Les graphes dynamiques rendent compte de l'évolution du trafic sur un réseau de transport multi-modal.</li>
+								<li class="fragment" data-fragment-index="4">Les agents s'auto-organisent pour gérer les flux de marchandises et s'adaptent d'eux-mêmes et en temps réel aux perturbations du système.</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">Points importants</h3>
+						<p>
+							<ul>
+								<li>Le modèle et son implémentation permettent entre autres d'étudier les impacts de l'attractivité des ports sur les flux logistiques.</li>
+								<li class="fragment" data-fragment-index="1">Les agents peuvent adopter différentes stratégies qui ont des impacts sur le système.</li>
+								<li class="fragment" data-fragment-index="2">Des critères de performances conduisent les agents à adopter préférentiellement les stratégies les plus efficaces.</li>
+								<li class="fragment" data-fragment-index="3">Capacité du modèle à étudier la résilience du système, notamment en permettant aux agents de s'adapter de manière autonome à différents scénarios.</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Perspectives</h3>
+						<p>
+							<ul>
+								<li>Dans un premier temps, on va améliorer la simulation et implémenter la multi-modalité prévue par le modèle.</li>
+								<li class="fragment" data-fragment-index="1">On veut également poursuivre un travail de confrontation des résultats avec des données réelles (notamment via des filières spécifiques tel que le e-commerce).</li>
+								<li class="fragment" data-fragment-index="2">Bien qu'il existe déjà des mesures de performance et des coûts divers, on voudrait intégrer la notion de coûts financiers dans l'implémentation.</li>
+								<li class="fragment" data-fragment-index="3">On souhaite proposer aux utilisateurs de nouvelles manières de perturber le système pour confronter les agents à des scénarios réalistes et variés. Par exemple : 
+									<ul>
+										<li>Bloquer les livraisons en partance d'un entrepôt ou d'un fournisseur.</li>
+										<li>Augmenter ou diminuer significativement la consommation de marchandises dans des lieux précis.</li>
+									</ul>
+								</li>
+								<li class="fragment" data-fragment-index="4">Enfin, on aimerait effectuer une analyse approfondie des réseaux émergeant au cours d'une simulation, afin, entre autres, de détecter des communautés d'acteurs.</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress">Merci pour votre attention !</h2>
+					<br /><br /><br />
+					<p class="center">
+					thibaut.demare@univ-lehavre.fr
+					</p>
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h3 class="no-toc-progress">Citations</h3>
+					<p>
+						<ul>
+							<li>Lóránt A Tavasszy, Ben Smeenk, and Cees J Ruijgrok. A dss for modelling logistic chains in freight transport policy analysis. International Transactions in Operational Research, 5(6):447 – 459, 1998. ISSN 0969-6016. doi : http://dx.doi.org/10.1016/S0969-6016(98)00045-8.</li>
+							<li>Barry Zondag, Pietro Bucci, Padideh Gützkow, and Gerard de Jong. Port competition modeling including maritime, port, and hinterland characteristics. Maritime Policy & Management, 37(3) :179–194, 2010.</li>
+							<li>Amir Samimi, Abolfazl Mohammadian, and Kazuya Kawamura. A behavioral freight movement microsimulation model : method and data. Transportation Letters, 2(1) :53–62, 2010. doi : 10.3328/TL.2010.02.01.53-62.</li>
+							<li>Francesco Parola and Anna Sciomachen. Intermodal container flows in a port system network: Analysis of possible growths via simulation models. International Journal of Production Economics, 97(1):75–88, 2005. ISSN 0925-5273. doi: http://dx.doi.org/10.1016/j.ijpe. 2004.06.051.</li>
+							<li>David L. Huff. Defining and estimating a trading area. Journal of Marketing, 28(3): pp. 34–38,1964.</li>
+							<li>Alfonso Shimbel. Structural parameters of communication networks. The bulletin of mathematical biophysics, 15(4): 501–507, 1953. doi: 10.1007/BF02476438.</li>
+						</ul>
+					</p>
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h3 class="no-toc-progress">Publications</h3>
+					<p>
+						<ul>
+							<li>Thibaut Démare, Cyrille Bertelle, Antoine Dutot, and Laurent Lévêque. Interface maritime et interface métropolitaine : vers la modélisation de l’axe seine par les réseaux. In Laurent Beauguitte (coord.), editor, Les réseaux dans le temps et dans l’espace, Paris, Actes de la deuxième journée d’études du groupe fmr (flux, matrices, réseaux), pages 249–263, 2013.</li>
+							<li>Thibaut Démare, Cyrille Bertelle, Antoine Dutot, and Laurent Lévêque. Agent-based model and networks : the modelling of the maritime and metropolitan interfaces of the seine axis. In Devport international conference for ports, maritime transport and regional development : Adaptation of maritime, port and logistics actors to hazards of globalization, June 2014.</li>
+							<li>Thibaut Démare, Cyrille Bertelle, Antoine Dutot, and Laurent Lévêque. Logistic corridors modelled with agent-based approach and dynamic graphs. In 4th International Conference on Advanced Logistics and Transport (ICALT), pages 199–204, May 2015. doi : 10.1109/ICAdLT.2015.7136619.</li>
+							<li>Thibaut Démare, Cyrille Bertelle, Antoine Dutot, and Laurent Lévêque. Agent-based approach and dynamic graphs to model logistic corridor. Procedia Computer Science, 52 (0) :968 – 973, 2015. ISSN 1877-0509. doi : http://dx.doi.org/10.1016/j.procs.2015.05.174. The 6th International Conference on Ambient Systems, Networks and Technologies (ANT-2015), the 5th International Conference on Sustainable Energy Information Technology (SEIT-2015).</li>
+							<li>Thibaut Démare, Cyrille Bertelle, Antoine Dutot, and Laurent Lévêque. A systemic approach with agent-based model and dynamic graphs to understand the organization of a logistic system. In Arnaud Serry and Laurent Lévêque, editors, Short Sea shipping : Myth or future of regional transport, chapter 12, pages 211–223. Editions EMS, May 2016.</li>
+						</ul>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				width: 1366,
+				height: 768,
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				transition: 'slide',
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } }
+
+				]
+			});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,212 @@
+.logo {
+    position: absolute;
+    left: 50px;
+}
+
+.clear {
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.center {
+    text-align: center!important;
+}
+
+.half_size {
+    width: 50%;
+}
+
+.third_size {
+    width: 32%;
+}
+
+.two_third_size {
+    width: 65%;
+}
+
+.fifth_size {
+    width:15%;
+    margin:0;
+}
+
+.small_size {
+    width: 20%;
+}
+
+.full_size {
+    width: 100%;
+}
+
+.large_size {
+    width: 80%;
+}
+
+.section_title {
+    color: white;
+    text-align: center;
+}
+
+.section_title h1{
+    color: white;
+}
+
+#first_frame {
+    
+}
+/*
+ * HEADER
+ */
+
+#header{
+    background-color: #1b1b1b;
+    color: #ddd;
+    width: 100%;
+    padding : 10px;
+   /* padding-bottom:0px; */
+    font-size: 1em;
+    font-family: 'Patua One', sans-serif;
+   /* box-shadow: 0px 0px 5px 7px #1b1b1b; */
+    z-index: 100; 
+}
+
+#presenter_name {
+    float: left;
+    text-align: left;
+    width : 24%;
+}
+
+#title_div {
+    color: #ddd;
+    float: left;
+    text-align: center;
+    width : 50%;
+    font-size: 1.3em;
+    height:45px;
+}
+
+#title {
+    vertical-align:middle;
+}
+
+#conf_name_date {
+    float: left;
+    text-align: right;
+    width : 24%;
+}
+
+.clear_div{
+    display: block;
+    clear: both;
+}
+
+#logo_graphstream {
+    width: 45px;
+    height: 45px;
+    vertical-align:middle;
+}
+
+#footer{
+    position:fixed;
+    bottom:3px;
+    font-size: 1.55vh;
+    z-index: 10;
+}
+
+/*
+ * Images
+ */
+#ModelResume {
+    width: 55%;   
+}
+
+#DiagFluxPlusActors {
+    width:100%;
+}
+
+#InterfacePortMetro {
+    width: 100%;
+}
+
+#TroisExemples {
+    width: 100%;
+}
+
+#model_actors {
+    width: 70%;   
+}
+
+#model_actors_zoom1 {
+    width: 100%;   
+}
+
+#model_actors_zoom2 {
+    width: 100%;   
+}
+
+#model_actors_zoom3 {
+    width: 100%;   
+}
+
+#model_actors_zoom4 {
+    width: 100%;   
+}
+
+#multi-modal_network {
+    width:70%;
+}
+
+#AgentsImpl {
+    width: 100%;
+}
+
+#CumulativeStockRoads {
+    width: 100%;
+}
+
+#CumulativeBatchNumber {
+    width: 100%;
+}
+
+#VideoReappro {
+    width: 90%;
+}
+
+#compAttr28, #compAttr2, #compAttr4 {
+    width: 40%;
+}
+
+#VideoEffectsAttr {
+    width: 40%
+}
+
+#SpatailClusters {
+    width: 60%;
+}
+
+#StrategiesAdoption {
+    width:70%;
+}
+
+#simulation {
+    width : 50%;
+}
+.graph {
+    text-align:right;
+    right:0;
+}
+
+/*
+ * Table results
+ */
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg tr{padding:10px 5px;border-style:solid;border-width:1px;word-break:normal;}
+.tg td{padding:10px 5px;border-style:solid;border-width:1px;word-break:normal;}
+.tg th{padding:10px 5px;border-style:solid;border-width:1px;word-break:normal;}
+.tg .tg-s6z2{text-align:center}
