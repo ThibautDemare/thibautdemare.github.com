@@ -57,8 +57,8 @@
     color: white;
 }
 
-#first_frame {
-    
+#first_frame p {
+    font-size: 1.3em;
 }
 /*
  * HEADER
@@ -68,7 +68,7 @@
     background-color: #1b1b1b;
     color: #ddd;
     width: 100%;
-    padding : 10px;
+    padding : 5px;
    /* padding-bottom:0px; */
     font-size: 1em;
     font-family: 'Patua One', sans-serif;
@@ -87,7 +87,7 @@
     float: left;
     text-align: center;
     width : 50%;
-    font-size: 1.3em;
+    font-size: 1.2em;
     height:45px;
 }
 

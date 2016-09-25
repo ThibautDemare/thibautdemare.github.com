@@ -83,11 +83,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="1695.1467"
-     inkscape:cy="-34.634715"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="1178.8215"
+     inkscape:cy="40.667512"
      inkscape:document-units="px"
-     inkscape:current-layer="g3136"
+     inkscape:current-layer="layer1"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -119,13 +119,13 @@
      transform="translate(1270.8604,456.39477)">
     <path
        style="fill:none;stroke:#000000;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
-       d="m -709.23095,-172.56822 170,0"
+       d="m -659.67381,-172.56822 170,0"
        id="path4231"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
-       d="m 251.86339,-172.56822 170,0"
+       d="m 268.38252,-172.56822 170,0"
        id="path4231-4"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -144,22 +144,22 @@
            x="-1272.1729"
            id="tspan4197"
            sodipodi:role="line" /><tspan
-           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans"
+           style="font-size:36.00000004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans"
            id="tspan4199"
            y="-187.1906"
            x="-1272.1729"
            sodipodi:role="line">- subit les aléas et les irrégularités</tspan><tspan
            id="tspan3011"
-           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans"
+           style="font-size:36.00000004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans"
            y="-147.1906"
            x="-1272.1729"
            sodipodi:role="line">du transport maritime</tspan><tspan
-           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans"
+           style="font-size:36.00000004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans"
            id="tspan4201"
            y="-107.1906"
            x="-1272.1729"
            sodipodi:role="line">- traite des flux massifiés</tspan><tspan
-           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans"
+           style="font-size:36.00000004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans"
            id="tspan4203"
            y="-67.190598"
            x="-1272.1729"
@@ -179,7 +179,7 @@
     </g>
     <g
        id="g3202"
-       transform="translate(-17.904414,0)">
+       transform="translate(15.133709,0)">
       <g
          id="g3091">
         <path
@@ -221,13 +221,13 @@
              sodipodi:role="line"
              x="-382.40259"
              y="-49.126148"
-             style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans"
+             style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Open Sans;-inkscape-font-specification:Open Sans"
              id="tspan4221" /><tspan
              sodipodi:role="line"
              x="-382.40259"
              y="-4.1261482"
              id="tspan4219"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Open Sans;-inkscape-font-specification:Open Sans" /></text>
+             style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Open Sans;-inkscape-font-specification:Open Sans" /></text>
         <text
            xml:space="preserve"
            style="font-size:18px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:sans;-inkscape-font-specification:sans"
@@ -244,7 +244,7 @@
     </g>
     <g
        id="g3136"
-       transform="translate(-1.4529179e-5,-10.176853)">
+       transform="translate(7.5400608e-5,-10.176853)">
       <g
          id="g3023">
         <text

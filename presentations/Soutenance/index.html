@@ -48,7 +48,7 @@
 			</div>
 
 			<!-- => faire plus de transition quand on passe d'une slide à l'autre -->
-			<div class="slides">
+			<div class="slides" id="first_frame">
 				<section data-background="#fff" data-state="no-toc-progress">
 					<h1 class="no-toc-progress">Une approche systémique à base d'agents et de graphes dynamiques pour modéliser l'interface logistique port-métropole</h1>
 					<p class="center">
@@ -164,7 +164,7 @@
 						<p>
 							<ul>
 								<li>Modèles agrégés : considèrent des données agrégées de quantité produite et consommée au sein de zones d'un territoire pour estimer la part des flux transitant entre ces zones. (Tavasszy et al., 1998) (Zondag et al., 2010)</li>
-								<li class="fragment" data-fragment-index="1">Modèles non agrégés : une partie des données est désagrégée et permet d'obtenir des résultats plus réalistes et précis. (Samini et al., 2010)</li>
+								<li class="fragment" data-fragment-index="1">Modèles non agrégés : tout ou partie des données sont non agrégées. Cela permet d'obtenir des résultats plus précis et donc plus réalistes. (Samini et al., 2010)</li>
 							</ul>
 						</p>
 
@@ -228,8 +228,8 @@
 						<h3 class="frame_title">Les agents</h3>
 						<ul>
 							<li>Chaque acteur et infrastructure de la réalité est représenté par un agent.</li>
-							<li>Ils ont des règles prédéfinies décrivant comment ils peuvent interagir entre eux et comment ils doivent se comporter en fonction de leurs perceptions.</li>
-							<li>Un graphe dynamique représente les interactions entre chaque agent.</li>
+							<li class="fragment" data-fragment-index="1">Ils ont des règles prédéfinies décrivant comment ils peuvent interagir entre eux et comment ils doivent se comporter en fonction de leurs perceptions.</li>
+							<li class="fragment" data-fragment-index="2">Un graphe dynamique représente les interactions entre chaque agent.</li>
 						</ul>
 					</section>
 
