@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Inauguration du Campus Logistique</title>
+
+		<meta name="description" content="Inauguration du Campus Logistique">
+		<meta name="author" content="Thibaut Démare">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/design.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div  id="header">
+				<div id="presenter_name">
+					LITIS<br />
+					LMAH<br />
+					IDEES
+				</div>
+				<div id="title_div">
+					<span id="title">Interface logistique port-métropole</span>
+				</div>
+				<div id="conf_name_date">
+					Inauguration du Campus Logistique
+					<br />
+					Le Havre
+					<br />
+					13 Octobre 2016
+				</div>
+				<div class="clear_div"></div>
+			</div>
+
+			<!-- => faire plus de transition quand on passe d'une slide à l'autre -->
+			<div class="slides" id="first_frame">
+				<section data-background="#fff" data-autoslide="3000">
+					<h1>Interface logistique port-métropole</h1>
+					<p class="center">
+						Normandie Université
+						<br />
+						LITIS - LMAH - IDEES
+						<br />
+						Inauguration du Campus Logistique
+						<br />
+						13 Octobre 2016
+					</p>
+
+					<!-- <p class="center">
+						Cyrille Bertelle, Thibaut Démare, Antoine Dutot, Claude Duvallet, Ronan Kerbiriou, Laurent Lévêque, Arnaud Serry, Adnan Yassine
+					</p> -->
+				</section>
+
+				<!-- =========== -->
+				<!-- = CONTEXT = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-autoslide="3000">
+						<h1>Projet DEVPORT</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">DEVPORT : SIG de l'axe Seine</h3>
+						
+						<div class="center">
+							<img src="images/sig.jpg" id="SIG"/>
+							<br/>
+							<!-- <span class="legend">Figure 1 : Détection de clusters spatiaux grâce aux composantes connexes d'un graphe de voisinage.</span> -->
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Analyse maritime</h3>
+						<div class="center">
+							<img src="images/analyse.jpg" id="analyse"/>
+							<br/>
+							<!-- <span class="legend">Figure 1 : Détection de clusters spatiaux grâce aux composantes connexes d'un graphe de voisinage.</span> -->
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">GEODEVPORT : Atlas dynamique en ligne</h3>
+						<div class="center">
+							<img src="images/atlas.png" id="atlas"/>
+							<br/>
+							<!-- <span class="legend">Figure 1 : Détection de clusters spatiaux grâce aux composantes connexes d'un graphe de voisinage.</span> -->
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-autoslide="3000">
+						<h1>Modélisation et Simulation</h1>
+					</section>
+					
+					<section>
+						<h3 class="frame_title">Un organisation distribuée du flux</h3>
+							<div class="center">
+								<object type="image/svg+xml" data="images/diagramme_flux_physique_plus_acteurs_horizontal_fr.svg" id="DiagFluxPlusActors">
+								  Your browser does not support SVG
+								</object>
+								<br/>
+								<span class="legend">Figure 1 : Chaque acteur est responsable d'une partie seulement du flux auto-organisé de marchandises. Leurs interactions et méthodes de travail permettent une organisation cohérente.</span>
+							</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">L'interface port-métropole</h3>
+						<!-- 
+							On *propose* l'interface 
+							Logistique métropolitaine = logistique urbaine
+						-->
+							<div class="center">
+								<object type="image/svg+xml" data="images/interface_port_metropole.svg" id="InterfacePortMetro">
+								  Your browser does not support SVG
+								</object>
+								<br/>
+								<span class="legend">Figure 2 : L'interface qui connecte les logistiques portuaire et métropolitaine.</span>
+							</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Problématique</h3>
+						<p>
+							<ul>
+								<li>On cherche à comprendre, à de multiples échelles, comment des acteurs, autonomes et très hétérogènes, s'organisent collectivement autour des infrastructures à leurs dispositions pour gérer des flux de marchandises soumis à un ensemble de contraintes.</li>
+								<li>Nous proposons un modèle agent qui représente les propriétés, contraintes et comportements <em>locaux</em> d'un système logistique pour en reproduire le fonctionnement <em>global</em> grâce à la simulation.</li>
+								<li>La simulation permet alors de tester différents scénarios pour comprendre comment des décisions locales impactent l'ensemble du système.</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Architecture générale du modèle</h3>
+						<div class="center">
+							<img src="images/resume_model_simplifie.svg" id="ModelResume"/>
+							<br/>
+							<span class="legend">Figure 4 : Représentation schématique du modèle</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">La plateforme de simulation</h3>
+						<ul>
+							<li>Implémentation simulant l'évolution du système heure par heure grâce à des agents réactifs.</li>
+							<li>Utilisation de données réelles concernant l'axe Seine afin d'effectuer des analyses et de permettre de confronter le modèle à des données réelles (possibilité de simuler facilement d'autres systèmes logistiques).</li>
+							<li>Possibilité de modifier différents paramètres et comportements locaux.</li>
+							<li>Possibilité de perturber le système dynamiquement pour observer différents phénomènes comme la réorganisation des acteurs.</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-autoslide="3000">
+						<h1>Projet CIRMAR</h1>
+					</section>
+
+				</section>
+
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-autoslide="3000">
+						<h1>Passage Portuaire</h1>
+					</section>
+
+					<section>
+						<h3>Projet ROROMAX</h3>
+						<h4>Contexte</h4>
+						<p>
+							Roromax vise à améliorer la compétitivité du Grand Port Maritime du Havre en trafic roulier. 
+						</p>
+
+						<h4>Objectif</h4>
+						<p>
+							Minimiser le temps total nécessaire aux opérations de manutentions, réduisant ainsi la durée d’escale des navires.
+						</p>
+
+						<h4>Résolution et réalisation</h4>
+						<p>
+							<ul>
+								<li>Développement d’un modèle mathématique qui intègre toutes les contraintes réelles.</li>
+								<li>Résolution de ce modèle par des algorithmes robustes.</li>
+								<li>Développement d’un logiciel d’aide à la décision permettant le choix des meilleurs emplacements à quais des navires arrivant au terminal roulier du Havre, tout en garantissant des temps minimaux d’escales.</li>
+							</ul>
+						</p>
+
+						<h4>Personnes impliquées</h4>
+						<p>
+							Senoussi BENMANSOUR, Ibrahima DIARRASSOUBA et Adnan YASSINE. LMAH – Université du Havre
+						</p>
+
+						
+						<div class="center">
+							<img src="images/article-roromax.jpg" id="roromaxPhoto"/>
+							<img src="images/img-logiciel-02.png" id="roromaxScreenshot"/>
+							<!-- <span class="legend">Figure 1 : Détection de clusters spatiaux grâce aux composantes connexes d'un graphe de voisinage.</span> -->
+						</div>
+					</section>
+
+					<section>
+						<h3>Optimisation multi-objective des systèmes de manutention de conteneurs dans les terminaux maritimes</h3>
+						<h4>Contexte</h4>
+						<p>
+							Vu l’évolution rapide du commerce mondial, la productivité des terminaux à conteneurs est continuellement mise à l’épreuve. L’optimisation des temps de stockage et du transfert de conteneurs, de l’espace de stockage et des coûts de stockage devient un besoin principal. 
+						</p>
+
+						<h4>Objectif</h4>
+						<p>
+							<ul>
+								<li>Evaluer des coûts opérationnels réalistes (équipement, transport, stockage).</li>
+								<li>Assurer une organisation efficace de l’espace de stockage .</li>
+								<li>Prendre en compte plusieurs types de véhicules et différents modes de routage.</li>
+							</ul>
+						</p>
+
+						<h4>Résolution et réalisation</h4>
+						<p>
+							Développement des algorithmes multi-objectifs et adaptés au problème et aux  indicateurs de performance afin d'aider le décideur à sélectionner une solution de compromis efficace.
+						</p>
+
+						<h4>Personnes impliquées</h4>
+						<p>
+							Hamdi DKHIL et Adnan YASSINE – LMAH – Université du Havre
+						</p>
+
+						<div class="center">
+							<img src="images/Cavalier_Gerbeur.jpg" id="cavalier"/>
+							<img src="images/port.jpg" id="port"/>
+							<img src="images/port2.jpg" id="port2"/>
+							<!-- <span class="legend">Figure 1 : Détection de clusters spatiaux grâce aux composantes connexes d'un graphe de voisinage.</span> -->
+						</div>
+					</section>
+				</section>
+
+				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				width: 1366,
+				height: 768,
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: false,
+				autoSlide:15000,
+				loop:true,
+				transition: 'slide'
+			});
+		</script>
+
+	</body>
+</html>
