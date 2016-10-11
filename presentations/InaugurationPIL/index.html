@@ -50,8 +50,8 @@
 
 			<!-- => faire plus de transition quand on passe d'une slide à l'autre -->
 			<div class="slides" id="first_frame">
-				<section data-background="#fff" data-autoslide="3000">
-					<h1>Interface logistique port-métropole</h1>
+				<section data-background="#fff" data-state="no-toc-progress" data-autoslide="3000">
+					<h1 class="no-toc-progress">Interface logistique port-métropole</h1>
 					<p class="center">
 						Normandie Université
 						<br />
@@ -71,7 +71,7 @@
 				<!-- = CONTEXT = -->
 				<!-- =========== -->
 				<section>
-					<section data-background="#1b1b1b" class="section_title" data-autoslide="3000">
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress" data-autoslide="3000">
 						<h1>Projet DEVPORT</h1>
 					</section>
 
@@ -86,7 +86,7 @@
 					</section>
 
 					<section>
-						<h3 class="frame_title">DEVPORT : Analyse maritime</h3>
+						<h3 class="frame_title no-toc-progress">DEVPORT : Analyse maritime</h3>
 						<div class="center">
 							<img src="images/analyse.jpg" id="analyse"/>
 							<br/>
@@ -95,7 +95,7 @@
 					</section>
 
 					<section>
-						<h3 class="frame_title">GEODEVPORT : Atlas dynamique en ligne</h3>
+						<h3 class="frame_title no-toc-progress">GEODEVPORT : Atlas dynamique en ligne</h3>
 						<div class="center">
 							<img src="images/atlas.png" id="atlas"/>
 							<br/>
@@ -105,12 +105,12 @@
 				</section>
 
 				<section>
-					<section data-background="#1b1b1b" class="section_title" data-autoslide="3000">
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress" data-autoslide="3000">
 						<h1>Modélisation et Simulation</h1>
 					</section>
 					
 					<section>
-						<h3 class="frame_title">Un organisation distribuée du flux</h3>
+						<h3 class="frame_title no-toc-progress">Un organisation distribuée du flux</h3>
 							<div class="center">
 								<object type="image/svg+xml" data="images/diagramme_flux_physique_plus_acteurs_horizontal_fr.svg" id="DiagFluxPlusActors">
 								  Your browser does not support SVG
@@ -121,7 +121,7 @@
 					</section>
 
 					<section>
-						<h3 class="frame_title">L'interface port-métropole</h3>
+						<h3 class="frame_title no-toc-progress">L'interface port-métropole</h3>
 						<!-- 
 							On *propose* l'interface 
 							Logistique métropolitaine = logistique urbaine
@@ -149,7 +149,9 @@
 					<section>
 						<h3 class="frame_title">Architecture générale du modèle</h3>
 						<div class="center">
-							<img src="images/resume_model_simplifie.svg" id="ModelResume"/>
+							<object type="image/svg+xml" data="images/resume_model_simplifie.svg" id="ModelResume">
+								  Your browser does not support SVG
+							</object>
 							<br/>
 							<span class="legend">Figure 4 : Représentation schématique du modèle</span>
 						</div>
@@ -167,15 +169,83 @@
 				</section>
 
 				<section>
-					<section data-background="#1b1b1b" class="section_title" data-autoslide="3000">
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress" data-autoslide="3000">
 						<h1>Projet CIRMAR</h1>
 					</section>
 
+					<section>
+						<h3 class="frame_title">CIRMAR : Analyse de la CIRculation MARitime</h3>
+						<div style="display: inline-flex; width:100%; align-items: flex-start; margin-top:20px;">
+						<div>
+							<ul>
+								<li>Utilisation des signaux AIS transmis par les navires.</li>
+								<li>Phase 1 du projet : Acquisition des données.
+									<ul>
+										<li>Définition des sources de données : Récepteur AIS local, données communautaires AIS HUB, données AIS du GPMH.</li>
+										<li>Mise en place d'un outil de réception et de stockage des données.</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<img src="images/CaptureAIS.png" id="CaptureAIS"/>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Schéma général du projet</h3>
+						<div class="center">
+							<img src="images/SchemaGeneral.png" id="SchemaGeneral"/>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">AIS HUB : Notre plus grosse source de données</h3>
+						<ul>
+							<li>Service de partage de données.</li>
+							<li>397 stations réparties dans le monde, 21237 navires.</li>
+							<li>Principe d'utilisation :
+								<ul>
+									<li>Envoi de nos données collectées localement.</li>
+									<li>Réception de l'ensemble des données collectées dans le monde entier.</li>
+								</ul>
+							</li>
+							<li>Ce que nous avons fait :
+								<ul>
+									<li>Mise en place d'une antenne et d'un récepteur AIS sur le toit de l'IUT.</li>
+									<li>Développement de plusieurs programmes informatique pour l'acquisition des données et d'envoi à AIS HUB, la réception des données depuis AIS HUB et le stockage au format texte, le décodage des trames AIS.</li>
+								</ul>
+							</li>
+						</ul>	
+					</section>
+
+					<section>
+						<h3 class="frame_title">CIRMAR : Analyse de la CIRculation MARitime</h3>
+						<ul>
+							<li>Phase 2 du projet : Structuration et traitement des données
+								<ul>
+									<li>Grande quantité de données reçues <span style="font-weight: bold;font-size:1.3em;">&#10152;</span> problématique de type Big Data.</li>
+									<li>Proposer des outils d'extraction des données pertinentes.</li>
+									<li>Améliorer la qualité des données en éliminant les données erronées ou en corrigeant certaines données (Exemple : le nom des ports).</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Applications valorisables</h3>
+						<ul>
+							<li>la ponctualité des navires dans les ports par rapport aux plannings des compagnies maritimes,</li>
+							<li>l'impact sur les maillons terrestres des chaînes logistiques,</li>
+							<li>l'influence du "slow steaming",</li>
+							<li>le design (choix des ports d'escales) des lignes maritimes régulières et leur évolution,</li>
+							<li>la modélisation des conditions de circulation dans les mers très fréquentées (i.e. La Manche), etc.</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
-					<section data-background="#1b1b1b" class="section_title" data-autoslide="3000">
-						<h1>Passage Portuaire</h1>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress" data-autoslide="3000">
+						<h1>Gestion des Terminaux Portuaires</h1>
 					</section>
 
 					<section>
@@ -187,15 +257,15 @@
 
 						<h4>Objectif</h4>
 						<p>
-							Minimiser le temps total nécessaire aux opérations de manutentions, réduisant ainsi la durée d’escale des navires.
+							Minimiser le temps total nécessaire aux opérations de manutentions, réduisant ainsi la durée d'escale des navires.
 						</p>
 
 						<h4>Résolution et réalisation</h4>
 						<p>
 							<ul>
-								<li>Développement d’un modèle mathématique qui intègre toutes les contraintes réelles.</li>
+								<li>Développement d'un modèle mathématique qui intègre toutes les contraintes réelles.</li>
 								<li>Résolution de ce modèle par des algorithmes robustes.</li>
-								<li>Développement d’un logiciel d’aide à la décision permettant le choix des meilleurs emplacements à quais des navires arrivant au terminal roulier du Havre, tout en garantissant des temps minimaux d’escales.</li>
+								<li>Développement d'un logiciel d'aide à la décision permettant le choix des meilleurs emplacements à quais des navires arrivant au terminal roulier du Havre, tout en garantissant des temps minimaux d'escales.</li>
 							</ul>
 						</p>
 
@@ -216,14 +286,14 @@
 						<h3>Optimisation multi-objective des systèmes de manutention de conteneurs dans les terminaux maritimes</h3>
 						<h4>Contexte</h4>
 						<p>
-							Vu l’évolution rapide du commerce mondial, la productivité des terminaux à conteneurs est continuellement mise à l’épreuve. L’optimisation des temps de stockage et du transfert de conteneurs, de l’espace de stockage et des coûts de stockage devient un besoin principal. 
+							Vu l'évolution rapide du commerce mondial, la productivité des terminaux à conteneurs est continuellement mise à l'épreuve. L'optimisation des temps de stockage et du transfert de conteneurs, de l'espace de stockage et des coûts de stockage devient un besoin principal. 
 						</p>
 
 						<h4>Objectif</h4>
 						<p>
 							<ul>
 								<li>Evaluer des coûts opérationnels réalistes (équipement, transport, stockage).</li>
-								<li>Assurer une organisation efficace de l’espace de stockage .</li>
+								<li>Assurer une organisation efficace de l'espace de stockage .</li>
 								<li>Prendre en compte plusieurs types de véhicules et différents modes de routage.</li>
 							</ul>
 						</p>
@@ -265,7 +335,15 @@
 				slideNumber: false,
 				autoSlide:15000,
 				loop:true,
-				transition: 'slide'
+				transition: 'slide',
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					/*{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } }*/
+
+				]
 			});
 		</script>
 

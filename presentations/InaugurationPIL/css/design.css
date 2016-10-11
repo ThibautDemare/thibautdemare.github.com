@@ -150,24 +150,33 @@
     width: 55%;   
 }
 
+#CaptureAIS {
+	width: 60%;
+	height:auto;
+}
+
+#SchemaGeneral {
+	width: 100%;
+}
+
 #roromaxPhoto {
-    width: 40%;
+    width: 38%;
     margin-top:5px;
 }
 
 #roromaxScreenshot {
-    width: 36%;
+    width: 34%;
     margin-top:5px;
 }
 
 #cavalier {
-    width: 13%;
+    width: 12%;
 }
 
 #port {
-    width: 35%;
+    width: 33%;
 }
 
 #port2 {
-    width: 34%;
+    width: 32%;
 }
