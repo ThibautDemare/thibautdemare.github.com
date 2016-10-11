@@ -125,6 +125,10 @@
 /*
  * Images
  */
+span.legend {
+	font-size: 1.3em;
+}
+
 #SIG {
 	width: 70%;
 }
@@ -148,6 +152,10 @@
 
 #ModelResume {
     width: 55%;   
+}
+
+#ExemplesSimu {
+	width:90%;
 }
 
 #CaptureAIS {
