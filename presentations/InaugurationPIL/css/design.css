@@ -125,6 +125,10 @@
 /*
  * Images
  */
+object[type="image/svg+xml"] {
+  margin-top:10px;
+}
+
 span.legend {
 	font-size: 1.3em;
 }
@@ -167,24 +171,32 @@ span.legend {
 	width: 100%;
 }
 
+#AISHub {
+	width: 30%;
+}
+
+#AISTraffic {
+	width: 48%;
+}
+
 #roromaxPhoto {
-    width: 38%;
-    margin-top:5px;
+    width: 55%;
+ /*   margin-top:5px;*/
 }
 
 #roromaxScreenshot {
-    width: 34%;
-    margin-top:5px;
+    width: 55%;
+    /*margin-top:5px;*/
 }
 
 #cavalier {
-    width: 12%;
+    width: 22%;
 }
 
 #port {
-    width: 33%;
+    width: 58%;
 }
 
 #port2 {
-    width: 32%;
+    width: 55%;
 }
