@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Bilan CLASSE - Modélisation de l'interface logistique port-métropole à l'aide d'une approche agent et de graphes dynamiques</title>
+
+		<meta name="description" content="Bilan CLASSE - Modélisation de l'interface logistique port-métropole à l'aide d'une approche agent et de graphes dynamiques">
+		<meta name="author" content="Thibaut Démare">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/design.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div  id="header">
+				<div id="presenter_name">
+					Thibaut Démare - LITIS<br />
+					thibaut.demare@univ-lehavre.fr
+				</div>
+				<div id="title_div">
+					<span id="title">Modélisation de l'interface logistique port-métropole à l'aide d'une approche agent et de graphes dynamiques</span>
+				</div>
+				<div id="conf_name_date">
+					Bilan CLASSE
+					<br />
+					Le Havre
+					<br />
+					5 Avril 2017
+				</div>
+				<div class="clear_div"></div>
+			</div>
+
+			<!-- => faire plus de transition quand on passe d'une slide à l'autre -->
+			<div class="slides" id="first_frame">
+				<section data-background="#fff" data-state="no-toc-progress">
+					<h1 class="no-toc-progress">Modélisation de l'interface logistique port-métropole à l'aide d'une approche agent et de graphes dynamiques</h1>
+					<p class="center">
+						Stefan Balev, Thibaut Démare, Dominique Fournier, Eric Sanlaville
+						<br />
+						Normandie Université, Le Havre - LITIS
+						<br />
+						CLASSE 2
+						<br />
+						5 Avril 2017
+					</p>
+				</section>
+
+
+				<!-- ============ -->
+				<!-- = Overview = -->
+				<!-- ============ -->
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress frame_title">Plan</h2>  
+					<ol style="width=100%">
+						<li>Problématique</li>
+						<li>Modèle et implémentation</li>
+						<li>Résultats</li>
+						<li>Vers la multi-modalité</li>
+						<li>Conclusion et perspectives</li>
+					</ol>
+				</section>
+
+				<!-- ================= -->
+				<!-- = Problématique = -->
+				<!-- ================= -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Problématique</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Présentation d'un système logistique</h3>
+						<ul>
+							<li>C'est une composante essentielle d'un système spatial dans lequel les acteurs s'organisent autour d'infrastructures pour faire circuler des flux de marchandises, d'information et financier sur un territoire.</li>
+							<li class="fragment" data-fragment-index="1">Ces systèmes possèdent des nœuds d'accès par lesquels la marchandise entre ou sort.</li>
+							<li class="fragment" data-fragment-index="2">Des métropoles, ou aires urbaines, attirent et génèrent les flux.</li>
+							<li class="fragment" data-fragment-index="3">Le système subit plusieurs contraintes de nature différente (spatiale, économique, politique, ou écologique).</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">Un organisation distribuée du flux</h3>
+							<div class="center">
+								<object type="image/svg+xml" data="images/diagramme_flux_physique_plus_acteurs_horizontal_fr.svg" id="DiagFluxPlusActors">
+								  Your browser does not support SVG
+								</object>
+								<br/>
+								<span class="legend">Figure 1 : Chaque acteur est responsable d'une partie seulement du flux auto-organisé de marchandises. Leurs interactions et méthodes de travail permettent une organisation cohérente.</span>
+							</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">L'interface port-métropole</h3>
+						<!-- 
+							On *propose* l'interface 
+							Logistique métropolitaine = logistique urbaine
+						-->
+						<div class="center">
+							<object type="image/svg+xml" data="images/interface_port_metropole.svg" id="InterfacePortMetro">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 2 : L'interface qui connecte les logistiques portuaire et métropolitaine.</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Problématique</h3>
+						<p class="fragment" data-fragment-index="1">
+							<ul>
+								<li>On cherche à comprendre, à de multiples échelles, comment des acteurs, autonomes et très hétérogènes, s'organisent collectivement autour des infrastructures à leurs dispositions pour gérer des flux soumis à un ensemble de contraintes.</li>
+								<li class="fragment" data-fragment-index="2">Nous proposons un modèle agent qui représente les propriétés, contraintes et comportements <em>locaux</em> d'un système logistique pour en reproduire le fonctionnement <em>global</em> grâce à la simulation.</li>
+								<li class="fragment" data-fragment-index="3">La simulation permet alors de tester différents scénarios pour comprendre comment des décisions locales impactent l'ensemble du système.</li>
+							</ul>
+						</p>
+					</section>
+
+				</section>
+
+				<!-- ============================ -->
+				<!-- = Modéle et implémentation = -->
+				<!-- ============================ -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Modèle et implémentation</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Architecture générale</h3>
+						<!-- 
+						=> insister sur la rétro-action entre les trois niveaux
+						=> insister aussi sur la multi-modalité
+						=> citer quelques types d'acteur pour être plus concret
+						=> des structures/organisations émergent
+						-->
+						<div class="center">
+							<img src="images/resume_model_simplifie.svg" id="ModelResume"/>
+							<br/>
+							<span class="legend">Figure 4 : Représentation générale du modèle</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Les agents</h3>
+						<div class="center">
+							<object type="image/svg+xml" data="images/agents_implementes_reseau_fr.svg" id="AgentsImpl">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 7 : Les agents implémentés.</span>
+						</div>
+					</section>
+
+					<section>
+						<!-- 
+						attention "sous-graphe"
+						modérer sur le côté multi car on l'a pas implémenté 
+						insister plus sur la dynamique de topo
+						-->
+						<h3 class="frame_title">Le réseau de transport</h3>
+						<div class="center">
+							<img src="images/multi-modal_network_en.svg" id="multi-modal_network"/>
+							<br/>
+							<span class="legend">Figure 6 : Un réseau multi-modal et dynamique</span>
+						</div>
+					</section>
+				</section>
+
+				<!-- =========== -->
+				<!-- = Results = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Résultats et analyses</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Impacts des stratégies de réapprovisionnement sur les ruptures de stock</h3>
+						<!-- 
+						=> parler du carroyage
+						=> expliquer ce que c'est
+						expliquer ce que montre la figure
+						-->
+						<div class="center">
+							<video controls muted loop preload="auto" id="VideoReappro">
+								<source src="video/two_simulations_of_logistic_system.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Évolution du trafic dans un réseau dynamique</h3>
+						<div class="center">
+							<video controls muted loop preload="auto" id="VideoBlockedRoads">
+								<source src="video/blocked_roads.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Impacts de l'attractivité des ports sur le trafic</h3>
+						<div class="center">
+							<video controls muted loop preload="auto" id="VideoEffectsAttr">
+								<source src="video/effects_attractivity.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+					</section>
+				</section>
+
+				<!-- ========================== -->
+				<!-- = Vers la multi-modalité = -->
+				<!-- ========================== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Vers la multi-modalité</h1>
+					</section>
+
+					<!--
+						parler des signaux AIS pour déterminer la régularité des départs/arrivées
+					-->
+					<section>
+						<h3 class="frame_title">Modéliser la multi-modalité</h3>
+						
+						<ul>
+							<li>Transitaires :
+								<ul>
+									<li>cherchent un chemin pour la marchandise sur un réseau multi-modal.</li>
+									<li>peuvent sélectionner l'itinéraire le moins cher, le plus court (en durée ou en kilomètre), ou le moins cher à échéance.</li>
+								</ul>
+							</li>
+							<li class="fragment" data-fragment-index="1">Transporteurs routiers :
+								<ul>
+									<li>proposent des itinéraires à chaque demande d'un transitaire.</li>
+								</ul>
+							</li>
+							<li class="fragment" data-fragment-index="1">Transporteurs maritimes et fluviaux :
+								<ul>
+									<li>proposent à l'avance des itinéraires réguliers.</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<!--
+						parler du travail des étudiants 
+					-->
+					<section>
+						<h3 class="frame_title">Modéliser la multi-modalité</h3>
+						
+						<ul>
+							<li>Véhicules :
+								<ul>
+									<li>Volume maximal (en EVP).</li>
+									<li>Vitesse.</li>
+									<li>Itinéraire à respecter.</li>
+									<li>Coût au kilomètre et par EVP.</li>
+								</ul>
+							</li>
+							<li>Les camions ont des caractéristiques homogènes mais pas les navires ou les barges fluviales.</li>
+							<li class="fragment" data-fragment-index="1">Terminaux :
+								<ul>
+									<li>Connectés par différents modes de transport.</li>
+									<li>Vitesses de manutention différent par mode de transport.</li>
+									<li>File d'attentes des marchandises entrantes/sortantes.</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+
+				<!-- ============================= -->
+				<!-- = Conclusion et perspectives= -->
+				<!-- ============================= -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Conclusion et perspectives</h1>
+					</section>
+
+					<section>
+
+						<ul>
+							<li>On dispose d'une simulation fonctionnelle, dynamique et désagrégée permettant d'observer l'évolution d'un système logistique en fonction de différents paramètres et scénarios.</li>
+							<li class="fragment" data-fragment-index="1">Un travail de conception et d'implémentation est encore nécessaire (d'abords concernant le fluvial, mais aussi pour le ferroviaire).</li>
+							<li class="fragment" data-fragment-index="2">Un travail d'étudiants est en cours pour développer une interface graphique plus facile d'utilisation.</li>
+							<li class="fragment" data-fragment-index="3">On souhaite également travailler sur la détection de communautés.</li>
+						</ul>
+					</section>
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress">Merci pour votre attention !</h2>
+					<br /><br /><br />
+					<p class="center">
+					thibaut.demare@univ-lehavre.fr
+					</p>
+					<br />
+					<img src="images/logos.png" id="logos"/>
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h3 class="no-toc-progress">Publications</h3>
+					<p>
+						<ul>
+							<li>Thibaut Démare, Cyrille Bertelle, Antoine Dutot, and Laurent Lévêque. A systemic approach with agent-based model and dynamic graphs to understand the organization of a logistic system. In Arnaud Serry and Laurent Lévêque, editors, Short Sea shipping : Myth or future of regional transport, chapter 12, pages 211–223. Editions EMS, May 2016.</li>
+							<li>Thibaut Démare, Cyrille Bertelle, Antoine Dutot, and Laurent Lévêque. Agent-based approach and dynamic graphs to model logistic corridor. Procedia Computer Science, 52 (0) :968 – 973, 2015. ISSN 1877-0509. doi : http://dx.doi.org/10.1016/j.procs.2015.05.174. The 6th International Conference on Ambient Systems, Networks and Technologies (ANT-2015), the 5th International Conference on Sustainable Energy Information Technology (SEIT-2015).</li>
+							<li>Thibaut Démare, Cyrille Bertelle, Antoine Dutot, and Laurent Lévêque. Logistic corridors modelled with agent-based approach and dynamic graphs. In 4th International Conference on Advanced Logistics and Transport (ICALT), pages 199–204, May 2015. doi : 10.1109/ICAdLT.2015.7136619.</li>
+							<li>Thibaut Démare, Cyrille Bertelle, Antoine Dutot, and Laurent Lévêque. Agent-based model and networks : the modelling of the maritime and metropolitan interfaces of the seine axis. In Devport international conference for ports, maritime transport and regional development : Adaptation of maritime, port and logistics actors to hazards of globalization, June 2014.</li>
+							<li>Thibaut Démare, Cyrille Bertelle, Antoine Dutot, and Laurent Lévêque. Interface maritime et interface métropolitaine : vers la modélisation de l’axe seine par les réseaux. In Laurent Beauguitte (coord.), editor, Les réseaux dans le temps et dans l’espace, Paris, Actes de la deuxième journée d’études du groupe fmr (flux, matrices, réseaux), pages 249–263, 2013.</li>
+						</ul>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				width: 1366,
+				height: 768,
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				transition: 'slide',
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } }
+
+				]
+			});
+		</script>
+
+	</body>
+</html>
