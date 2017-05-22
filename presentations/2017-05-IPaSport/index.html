@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Effects of Ports Attractiveness on Logistic Flows in a Competition Context</title>
+
+		<meta name="description" content="Effects of Ports Attractiveness on Logistic Flows in a Competition Context">
+		<meta name="author" content="Thibaut Démare">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/design.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div  id="header">
+				<div id="presenter_name">
+					Thibaut Démare - LITIS<br />
+					thibaut.demare@univ-lehavre.fr
+				</div>
+				<div id="title_div">
+					<span id="title">Effects of Ports Attractiveness on Logistic Flows in a Competition Context</span>
+				</div>
+				<div id="conf_name_date">
+					IPaSPort'2017 International Conference
+					<br />
+					Le Havre
+					<br />
+					3 - 4 May 2017
+				</div>
+				<div class="clear_div"></div>
+			</div>
+
+			<div class="slides" id="first_frame">
+				<section data-background="#fff" data-state="no-toc-progress">
+					<h1 class="no-toc-progress">Effects of Ports Attractiveness on Logistic Flows in a Competition Context</h1>
+					<p class="center">
+						Thibaut Démare
+						<br />
+						Stefan Balev, Cyrille Bertelle, Antoine Dutot, Dominique Fournier and Eric Sanlaville
+						<br />
+						Normandie Université
+						<br />
+						LITIS
+						<br />
+						IPaSPort'2017 International Conference
+						<br />
+						3 - 4 May 2017
+					</p>
+					<br />
+					<br />
+					<br />
+					<p class="center bold">[Hit the space bar to go to the next slide or the '?' button to show the help]</p>
+				</section>
+
+
+				<!-- ============ -->
+				<!-- = Overview = -->
+				<!-- ============ -->
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress frame_title">Overview</h2>  
+					<ol>
+						<li>Context and issues</li>
+						<li>Model</li>
+						<li>Results</li>
+					</ol>
+				</section>
+
+
+				<!-- =========== -->
+				<!-- = CONTEXT = -->
+				<!-- =========== -->
+				<section>
+
+				<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Context and issues</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Logistic systems show complexity</h3>
+						<ul>
+							<li>It is a geographical territory composed of urban areas and of logistic structures.</li>
+							<li class="fragment" data-fragment-index="1">These structures support organized flows of goods which mainly move between the urban areas, forming the logistic corridor.</li>
+							<li class="fragment" data-fragment-index="2">The goods enter and leave the system through well-known access nodes.</li>
+							<li class="fragment" data-fragment-index="3">Different constraints (spatial, economical, political, or ecological) act over the system.</li>
+							<li class="fragment" data-fragment-index="4">There are numerous and heterogeneous actors (importers, exporters, freight forwarders, logistic providers,...). Their behaviors and interactions with each other allow to organize the flows of goods. They are auto-organized.</li>
+						</ul>
+
+					</section>
+
+					<section>
+						<div class="center">
+							<object type="image/svg+xml" data="images/diagramme_flux_physique_plus_acteurs_horizontal_en.svg" id="DiagFluxPlusActors">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 1: A flow auto-organized by numerous and heterogeneous actors</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Problematic</h3>
+
+						<p class="fragment" data-fragment-index="1">
+							<ul>
+								<li>We want to understand how actors with different goals, are organized around all the logistic infrastructures to manage flows of goods despite all the constraints of the system.</li>
+								<li class="fragment" data-fragment-index="1">We are looking for an individual-based model which can reproduce the working of a logistic system thanks to the simulation.</li>
+								<li class="fragment" data-fragment-index="2">And then we could test different scenarios on this simulation to understand how the local decisions impact the system.</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+				<!-- =================================== -->
+				<!-- = MODELLING OF LOGISTIC CORRIDORS = -->
+				<!-- =================================== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Model</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">A complex system approach</h3>
+
+						<ul>
+							<li>An agent-based model which represents each actor and infrastructure thanks to autonomous and reactive entities.
+							<li class="fragment" data-fragment-index="1">These agents have predefined rules which describe how they behave and interact together according to their perceptions of the environment and to their needs.</li>
+						</ul>
+
+						<ul>	
+							<li class="fragment" data-fragment-index="2">A dynamic graph represents the transportation network.</li>
+							<li class="fragment" data-fragment-index="4">We can follow in real time each vehicle agent and observe the traffic evolution.
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<div class="center">
+							<img src="images/resume_model_simplifie.svg" id="ModelResume"/>
+							<br/>
+							<span class="legend">Figure 2: Model representation</span>
+						</div>
+					</section>
+
+				</section>
+
+				<!-- =========== -->
+				<!-- = Results = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Results</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Implementation</h3>
+						<ul>
+							<li>We implemented the model as a step-by-step simulation into the agent-based simulation platform GAMA. </li>
+							<li class="fragment" data-fragment-index="1">We use real data on the Seine axis to check its validity and to make measures.</li>
+							<li class="fragment" data-fragment-index="2">The Seine axis is mostly represented by the road (around 90% of the traffic is by road).</li> 
+						</ul>
+					</section>
+					
+					<section>
+						<div class="center">
+							<img src="images/agents_implementes_reseau_en.svg" id="AgentsImpl"/>
+							<br/>
+							<span class="legend">Figure 2: Implemented agents</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">How do logistics service providers (LSPs) select a port?</h3>
+						<font size="+3">$$F_{ij} = \frac{A_i}{d_{ij}^2}$$</font>
+						<ul>
+							<li>$F_{ij}$ is the force of attraction between the port $i$ and the LSP $j$.</li>
+							<li>$A_i$ is the attractiveness of the port $i$. This parameter represents the competition between ports: a higher attractiveness value means that the port is more competitive than another one.</li>
+							<li>And $d_{ij}$ is the distance between $i$ and $j$.</li> 
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Effects of port attractiveness on traffic</h3>
+						<div class="center">
+							<video controls muted loop preload="auto" id="VideoEffectsAttr">
+								<source src="video/effects_attractivity.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+					</section>
+				</section>
+
+				<!-- ============== -->
+				<!-- = CONCLUSION = -->
+				<!-- ============== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Conclusion</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">To sum up</h3>
+						<p>
+							<ul>
+								<li>We proposed an agent-based model and dynamic graphs to represent a logistic system</li>
+								<li class="fragment" data-fragment-index="1">The implementation has been done thanks to the GAMA platform and it uses data on the Seine axis.</li>
+								<li class="fragment" data-fragment-index="2">It allows us to observe the effects of a local parameter on macro properties: here the port attractiveness on the traffic evolution.</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Perspectives</h3>
+						<p>
+							<ul>
+								<li>We want to implement the multi-modality.</li>
+								<li class="fragment" data-fragment-index="1">We want to study the interaction network in order to detect special communities of actors.</li>
+							</ul>
+						</p>
+					</section>
+
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress">Thank you for your attention !</h2>
+					<br /><br />
+
+					<p class="center">
+					thibaut.demare@univ-lehavre.fr
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				width: 1366,
+				height: 768,
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				transition: 'slide',
+				loop:true,
+				help: true,
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } }
+				]
+			});
+		</script>
+
+		<!-- Integration of MathJax -->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['\\[','\\]'], ['$$','$$']]}});
+		</script>
+		<script type="text/javascript"
+			src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+	</body>
+</html>
