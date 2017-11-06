@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Impacts de l'attractivité portuaire sur les flux de marchandises dans un contexte compétitif</title>
+
+		<meta name="description" content="Impacts de l'attractivité portuaire sur les flux de marchandises dans un contexte compétitif">
+		<meta name="author" content="Thibaut Démare">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/design.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div  id="header">
+				<div id="presenter_name">
+					Thibaut Démare - LITIS<br />
+					thibaut.demare@univ-lehavre.fr
+				</div>
+				<div id="title_div">
+					<span id="title">Impacts de l'attractivité portuaire sur les flux de marchandises dans un contexte compétitif</span>
+				</div>
+				<div id="conf_name_date">
+					SAGEO - Spatial Analysis and GEOmatics 2017
+					<br />
+					Le Havre
+					<br />
+					6 - 9 Novembre 2017
+				</div>
+				<div class="clear_div"></div>
+			</div>
+
+			<div class="slides" id="first_frame">
+				<section data-background="#fff" data-state="no-toc-progress" data-autoslide="3000">
+					<h1 class="no-toc-progress">Impacts de l'attractivité portuaire sur les flux de marchandises dans un contexte compétitif</h1>
+					<p class="center">
+						Thibaut Démare
+						<br />
+						Stefan Balev, Cyrille Bertelle, Antoine Dutot, Dominique Fournier and Eric Sanlaville
+						<br />
+						Normandie Université
+						<br />
+						LITIS
+						<br />
+						SAGEO - Spatial Analysis and GEOmatics 2017
+						<br />
+						6 - 9 Novembre 2017
+					</p>
+
+					<!-- <p class="center">
+						Cyrille Bertelle, Thibaut Démare, Antoine Dutot, Claude Duvallet, Ronan Kerbiriou, Laurent Lévêque, Arnaud Serry, Adnan Yassine
+					</p> -->
+				</section>
+
+				<!-- ============ -->
+				<!-- = Overview = -->
+				<!-- ============ -->
+				<section data-state="no-toc-progress" data-autoslide="3000">
+					<h2 class="no-toc-progress frame_title">Plan</h2>  
+					<ol>
+						<li>Les systèmes logistiques</li>
+						<li>Le modèle</li>
+						<li>Les résultats</li>
+					</ol>
+				</section>
+
+
+				<!-- =========== -->
+				<!-- = CONTEXT = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress" data-autoslide="3000">
+						<h1>Les systèmes logistiques</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Des caractéristiques synonymes de complexité</h3>
+						<ul>
+							<li>Le territoire se compose de métropoles, et offre de nombreuses structures logistiques de différentes natures.</li>
+							<li class="fragment" data-fragment-index="1">Ces structures permettent de supporter des flux organisés de marchandises entre les métropoles.</li>
+							<li class="fragment" data-fragment-index="2">Les marchandises entrent et sortent du territoire par des nœuds d'accès connus (e.g. les ports maritimes).</li>
+							<li class="fragment" data-fragment-index="3">Le système et ses acteurs subissent différentes contraintes (spatiales, économiques, politique, ou écologique).</li>
+							<li class="fragment" data-fragment-index="4">Un nombre important d'acteurs aux méthodes et objectifs variés doivent interagir ensemble. Leurs comportements autonomes leur permettent d'organiser globalement les flux de marchandises de manière auto-organisée.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Problématique</h3>
+						<p>
+							<ul>
+								<li>On cherche à comprendre, à de multiples échelles, comment des acteurs, autonomes et très hétérogènes, s'organisent collectivement autour des infrastructures à leurs dispositions pour gérer des flux de marchandises soumis à un ensemble de contraintes.</li>
+								<li class="fragment" data-fragment-index="1">Pour cela, nous proposons un modèle individus-centrés qui vise à reproduire le fonctionnement d'un système logistique au travers de la simulation.</li>
+								<li class="fragment" data-fragment-index="2">La simulation permet alors de tester différents scénarios pour comprendre comment des décisions locales impactent l'ensemble du système.</li>
+							</ul>
+						</p>
+					</section>
+
+				</section>
+
+				<!-- =================================== -->
+				<!-- = MODELLING OF LOGISTIC CORRIDORS = -->
+				<!-- =================================== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress" data-autoslide="3000">
+						<h1>Le modèle</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Une approche système complexe de la modélisation</h3>
+
+						<ul>
+							<li>Un modèle multi-agent qui représente chaque acteur et infrastructure par une entité autonome et réactive.
+							<li class="fragment" data-fragment-index="1">Ces agents ont des règles prédéfinies qui décrivent comment ils se comportent et interagissent entre eux en fonction de leurs perceptions de leur environnement et de leurs besoins.</li>
+						</ul>
+
+						<ul>	
+							<li class="fragment" data-fragment-index="2">Des graphes dynamiques représentent le réseau de transport multi-modal.</li>
+							<li class="fragment" data-fragment-index="3">On peut suivre le déplacement en temps réel de chaque véhicule et observer l'évolution global du trafic.
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- =========== -->
+				<!-- = Results = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress" data-autoslide="3000">
+						<h1>Les résultats</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">L'implémentation</h3>
+						<ul>
+							<li>Nous avons implémenté le modèle au sein de la plateforme de simulation GAMA. Une étape de la simulation équivaut à une heure.</li>
+							<li class="fragment" data-fragment-index="1">Nous avons utilisé des données réelles sur l'axe Seine (environ 12 000 agents) afin de valider le modèle et d'effectuer de premières analyses.</li>
+							<li class="fragment" data-fragment-index="2">L'axe Seine étant majoritairement représenté par le mode routier (environ 90% du trafic s'effectue par la route), nous n'avons pas encore implémenté d'autre mode de transport.</li>
+						</ul>
+					</section>
+
+					<section data-autoslide="35000">
+						<div class="center">
+							<img src="images/agents_implementes_reseau_fr.svg" id="AgentsImpl"/>
+							<br/>
+							<span class="legend">Figure 3 : Les agents implémentés</span>
+						</div>
+					</section>
+
+					<section data-autoslide="10000">
+						<h3 class="frame_title">Comment les prestataires logistiques sélectionnent leur fournisseur?</h3>
+						<p>
+							On détermine la probabilité qu'un prestataire choisisse un fournisseur en fonction de la force d'attraction qu'exerce un port sur le prestataire.
+						</p>
+						<font class="fragment"  data-fragment-index="1" size="+3">$$F_{ij} = \frac{A_i}{d_{ij}^2}$$</font>
+						<ul class="fragment"  data-fragment-index="2">
+							<li class="fragment"  data-fragment-index="2">$F_{ij}$ est la force d'attraction qu'un port $i$ exerce sur un prestataire logistique $j$.</li>
+							<li class="fragment"  data-fragment-index="3">$A_i$ est l'attractivité du port $i$. Ce paramètre représente la compétition entre les ports : un attractivité plus importante signifie que le port est plus compétitif qu'un autre.</li>
+							<li class="fragment"  data-fragment-index="4">Et $d_{ij}$ est la distance entre $i$ et $j$.</li> 
+						</ul>
+					</section>
+
+					<section data-autoslide="126000">
+						<h3 class="frame_title">Impacts de l'attractivité des ports sur le trafic</h3>
+						<div style="float:left; width:45%;">
+							<p>
+								<b>Scenario 1 (étape 0 à 500) :</b> on ne prend pas en compte l'attractivité. Chaque prestataire a la même probabilité de choisir le fournisseur connecté au Havre ou à Anvers. Dans cette configuration, on observe deux routes majeures sur l'axe Anvers-Paris.
+							</p>
+							<p>
+								<b>Scenario 2 (étapes 500 à 1000) :</b> on prend en compte l'attractivité et on considère que Anvers est 3 fois plus attractive que le Havre. On observe l'apparition progressive d'une troisième route sur l'axe Anvers-Paris (visible après l'étape 750).
+							</p>
+							<p>
+								<b>Scenario 3 (à partir de l'étape 1000) :</b> enfin, on considère que le Havre est 5 fois plus attractive qu'Anvers. Progressivement, il ne reste plus qu'un seul axe emprunté sur l'axe Anvers-Paris.
+							</p>
+						</div>
+						<div class="center">
+							<video controls muted loop data-autoplay preload="auto" id="VideoEffectsAttr">
+								<source src="video/effects_attractivity.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+					</section>
+				</section>
+
+				<!-- ============== -->
+				<!-- = CONCLUSION = -->
+				<!-- ============== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Conclusion</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Pour résumer</h3>
+						<p>
+							<ul>
+								<li>Nous avons proposé un modèle multi-agent et des graphes dynamiques pour représenter un système logistique.</li>
+								<li class="fragment" data-fragment-index="1">L'implémentation a été réalisé au sein de la plateforme de simulation GAMA et utilise des données sur l'axe Seine.</li>
+								<li class="fragment" data-fragment-index="2">Le modèle et son implémentation permettent d'observer les effets de paramètres locaux sur les propriétés macroscopiques : ici l'attractivité portuaire sur l'évolution du trafic.</li>
+							</ul>
+						</p>
+						<h3 class="frame_title fragment" data-fragment-index="3">Perspectives</h3>
+						<p>
+							<ul>
+								<li class="fragment" data-fragment-index="3">Dans un premier temps on cherche à implémenter les autres modes de transport.</li>
+								<li class="fragment" data-fragment-index="4">Ensuite, nous souhaitons observer les impacts que pourraient avoir certains grands projets d'aménagement (comme le canal Seine-Nord).</li>
+							</ul>
+						</p>
+					</section>
+
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress">Merci pour votre attention !</h2>
+					<br /><br /><br />
+					<p class="center">
+					thibaut.demare@gmail.com
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				width: 1366,
+				height: 768,
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: false,
+				autoSlide:8000,
+				loop:true,
+				transition: 'slide',
+				autoPlayMedia: null,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					/*{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } }*/
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+
+		<!-- Integration of MathJax -->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['\\[','\\]'], ['$$','$$']]}});
+		</script>
+		<script type="text/javascript"
+			src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+	</body>
+</html>
