@@ -1,9 +1,18 @@
 @import url(../fonts/PatuaOne.css);
 @import url(../fonts/OpenSans.css);
 
-.logo {
-	position: absolute;
-	left: 50px;
+.logo_UE {
+	width:10%;
+}
+
+.logo_Region {
+	width:15%;
+}
+
+#financement {
+	width:75%;
+	text-align:center!important;
+	margin:auto;
 }
 
 .clear {
