@@ -1,0 +1,105 @@
+/*
+ * Le Menu
+ */
+/* Le bloc principal */
+.menu {
+	background-color: #545454;
+	color: white;
+	position: relative;
+	z-index: 1;
+	font-size: calc(12px + 0.4vw);
+	line-height: calc(14px + 0.4vw);
+}
+
+.menu::after {
+	content: "☰";
+	color: white;
+	top: calc(12px + 0.4vw);
+	right: 20px;
+	position: absolute;
+	pointer-events: none;
+	z-index: 2;
+}
+
+/* La liste */
+.menu-list {
+	margin: 0 auto;
+	width: 100%;
+	background-color: #545454;
+	cursor: pointer;
+	padding: 0;
+}
+
+.menu-list li {
+	display: inline-block;
+}
+
+.menu-list:hover::before {
+	border-bottom: 1px solid #b3b3b3;
+	content: "Menu";
+	display: block;
+	font-size: calc(12px + 0.4vw);
+	line-height: 54px;
+	pointer-events: none;
+	text-align: left;
+	padding-left: 15px;
+}
+
+/* Menu item */
+.menu-item {
+	background-color: #545454;
+	color: white;
+	display: block;
+	padding: 15px 15px;
+	list-style-type: none;
+}
+
+.menu-list:hover li {
+	display: list-item;
+}
+
+.menu-list:hover li .menu-item {
+	display: block;
+}
+
+a.menu-item:hover {
+	background-color: #404040;
+	color: #fff;
+}
+
+.menu-item:not(.active) {
+	display: none;
+}
+
+.menu-item.active {
+	display: inline-block;
+	color:white;
+}
+
+a.menu-item, a.menu-item:link, a.menu-item:visited {
+	text-decoration: none;
+	outline: none;
+	color: white;
+}
+
+a.menu-item:hover, a.menu-item:focus, a.menu-item:active {
+	color: white;
+}
+
+/*
+ * On n'affiche pas l'image avec le nom
+ */
+.banniere {
+	display: none;
+}
+
+/*
+ * Les canvas 
+ */
+#boids {
+	display: none;
+}
+
+#graph {
+	display: none;
+}

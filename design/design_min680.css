@@ -1,0 +1,47 @@
+/**
+  * Partie consacree au menu
+  */
+/* le menu est centre, tout comme son contenu */
+.menu {
+	height: 40px;
+	width: 100%;
+	background-color: #545454;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.menu-list {
+	margin: auto;
+	line-height: 40px;
+	list-style-type: none;
+}
+
+/* La liste correspondant au menu est horyzontale. Chaque item du menu fais 20% de taille. */
+.menu-list {
+	margin: 0;
+	padding: 0;
+}
+
+.menu-list li {
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	width: 13%;
+}
+
+.menu-item:hover {
+	background-color: #336CBF;
+}
+
+.menu-item, .menu-item:link, .menu-item:visited {
+	text-decoration: none;
+	outline: none;
+	color: white;
+	display: block;
+}
+
+.menu-itemt:hover, .menu-item:focus, .menu-item:active {
+	color: white;
+}

@@ -19,12 +19,7 @@ View, California, 94041, USA. -->
         <meta name="description" content="Site au sujet de mes travaux de thèse">
         <meta name="keywords" content="système complexe, modélisation, simulation, modèle agent, graphe, logistique, axe Seine">
         
-		<link rel="shortcut icon" href="/img/design/favicon2.png" />
-		
-		<!-- Integration of jQuery -->
-		<script type="text/javascript" src="/js/jquery.min.js"></script>
-		<!-- Integration of jQuery-UI -->
-		<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+		<link rel="shortcut icon" href="/img/design/favicon.png" />
 		
 		<!-- Integration of MathJax -->
 		<script type="text/x-mathjax-config">
@@ -34,28 +29,20 @@ View, California, 94041, USA. -->
 		<script type="text/javascript"
 			src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 		</script>
-		
-		<!-- Design and script for slider -->
-		<script type="text/javascript" src="/js/slider.js"></script>
-		<link rel="stylesheet" type="text/css" href="/design/slider.css">
-		
-		<!-- Design for list blog post -->
-		<link rel="stylesheet" type="text/css" href="/design/description.css">
-		<link rel="stylesheet" type="text/css" href="/design/onglet.css">
+						
+		<!-- Design -->
+			<!-- Style qu'on a quelque soit la taille de l'écran -->
+			<link rel="stylesheet" media="screen" type="text/css" href="/design/design.css" />
+			<!-- Avec ce steelsheet, on modifie la bannière (nav dans le style de Sens Critique sur mobile) + pas d'animations -->
+			<link rel="stylesheet" media="screen and (max-width: 680px)" type="text/css" href="/design/design_max680.css" />
+			<!-- À partir de là on fait un menu classique, on a assez de place -->
+			<link rel="stylesheet" media="screen and (min-width: 680px)" type="text/css" href="/design/design_min680.css" />
+			<!-- Mais on n'affiche toujours pas les animations  -->
+			<link rel="stylesheet" media="screen and (min-width: 680px) and (max-width: 1280px)" type="text/css" href="/design/design_min680_max680.css" />
+			<!-- Là on rajoute les canvas sur le côté pour les animations JS -->
+			<link rel="stylesheet" media="screen and (min-width: 1280px)" type="text/css" href="/design/design_min1280.css" />
 
-		<!-- Design and script for post (blog, projets or carnet de bord)-->
-		<script type="text/javascript" src="/js/sommaire.js"></script>
-		<link rel="stylesheet" type="text/css" href="/design/article.css">
-		
-		<!-- Design for definitions -->
-		<link rel="stylesheet" type="text/css" href="/design/definitions.css">
-		
-		<!-- Design for about page -->
-		<link rel="stylesheet" type="text/css" href="/design/about.css">
-		
-		<!-- Global design -->
-		<link rel="stylesheet" type="text/css" href="/design/design.css" media="screen, handheld, tv, projection" />
-        <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic">
+			<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic">
 		<!--[if lte IE 10]>
 			<style type="text/css">
 				a.menu:hover, a.menu:focus, a.menu:active {
@@ -76,65 +63,55 @@ View, California, 94041, USA. -->
         </script>
 	</head>
 	
-	<!-- Body -->
 	<body>
-		<!-- Global div -->
-		<div id="global">
-		
-			<!-- Banner -->
-			<div id="banniere">
-				<a href="/index.html" class="banniere">
-					<img src="/img/design/banniere.png" alt="Thibaut Démare" style="border : none;"/>
-				</a>
-			</div>
-			<!-- End of banner -->
 
-			<!-- Menu -->
-			<div id="menu">
-				<ul class="menu">
-					<li class="menu"><a href="/index.html" class="accueil"><span title="Accueil" style="display : block; text-indent:-99999px">Accueil</span></a></li>
-					<!--<li class="menu"><a href="/blog_list.html" class="menu">Blog</a></li>-->
-					<!--<li class="menu"><a href="/projets_list.html" class="menu">Projets</a></li>-->
-					<li class="menu"><a href="/carnet_bord_list.html" class="menu">Carnet de bord</a></li>
-					<li class="menu"><a href="/definitions.html" class="menu">Définitions</a></li>
-					<li class="menu"><a href="/about.html" class="menu">À propos</a></li>
-				</ul>
+		<div id="banniere">
+			<a href="/index.html" class="banniere">
+				<img src="/img/design/banniere.png" alt="Thibaut Démare" style="border : none;"/>
+			</a>
+		</div>
+
+		<nav class="menu">
+			<ul class="menu-list">
+				{% if page.nav == "home" %}
+					<li><a class="menu-item active" href="/index.html">À propos</a></li>
+				{% else %}
+					<li><a class="menu-item" href="/index.html">À propos</a></li>
+				{% endif %}
+				{% if page.nav == "CV" %}
+					<li><a class="menu-item active" href="/cv.html" class="menu-item">CV</a></li>
+				{% else %}
+					<li><a class="menu-item" href="/cv.html">CV</a></li>
+				{% endif %}
+				{% if page.nav == "publis" %}
+					<li><a class="menu-item active" href="/publications.html">Publications</a></li>
+				{% else %}
+					<li><a class="menu-item" href="/publications.html">Publications</a></li>
+				{% endif %}
+			</ul>
+		</nav>
+
+		<div id="flexbox">
+			<div id="boids">
+				<canvas id="canvasBoids"></canvas>
 			</div>
-			<!-- End of menu -->
-			
-			<!-- This space allows to take in count the width the menu, positionned in absolute -->
-			<div id="espace"></div>
-			
-			<!-- sub_global -->
-			<div id="sub_global">
-			
+
+			<div id="global">
 				{{ content }}
-				
 			</div>
-			<!-- End of sub_global -->
-			<div id="licence">
-				<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr">
-					<img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
-				</a>
-				<br />
-				Ce site Internet est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 3.0 non transposé</a>.
+
+			<div id="graph">
+				<canvas id="canvasGraph"></canvas>
 			</div>
 		</div>
-		<!-- End of global div -->
-		
-		<!-- Footer -->
-		<!--
-		<div id="pied_de_page">
-			<p class="pied_de_page">css et html valide</p>
-			<p class="pied_de_page">
-				<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr">
-					<img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
-				</a>
-				<br />
-				Le contenu de ce site est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr">Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 3.0 non transposé</a>.
-			</p>
+
+		<div id="licence">
+			<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr">
+				<img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
+			</a>
+			<br />
+			Ce site Internet est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 3.0 non transposé</a>.
 		</div>
-		-->
-		<!-- Footer -->
+
 	</body>
 </html>

@@ -1,89 +1,34 @@
 ---
 layout: default
 title: Accueil
+nav: home
 ---
 
-<!-- Debut du slider -->
-
-
-<!--
------------------------
-Make a slider of actuality
------------------------
-<div id="slider">
-	<ul id="actus">
-		{% for post in site.posts.blog limit:5 %}
-			{% if post == site.posts.first %}
-		<li id="actu-{{ forloop.index }}" class="actu">
-			{% else %}
-  		<li id="actu-{{ forloop.index }}" class="actu actu_cache">
-  			{% endif %}
-  			<a href="{{ post.url }}" class="lien_actu">
-  				<img src="/img/moyenne/{{ post.img }}" alt="{{ post.title }}">
-  			</a>
-			<div class="info">
-				<h1 class="titre"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-				<p class="description">
-					{{ post.abstract }}
-				</p>
-				<a href="{{ post.url }}" class="lire_suite">[Lire l'article]</a>
-			</div>
-		</li>
-		{% endfor %}
-	</ul>
-	
-	<div id="div_navigateur_actu">
-		<ul id="navigateur_actu">
-			{% for post in site.posts.blog limit:5 %}
-			<li class="vers_actu">
-				<button type="button" id="vers-actu-{{ forloop.index }}" data-idActu="{{ forloop.index }}">
-					<img src="/img/miniature/{{ post.img }}" alt="{{ post.title }}">
-				</button>
-			</li>
-			{% endfor %}
-		</ul>
-	</div>
-</div>
--->
-
-<div id="slider">
-	<div id="div_navigateur_actu">
-		<ul id="navigateur_actu">
-			{% assign i=0 %}
-			{% for post in site.posts %}
-				{% if post.type == "photos" %}
-			<li class="vers_actu">
-				<button type="button" id="vers-actu-{{ i }}" data-idActu="{{ i }}">
-					<img src="/img/photos/{{ post.img }}" alt="{{ post.title }}" height="100px">
-				</button>
-			</li>
-					{% assign i=i | plus:1  %}
-				{% endif %}
-			{% endfor %}
-		</ul>
-	</div>
-	<ul id="actus">
-	{% assign i=0 %}
-		{% for post in site.posts %}
-			{% if post.type == "photos" %}
-				{% if i == 0 %}
-		<li id="actu-{{ i }}" class="actu photos">
-				{% else %}
-  		<li id="actu-{{ i }}" class="actu actu_cache photos">
-  				{% endif %}
-  				{% assign i=i | plus:1  %}
-                {% if post.sourceName == "none" %}
-  				<a href="/img/photos/{{ post.img }}"><img src="/img/photos/{{ post.img }}" alt="{{ post.title }}" height="400px"></a>
-  				<span class="source-photo">{{ post.title }}</span>
-                {% else %}
-                <a href="/img/photos/{{ post.img }}"><img src="/img/photos/{{ post.img }}" alt="{{ post.title }}" height="400px"></a>
-  				<span class="source-photo">Vu sur <a href="{{post.sourceURL }}">{{ post.sourceName }}</a></span>
-                {% endif %}
-  			{% endif %}
-		</li>
-		{% endfor %}
-	</ul>
-
-</div>
-
+					<div id="short-present" class="center">
+						<div id="portrait">
+							<img src="img/photos/portrait.jpg">
+						</div>
+						<p>
+							<br />
+							<b>Thibaut DÉMARE</b>
+							<br />
+							PhD., Ingénieur Recherche au LITIS (Laboratoire d'Informatique, du Traitement de l'Information et des Systèmes) à Normandie Université, Le Havre
+						
+							<br /><br />
+							<a href="https://github.com/ThibautDemare"><img src="img/design/github.png" alt="Github" class="social_icon"/></a>
+							<a href="http://fr.linkedin.com/in/thibautdemare/"><img src="img/design/linkedin.png" alt="LinkedIn" class="social_icon"/></a>
+							<a href="https://plus.google.com/116709841045842689468/about"><img src="img/design/gplus.png" alt="Google +"class="social_icon"/></a>
+							<a href="http://www.mendeley.com/profiles/thibaut-demare/"><img src="img/design/mendeley.png" alt="Mendeley" class="social_icon"/></a>
+							<a href="https://www.researchgate.net/profile/Thibaut_Demare"><img src="img/design/researchgate.png" alt="ResearchGate" class="social_icon"/></a>
+						</p>
+					</div>
+					<br /><br />
+					<b>Mail : </b><br />
+						<a href="mailto:thibaut.demare@gmail.com">thibaut.demare@gmail.com</a><br /><br />
+					<b>Adresse :</b><br />
+						UFR des Sciences et Techniques<br />
+						Université du Havre<br />
+						25 rue Philippe Lebon<br />
+						BP 1123<br />
+						76063 Le Havre Cedex
 
