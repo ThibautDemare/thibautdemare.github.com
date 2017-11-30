@@ -39,7 +39,7 @@ View, California, 94041, USA. -->
 			<!-- À partir de là on fait un menu classique, on a assez de place -->
 			<link rel="stylesheet" media="(min-device-width: 680px)" type="text/css" href="/design/design_min680.css" />
 			<!-- Mais on n'affiche toujours pas les animations  -->
-			<link rel="stylesheet" media="(min-device-width: 680px) and (max-device-width: 1280px)" type="text/css" href="/design/design_min680_max680.css" />
+			<link rel="stylesheet" media="(min-device-width: 680px) and (max-device-width: 1280px)" type="text/css" href="/design/design_min680_max1280.css" />
 			<!-- Là on rajoute les canvas sur le côté pour les animations JS -->
 			<link rel="stylesheet" media="(min-device-width: 1280px)" type="text/css" href="/design/design_min1280.css" />
 
@@ -75,9 +75,9 @@ View, California, 94041, USA. -->
 		<nav class="menu">
 			<ul class="menu-list">
 				{% if page.nav == "home" %}
-					<li><a class="menu-item active" href="/index.html">À propos</a></li>
+					<li><a class="menu-item active" href="/index.html">Contact</a></li>
 				{% else %}
-					<li><a class="menu-item" href="/index.html">À propos</a></li>
+					<li><a class="menu-item" href="/index.html">Contact</a></li>
 				{% endif %}
 				{% if page.nav == "CV" %}
 					<li><a class="menu-item active" href="/cv.html" class="menu-item">CV</a></li>
