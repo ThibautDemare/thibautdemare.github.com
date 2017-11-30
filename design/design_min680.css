@@ -1,3 +1,7 @@
+body {
+	font-size: calc(14px + 0.4vw); /* Taille du texte censé être responsive */
+}
+
 /**
   * Partie consacree au menu
   */
