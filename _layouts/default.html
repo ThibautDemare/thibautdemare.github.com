@@ -21,6 +21,31 @@ View, California, 94041, USA. -->
         
 		<link rel="shortcut icon" href="/img/design/favicon.png" />
 		
+		{% if page.nav == "gallerie" %}
+			<!-- lightgallery -->
+			<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+			<script src="js/lightGallery/static/js/transition.js"></script>
+			<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+			<script src="js/lightGallery/lightgallery/js/lightgallery.js"></script>
+			<script src="js/lightGallery/lightgallery/js/lg-fullscreen.js"></script>
+			<script src="js/lightGallery/lightgallery/js/lg-thumbnail.js"></script>
+			<script src="js/lightGallery/lightgallery/js/lg-video.js"></script>
+			<script src="js/lightGallery/lightgallery/js/lg-autoplay.js"></script>
+			<script src="js/lightGallery/lightgallery/js/lg-share.js"></script>
+			<script src="js/lightGallery/lightgallery/js/lg-zoom.js"></script>
+			<script src="js/lightGallery/lightgallery/js/lg-hash.js"></script>
+			<script src="js/lightGallery/lightgallery/js/lg-pager.js"></script>
+			<script src="js/lightGallery/external/jquery.mousewheel.min.js"></script>
+
+			<!-- The following script uses the flickr API to get urls of my photos (from my profile) and then create child element to #lightgallery div according to lightgallery docs -->
+			<script src="js/lightGallery/photos.js"></script>
+
+			<!-- And the css for this gallery -->
+			<link href="js/lightGallery/lightgallery_perso.css" rel="stylesheet">
+			<link href="js/lightGallery/lightgallery/css/lightgallery.css" rel="stylesheet">
+			<link href="js/lightGallery/lightgallery/css/lg-transitions.css" rel="stylesheet">
+		{% endif %}
+
 		<!-- Integration of MathJax -->
 		<script type="text/x-mathjax-config">
 			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
@@ -88,6 +113,11 @@ View, California, 94041, USA. -->
 					<li><a class="menu-item active" href="/publications.html">Publications</a></li>
 				{% else %}
 					<li><a class="menu-item" href="/publications.html">Publications</a></li>
+				{% endif %}
+				{% if page.nav == "gallerie" %}
+					<li><a class="menu-item active" href="/gallery.html">Gallerie</a></li>
+				{% else %}
+					<li><a class="menu-item" href="/gallery.html">Gallerie</a></li>
 				{% endif %}
 			</ul>
 		</nav>
