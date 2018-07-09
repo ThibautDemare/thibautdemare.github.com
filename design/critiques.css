@@ -28,9 +28,10 @@
 	height: 240px;
 }
 
-.resume > h2 {
+.resume > h2 > a {
 	color: #336CBF;
 	margin-top: 0px;
+	text-decoration: none;
 }
 
 h1, h2 {
