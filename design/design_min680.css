@@ -35,8 +35,22 @@ body {
 	width: 13%;
 }
 
+.menu-item {
+	transition: background ease .4s;
+    transition-property: background;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    background: #545454;
+}
+
 .menu-item:hover {
-	background-color: #336CBF;
+	transition: background ease .4s;
+    transition-property: background;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    background: #336CBF;
 }
 
 .menu-item, .menu-item:link, .menu-item:visited {
@@ -46,6 +60,6 @@ body {
 	display: block;
 }
 
-.menu-itemt:hover, .menu-item:focus, .menu-item:active {
+.menu-item:hover, .menu-item:focus, .menu-item:active {
 	color: white;
 }
