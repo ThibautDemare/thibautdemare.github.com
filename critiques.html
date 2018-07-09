@@ -1,0 +1,48 @@
+---
+layout: default
+title: Critiques ciné
+nav: critiques
+---
+
+{% for post in site.posts %}
+	<article class="critique">
+		<div class="poster">
+			<a href="{{ post.url }}">
+				<img src="img/posters/{{ post.poster_url }}" />
+			</a>
+		</div>
+
+		<div class="resume">
+			<h2>{{ post.title }}</h2>
+			{{ post.excerpt }}
+			<p class="critique_date">Publié le 
+
+{% assign j = post.date | date: "%-d" %}
+{% assign m = post.date | date: "%-m" %}
+
+{% if j == '1' %}
+1er
+{% else %}
+{{j}}
+{% endif %}
+{% case m %}
+  {% when '1' %}Janvier
+  {% when '2' %}Février
+  {% when '3' %}Mars
+  {% when '4' %}Avril
+  {% when '5' %}Mai
+  {% when '6' %}Juin
+  {% when '7' %}Juillet
+  {% when '8' %}Août
+  {% when '9' %}Septembre
+  {% when '10' %}Octobre
+  {% when '11' %}Novembre
+  {% when '12' %}Décembre
+{% endcase %}
+{{ post.date | date: "%Y" }}
+
+			</p>
+			<a href="{{ post.url }}">Lire la suite</a>
+		</div>
+	</article>
+{% endfor %}
