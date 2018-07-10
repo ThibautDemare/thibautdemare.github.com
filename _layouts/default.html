@@ -94,42 +94,43 @@ View, California, 94041, USA. -->
 	</head>
 	
 	<body>
+		<header>
+			<div id="banniere">
+				<a href="/index.html" class="banniere">
+					<img src="/img/design/banniere.png" alt="Thibaut Démare" style="border : none;"/>
+				</a>
+			</div>
 
-		<div id="banniere">
-			<a href="/index.html" class="banniere">
-				<img src="/img/design/banniere.png" alt="Thibaut Démare" style="border : none;"/>
-			</a>
-		</div>
-
-		<nav class="menu">
-			<ul class="menu-list">
-				{% if page.nav == "home" %}
-					<li><a class="menu-item active" href="/index.html">Contact</a></li>
-				{% else %}
-					<li><a class="menu-item" href="/index.html">Contact</a></li>
-				{% endif %}
-				{% if page.nav == "CV" %}
-					<li><a class="menu-item active" href="/cv.html" class="menu-item">CV</a></li>
-				{% else %}
-					<li><a class="menu-item" href="/cv.html">CV</a></li>
-				{% endif %}
-				{% if page.nav == "publis" %}
-					<li><a class="menu-item active" href="/publications.html">Publications</a></li>
-				{% else %}
-					<li><a class="menu-item" href="/publications.html">Publications</a></li>
-				{% endif %}
-				{% if page.nav == "gallerie" %}
-					<li><a class="menu-item active" href="/gallery.html">Photos</a></li>
-				{% else %}
-					<li><a class="menu-item" href="/gallery.html">Photos</a></li>
-				{% endif %}
-				{% if page.nav == "critiques" %}
-					<li><a class="menu-item active" href="/critiques.html">Cinéma</a></li>
-				{% else %}
-					<li><a class="menu-item" href="/critiques.html">Cinéma</a></li>
-				{% endif %}
-			</ul>
-		</nav>
+			<nav class="menu">
+				<ul class="menu-list">
+					{% if page.nav == "home" %}
+						<li><a class="menu-item active" href="/index.html">Contact</a></li>
+					{% else %}
+						<li><a class="menu-item" href="/index.html">Contact</a></li>
+					{% endif %}
+					{% if page.nav == "CV" %}
+						<li><a class="menu-item active" href="/cv.html" class="menu-item">CV</a></li>
+					{% else %}
+						<li><a class="menu-item" href="/cv.html">CV</a></li>
+					{% endif %}
+					{% if page.nav == "publis" %}
+						<li><a class="menu-item active" href="/publications.html">Publications</a></li>
+					{% else %}
+						<li><a class="menu-item" href="/publications.html">Publications</a></li>
+					{% endif %}
+					{% if page.nav == "gallerie" %}
+						<li><a class="menu-item active" href="/gallery.html">Photos</a></li>
+					{% else %}
+						<li><a class="menu-item" href="/gallery.html">Photos</a></li>
+					{% endif %}
+					{% if page.nav == "critiques" %}
+						<li><a class="menu-item active" href="/critiques.html">Cinéma</a></li>
+					{% else %}
+						<li><a class="menu-item" href="/critiques.html">Cinéma</a></li>
+					{% endif %}
+				</ul>
+			</nav>
+		</header>
 
 		<div id="flexbox">
 			<div id="boids">
@@ -145,13 +146,13 @@ View, California, 94041, USA. -->
 			</div>
 		</div>
 
-		<div id="licence">
+		<footer id="licence">
 			<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr">
 				<img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
 			</a>
 			<br />
 			Ce site Internet est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr">Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 3.0 non transposé</a>.
-		</div>
+		</footer>
 
 	</body>
 </html>
