@@ -65,12 +65,18 @@ body {
 #licence {
 	margin: auto;
 	margin-top: 30px;
-	margin-bottom: 30px;
 	text-align: center;
-	width: 50%;
-	border-top: 1px solid #404040;
+	width: 100%;
 	padding: 5px;
-	color: #545454;
+	color: #fff;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	background-color: #545454;
+	margin-bottom: 0;
+}
+
+#licence > a {
+	color:white;
 }
 
 /**
