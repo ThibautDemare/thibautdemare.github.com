@@ -100,3 +100,7 @@ blockquote::before {
 	position: absolute;
 	left: 10px;
 }
+
+blockquote > ul > li {
+	list-style-type: '— ';
+}
