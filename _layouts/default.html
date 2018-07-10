@@ -16,9 +16,20 @@ View, California, 94041, USA. -->
         
 		<meta charset="UTF-8">
 		<meta name="author" content="Thibaut Démare">
-        <meta name="description" content="Site au sujet de mes travaux de thèse">
-        <meta name="keywords" content="système complexe, modélisation, simulation, modèle agent, graphe, logistique, axe Seine">
-        
+        <meta name="description" content="Site personnel sur mes travaux de recherches et mes hobbies">
+
+		{% if page.nav == "home" or page.nav == "cv" or page.nav == "publis"%}
+			<meta name="keywords" content="système complexe, modélisation, simulation, modèle agent, graphe, logistique, axe Seine">
+		{% endif %}
+
+        {% if page.nav == "gallerie" %}
+			<meta name="keywords" content="photographie, art, composition, canon, flickr, gallerie">
+		{% endif %}
+
+		{% if page.nav == "critiques" %}
+			<meta name="keywords" content="cinéma, film, art, critique, senscritique">
+		{% endif %}
+
 		<link rel="shortcut icon" href="/img/design/favicon.png" />
 		
 		{% if page.nav == "gallerie" %}
@@ -134,6 +145,7 @@ View, California, 94041, USA. -->
 
 		<div id="content">
 			<div id="boids">
+				<!-- TODO -->
 				<canvas id="canvasBoids"></canvas>
 			</div>
 
@@ -142,6 +154,7 @@ View, California, 94041, USA. -->
 			</div>
 
 			<div id="graph">
+				<!-- TODO -->
 				<canvas id="canvasGraph"></canvas>
 			</div>
 		</div>
