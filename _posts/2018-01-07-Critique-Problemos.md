@@ -2,6 +2,7 @@
 layout: critique
 title:  "Une dystopie chez les utopiques"
 poster_url: Problemos.jpg
+sc_url: https://www.senscritique.com/film/Problemos/critique/153797525
 date: 2018-01-07
 categories: critique
 is_post: true

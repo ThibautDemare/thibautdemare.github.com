@@ -2,6 +2,7 @@
 layout: critique
 title:  "Rick Pas Vraiment Grimes au pays des kangourous"
 poster_url: Cargo.jpg
+sc_url: https://www.senscritique.com/film/Cargo/critique/171979461
 date: 2018-07-03
 categories: critique
 is_post: true

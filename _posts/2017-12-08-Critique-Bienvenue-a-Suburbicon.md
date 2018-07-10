@@ -2,6 +2,7 @@
 layout: critique
 title:  "Du rêve américain à la réalité"
 poster_url: Bienvenue_a_Suburbicon.jpg
+sc_url: https://www.senscritique.com/film/Bienvenue_a_Suburbicon/critique/145713096
 date: 2017-12-08
 categories: critique
 is_post: true

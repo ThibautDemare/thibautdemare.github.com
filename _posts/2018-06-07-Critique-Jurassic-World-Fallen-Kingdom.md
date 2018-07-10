@@ -2,6 +2,7 @@
 layout: critique
 title:  "Une bonne réal, mais toujours des problèmes d'écriture"
 poster_url: Jurassic_World_Fallen_Kingdom.jpg
+sc_url: https://www.senscritique.com/film/Jurassic_World_Fallen_Kingdom/critique/170075705
 date: 2018-06-07
 categories: critique
 is_post: true

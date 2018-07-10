@@ -2,6 +2,7 @@
 layout: critique
 title:  "Un esthétisme bien travaillé au détriment de la clarté du film"
 poster_url: Only_God_Forgives.jpg
+sc_url: https://www.senscritique.com/film/Only_God_Forgives/critique/140020879
 date: 2018-01-24
 categories: critique
 is_post: true
