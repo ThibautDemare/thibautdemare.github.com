@@ -3,36 +3,44 @@ layout: default
 nav: critiques
 ---
 
+<article>
+
 <h1>
 {{ page.title }}
 </h1>
 
 {{ content }}
 
-<p class="critique_date">Publié initialement sur <a href="{{ page.sc_url }}">SensCritique</a> le 
 
-{% assign j = page.date | date: "%-d" %}
-{% assign m = page.date | date: "%-m" %}
+<footer class="critique_date">
+  <p>
+    Publié initialement sur <a href="{{ page.sc_url }}">SensCritique</a> le 
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">
+      {% assign j = page.date | date: "%-d" %}
+      {% assign m = page.date | date: "%-m" %}
 
-{% if j == '1' %}
-1er
-{% else %}
-{{j}}
-{% endif %}
-{% case m %}
-  {% when '1' %}Janvier
-  {% when '2' %}Février
-  {% when '3' %}Mars
-  {% when '4' %}Avril
-  {% when '5' %}Mai
-  {% when '6' %}Juin
-  {% when '7' %}Juillet
-  {% when '8' %}Août
-  {% when '9' %}Septembre
-  {% when '10' %}Octobre
-  {% when '11' %}Novembre
-  {% when '12' %}Décembre
-{% endcase %}
-{{ page.date | date: "%Y" }}
+      {% if j == '1' %}
+      1er
+      {% else %}
+      {{j}}
+      {% endif %}
+      {% case m %}
+      {% when '1' %}Janvier
+      {% when '2' %}Février
+      {% when '3' %}Mars
+      {% when '4' %}Avril
+      {% when '5' %}Mai
+      {% when '6' %}Juin
+      {% when '7' %}Juillet
+      {% when '8' %}Août
+      {% when '9' %}Septembre
+      {% when '10' %}Octobre
+      {% when '11' %}Novembre
+      {% when '12' %}Décembre
+      {% endcase %}
+      {{ page.date | date: "%Y" }}
+    </time>.
+  </p>
+</footer>
 
-</p>
+</article>
