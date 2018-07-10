@@ -4,6 +4,8 @@ title: Critiques ciné
 nav: critiques
 ---
 
+<p>Passioné par le 7ème art, je suis actif sur <a href="https://www.senscritique.com/Grub">SensCritique</a> depuis quelques temps et j'y publie à l'occasion des critiques de films lorsque je suis inspiré. Cette page recense donc ces critiques.</p>
+
 {% for post in site.posts %}
 	<article class="critique">
 		<div class="poster">
@@ -14,7 +16,6 @@ nav: critiques
 
 		<div class="resume">
 			<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-			{{ post.excerpt }}
 			<p class="critique_date">Publié le 
 
 {% assign j = post.date | date: "%-d" %}
@@ -42,6 +43,9 @@ nav: critiques
 {{ post.date | date: "%Y" }}
 
 			</p>
+
+			{{ post.excerpt }}
+
 			<a href="{{ post.url }}">Lire la suite</a>
 		</div>
 	</article>
