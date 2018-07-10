@@ -27,7 +27,7 @@ Ensuite, comme pour le précédent opus, ce film est très prévisible (même si
 
 <div class="spoiler">
 <p>
-Les méchants meurent à la fin, et les gentils survivent tous ! C'était inattendus !
+Les méchants meurent à la fin, et les gentils survivent tous ! C'était inattendu !
 </p>
 <span class="spoiler-text">Spoiler</span>
 </div>
