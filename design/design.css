@@ -31,7 +31,7 @@ body {
 /**
   * Partie consacree a l'element central (global)
   */
-#flexbox {
+#content {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
