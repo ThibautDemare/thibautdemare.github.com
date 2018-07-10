@@ -29,6 +29,7 @@ Ensuite, comme pour le précédent opus, ce film est très prévisible (même si
 <p>
 Les méchants meurent à la fin, et les gentils survivent tous ! C'était inattendus !
 </p>
+<span class="spoiler-text">Spoiler</span>
 </div>
 
 Et en parlant de personnage, prenons le temps de parler de certains d'entre eux et plus particulièrement du personnage de Franklin (joué par Justice Smith). Je pense que l'écriture de son personnage s'est faite comme ça :

@@ -15,6 +15,7 @@ Ce film est une tentative réussie pour renouveler les films de zombies. On est 
 
 <div class="spoiler">
 <p>On retiendra notamment le moment où le héros pense sincèrement laisser sa fille à un couple dont l'homme paraît foncièrement mauvais mais est le seul candidat. On sent que Andy n'a plus le choix à ce moment là. Il a compris que la société a changé, que c'est la loi du plus fort qui prime désormais. Il préfère l'espace d'un instant laisser sa fille dans les bras de cet homme plutôt que de la voir mourir. On ressent bien également l'urgence de la situation grâce à un compte à rebours au poignet du héros.</p>
+<span class="spoiler-text">Spoiler</span>
 </div>
 
 La réalisation quant à elle offre des paysages magnifiques qui subliment le désert australiens. Il y a eu un vrai travail sur la photographie qui fait plaisir à voir. La mise en scène reste assez classique, et n'emprunte que rarement aux films d'horreur mis à part quelques scènes où, par exemple, on aperçoit un zombie en arrière plan qui s'approche. La musique, pour sa part, s'intègre très bien au film. Elle rehausse la tension aux moments opportuns mais n'est pas non plus transcendante et sera vite oubliée. 

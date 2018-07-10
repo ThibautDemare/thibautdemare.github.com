@@ -39,6 +39,22 @@ h1, h2 {
 	margin-bottom: 0px;
 }
 
+.spoiler > span.spoiler-text{
+	color:white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.spoiler p:hover ~ span.spoiler-text {
+	color: transparent;
+}
+
+.spoiler {
+	position: relative;
+}
+
 .spoiler p {
 	transition: background ease .4s;
     transition-property: background;
