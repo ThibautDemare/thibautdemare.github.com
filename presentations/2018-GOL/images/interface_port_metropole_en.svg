@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2325.1187"
+   height="426.34378"
+   viewBox="0 0 2179.7986 399.6973"
+   preserveAspectRatio="xMinYMin meet"
+   id="svg4187"
+   version="1.1"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="interface_port_metropole_en.svg"
+   inkscape:export-filename="C:\Users\Thibaut\Desktop\Thèse\Travail\Redaction\image-originale\illustrations_soutenance\interface_port_metropole_en.png"
+   inkscape:export-xdpi="299.93433"
+   inkscape:export-ydpi="299.93433">
+  <defs
+     id="defs4189">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible">
+      <path
+         id="path4754"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path4748"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Send"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Send"
+       style="overflow:visible">
+      <path
+         id="path4778"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-1"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4754-7"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="763.36988"
+     inkscape:cy="254.75449"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4192">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(1195.4888,-72.521105)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:Sans-Serif;-inkscape-font-specification:Sans-Serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       x="-944.28571"
+       y="245.21933"
+       id="text4195"><tspan
+         sodipodi:role="line"
+         id="tspan4197"
+         x="-944.28571"
+         y="245.21933"
+         style="font-size:40px;line-height:1.25">Port Logistics</tspan><tspan
+         sodipodi:role="line"
+         x="-944.28571"
+         y="288.1412"
+         id="tspan4201"
+         style="font-size:32px;line-height:1.25">Undergo hazards</tspan><tspan
+         sodipodi:role="line"
+         x="-944.28571"
+         y="328.1412"
+         id="tspan4203"
+         style="font-size:32px;line-height:1.25">Process massified flow of goods</tspan><tspan
+         sodipodi:role="line"
+         x="-944.28571"
+         y="368.1412"
+         style="font-size:32px;line-height:1.25"
+         id="tspan3017">Provide standardized services</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:Sans-Serif;-inkscape-font-specification:Sans-Serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       x="687.71417"
+       y="245.21933"
+       id="text4205"><tspan
+         sodipodi:role="line"
+         x="687.71417"
+         y="245.21933"
+         id="tspan4209"
+         style="font-size:36px;line-height:1.25"><tspan
+           id="tspan3023"
+           style="font-size:40px">Urban Logistics</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="687.71417"
+         y="291.68027"
+         style="font-size:36px;line-height:1.25"
+         id="tspan3025">Expect regular and ponctual flow</tspan><tspan
+         sodipodi:role="line"
+         x="687.71417"
+         y="336.68027"
+         id="tspan4213"
+         style="font-size:36px;line-height:1.25">Process atomised flow</tspan><tspan
+         sodipodi:role="line"
+         x="687.71417"
+         y="381.68027"
+         style="font-size:36px;line-height:1.25"
+         id="tspan3021">Provide personalized services</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m -659.5365,282.80855 h 170"
+       id="path4231"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:9;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 190.50604,282.80855 h 170"
+       id="path4231-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g5641"
+       transform="translate(70.999982)">
+      <text
+         id="text4215"
+         y="245.70761"
+         x="-219.13239"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:Sans-Serif;-inkscape-font-specification:Sans-Serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan4223"
+           style="font-size:40px;line-height:1.25"
+           y="245.70761"
+           x="-219.13239"
+           sodipodi:role="line">Port-Urban Interface</tspan><tspan
+           id="tspan4225"
+           style="font-size:36px;line-height:1.25"
+           y="292.16855"
+           x="-219.13239"
+           sodipodi:role="line">Absorb hazards and irregularity</tspan><tspan
+           id="tspan4227"
+           style="font-size:36px;line-height:1.25"
+           y="337.16855"
+           x="-219.13239"
+           sodipodi:role="line">Atomize flow</tspan><tspan
+           y="382.16855"
+           x="-219.13239"
+           sodipodi:role="line"
+           style="font-size:36px;line-height:1.25"
+           id="tspan3044">Provide numerous services</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:6.66162205;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:3.8705883;stroke-dasharray:none;stroke-dashoffset:1.5;stroke-opacity:1"
+         d="m -220.86074,75.851916 c -42.23969,0 -79.16885,21.78844 -99.2998,54.333854 -9.33367,-2.13707 -19.24262,-3.26142 -29.49155,-3.26142 -55.47088,0 -100.58306,33.6359 -102.07548,75.56778 -37.47388,17.06151 -62.24452,46.45739 -62.24452,79.87006 0,23.12928 11.84422,44.33349 31.57331,60.8567 -0.3084,2.63448 -0.48573,5.27429 -0.48573,7.98005 0,42.92299 39.76678,77.71893 88.82161,77.71893 7.99036,0 15.74172,-0.90574 23.10748,-2.6369 4.86653,14.11222 29.43816,24.8423 59.05251,24.8423 9.33852,0 18.1423,-1.07954 26.02196,-2.98384 18.93618,13.06263 42.15725,20.74816 67.24074,20.74816 25.02826,0 48.18871,-7.66857 67.10196,-20.67879 10.23057,4.4875 23.18473,7.14738 37.26345,7.14738 29.83326,0 54.58351,-11.99584 59.19129,-27.75677 5.28666,0.85845 10.7362,1.31846 16.30707,1.31846 49.054865,0 88.821651,-34.79594 88.821651,-77.71893 0,-3.22318 -0.258259,-6.38644 -0.693921,-9.50668 17.178088,-15.93068 27.340403,-35.68637 27.340403,-57.10955 0,-36.15521 -28.958526,-67.61673 -71.6818422,-83.82539 -5.95582155,-38.99255 -53.1177708,-69.3919 -110.4025008,-69.3919 -5.10262,0 -10.13814,0.29679 -15.05802,0.76334 -19.8507,-33.602414 -57.34694,-56.276844 -100.41007,-56.276844 z"
+         id="path3305"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,344 @@
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Emergence of Strategies in a Logistic System Thanks to an Agent-based Model and Dynamic Graphs</title>
+
+		<!-- TOC Progress CSS -->
+		<link rel="stylesheet" href="plugin/toc-progress/toc-progress.css">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/design.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/androidstudio.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div  id="header">
+				<div id="presenter_name">
+					Thibaut Démare - LITIS<br />
+					thibaut.demare@univ-lehavre.fr
+				</div>
+				<div id="title_div">
+					<span id="title">Emergence of Strategies in a Logistic System Thanks to an Agent-based Model and Dynamic Graphs</span>
+				</div>
+				<div id="conf_name_date">
+					GOL'18
+					<br />
+					Le Havre
+					<br />
+					10-12th April 2018
+				</div>
+				<div class="clear_div"></div>
+			</div>
+
+			<div class="slides" id="first_frame">
+				<section data-background="#fff" data-state="no-toc-progress">
+					<h1 class="no-toc-progress">Emergence of Strategies in a Logistic System Thanks to an Agent-based Model and Dynamic Graphs</h1>
+					<p class="center">
+						Thibaut Démare
+						<br />
+						Stefan Balev, Cyrille Bertelle, Antoine Dutot, Dominique Fournier and Eric Sanlaville
+						<br />
+						Normandie Université
+						<br />
+						LITIS
+						<br />
+						GOL'18
+						<br />
+						10-12th April 2018
+					</p>
+
+				</section>
+
+				<!-- ============ -->
+				<!-- = Overview = -->
+				<!-- ============ -->
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress frame_title">Overview</h2>  
+					<ol>
+						<li>Context and Problematic</li>
+						<li>Model</li>
+						<li>Results</li>
+					</ol>
+				</section>
+
+
+				<!-- ================= -->
+				<!-- = Problématique = -->
+				<!-- ================= -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Context and Problematic</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Presentation of a logistic system</h3>
+						<ul>
+							<li>A logistic system is part of a geographical territory composed of urban areas and of logistic structures.</li>
+							<li class="fragment" data-fragment-index="1">The different kind of flow (of goods, of information, or financial) are organized by actors and thanks to infrastructures.</li>
+							<li class="fragment" data-fragment-index="2">The goods enter and leave the system through well-known access nodes.</li>
+							<li class="fragment" data-fragment-index="3">Cities or urban areas attract and generate these flow.</li>
+							<li class="fragment" data-fragment-index="4">Different constraints (spatial, economical, political, or ecological) act over the system.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">A distributed organization of the flow</h3>
+							<div class="center">
+								<object type="image/svg+xml" data="images/diagramme_flux_physique_plus_acteurs_horizontal_v2.0_en.svg" id="DiagFluxPlusActors">
+								  Your browser does not support SVG
+								</object>
+								<br/>
+								<span class="legend">Figure 1: Each actor manages a part of the flow. Their interactions and behaviors allows a coherent organization which is said auto-organized.</span>
+							</div>
+					</section>
+
+					<!-- <section>
+						<h3 class="frame_title no-toc-progress">The port-urban interface</h3>
+						
+							On *propose* l'interface 
+							Logistique métropolitaine = logistique urbaine
+						
+						<div class="center">
+							<object type="image/svg+xml" data="images/interface_port_metropole_en.svg" id="InterfacePortMetro">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 2: The interface which connects the port logistics and the urban ones.</span>
+						</div>
+					</section>-->
+
+					<section>
+						<h3 class="frame_title">Problematic</h3>
+						<p class="fragment" data-fragment-index="1">
+							<ul>
+								<li>We want to understand how actors with different goals, are organized around all the logistic infrastructures to manage flows of goods despite all the constraints of the system.</li>
+								<li class="fragment" data-fragment-index="1">But existing models are limited because they simulate few actors, or because they are not enough dynamic and do not allow the actors to adapt themselves to different situations.</li>
+								<li class="fragment" data-fragment-index="2">We propose an agent-based model which represent the properties, constraints and behaviors at a local level of a logistic system in order to reproduce the global behaviors thanks to the simulation.</li>
+								<li class="fragment" data-fragment-index="3">The simulation allows to test different scenarios to understand how local decisions impact the whole system.</li>
+							</ul>
+						</p>
+					</section>
+
+				</section>
+
+				<!-- ============================ -->
+				<!-- = Modéle et implémentation = -->
+				<!-- ============================ -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Model</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">A complex system approach</h3>
+
+						<ul>
+							<li>A multi-agent model which represents each actor and infrastructure by autonomous and reactive entities.
+							<li class="fragment" data-fragment-index="1">These agents have rules which describe how they behave and interact together according to the perception of their environment and their needs.</li>	
+							<li class="fragment" data-fragment-index="2">Dynamic graphs represent the multi-modal transportation network.</li>
+							<li class="fragment" data-fragment-index="3">We can track vehicle trips in real time and observe the evolution of the traffic.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title nope">Representation of the model</h3>
+						<!-- 
+						=> insister sur la rétro-action entre les trois niveaux
+						=> insister aussi sur la multi-modalité
+						=> citer quelques types d'acteur pour être plus concret
+						=> des structures/organisations émergent
+						-->
+						<div class="center">
+							<object type="image/svg+xml" data="images/resume_model_simplifie_en.svg" id="ModelResume">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 3: Representation of the model</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title nope">The agents</h3>
+						<div class="center">
+							<object type="image/svg+xml" data="images/agents_implementes_reseau_en.svg" id="AgentsImpl">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 4: the agents.</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title nope">How final consignees manage their collaboration with LSPs</h3>
+						<div class="center">
+							<img src="images/activity_diagram_final_consignee_horizontal_en.svg" id="ActivityDiagFC"/>
+							<br/>
+							<span class="legend">Figure 5: How final consignees manage their collaboration with LSPs</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">The restock threshold</h3>
+						<p class="fragment" data-fragment-index="1">
+							<ul>
+								<li>the LSP monitors the stocks levels once a day.</li>
+								<li class="fragment" data-fragment-index="1">For each stock inside the warehouses of his network, the LSP determines if the current quantity of goods is too low according to this formula:
+									<ul>
+										<li>$q < q_\text{max} \times S$</li>
+										<li>where:</li>
+										<li>$q$ is the current quantity of goods</li>
+										<li>$q_\text{max}$ is the maximal quantity of goods for this stock</li>
+										<li>$S$ is the restock threshold.</li>
+									</ul>
+								</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+				<!-- =========== -->
+				<!-- = Results = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Results</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">The implementation</h3>
+						<ul>
+							<li>We implemented the model in the GAMA simulation platform. One simulated step equals to one hour.</li>
+							<li class="fragment" data-fragment-index="1">We use real data about the Seine axis (around 12 000 agents) in order to validate the model and to do analysis.</li>
+							<li class="fragment" data-fragment-index="2">The Seine axis is mostly represented by the road (around 90% of the traffic is done by road). Therefore, we did not implement other modes of transport.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title nope">Screenshot of the simulation</h3>
+						<div class="center">
+							<img src="images/screenshot_simulation.png" id="Simu"/>
+							<br/>
+							<span class="legend">Figure 7: Screenshot of the simulation</span>
+						</div>
+					</section>
+					
+					<section>
+						<h3 class="frame_title nope">Emergence of the best restock strategies</h3>
+						<div class="center">
+							<img src="images/restock_strategies_adoption.svg" id="RestockAdoption"/>
+							<br/>
+							<span class="legend">Figure 8: Emergence of the best restock strategies: the LSPs with higher restock threshold value are more numerous at the end of the simulation.</span>
+						</div>
+					</section>
+
+					<section data-autoslide="126000">
+						<h3 class="frame_title">Perturbations of the traffic</h3>
+						<div style="float:left; width:45%;">
+							<p>
+								<b>Scenario 1 (steps 0 to 500):</b> we don't disturb the traffic at all.
+							</p>
+							<p>
+								<b>Scenario 2 (steps 500 to 1000):</b> we disturb the traffic on the Antwerp-Paris axis.
+							</p>
+							<p>
+								<b>Scenario 3 (after step 1000):</b> we almost block the whole traffic on the Antwerp-Paris axis.
+							</p>
+						</div>
+						<div class="center">
+							<video controls muted loop data-autoplay preload="auto" id="VideoBlockedRoads">
+								<source src="video/blocked_roads.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+					</section>
+				</section>
+
+
+				<!-- ============================= -->
+				<!-- = Conclusion et perspectives= -->
+				<!-- ============================= -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Conclusion</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Conclusion</h3>
+						<ul>
+							<li>We have implemented a functional simulation which uses an individual-based approach. And it is dynamic since the agents adapt themselves their behaviors.</li>
+							<li class="fragment" data-fragment-index="1">It allows to observe the evolution of logistic systems according to different parameters or scenarios.</li>
+						</ul>
+						<h3 class="fragment frame_title" data-fragment-index="2">Perspectives</h3>
+						<ul>
+							<li class="fragment" data-fragment-index="2">We are working on the implementation of the multi-modal network in order to test, for instance, the effects of the future Canal Seine-Nord project.</li>
+							<li class="fragment" data-fragment-index="3">We also would like to work on community detection to get a better understanding of the interactions between the agents.</li>
+						</ul>
+					</section>
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress">Thank you !</h2>
+					<br /><br /><br />
+					<p class="center">
+					thibaut.demare@univ-lehavre.fr
+					</p>
+					<br />
+					<img src="images/logos.png" id="logos"/>
+				</section>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				// Display presentation control arrows
+				controls: false,
+				// Display the page number of the current slide
+				slideNumber: true,
+				// Push each slide change to the browser history
+				history: true,
+				// Vertical centering of slides
+				center: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } }
+				]
+			});
+		</script>
+
+		<!-- Integration of MathJax -->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['\\[','\\]'], ['$$','$$']]}});
+		</script>
+		<script type="text/javascript"
+			src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+	</body>
+</html>
