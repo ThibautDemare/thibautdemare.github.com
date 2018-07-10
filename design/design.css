@@ -143,3 +143,10 @@ a:active {
 	width:40vw;
 	min-width: 250px;
 }
+
+/*
+ * ̈Paragraphs
+ */
+p {
+	text-align: justify;
+}
