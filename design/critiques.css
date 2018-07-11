@@ -48,7 +48,7 @@ h1, h2 {
 }
 
 .spoiler p:hover ~ span.spoiler-text {
-	color: transparent;
+	display: none;
 }
 
 .spoiler {
