@@ -40,7 +40,6 @@ body {
     transition-duration: 0.4s;
     transition-timing-function: ease;
     transition-delay: 0s;
-    background: #545454;
 }
 
 .menu-item:hover {
