@@ -7,7 +7,6 @@ body {
  */
 /* Le bloc principal */
 .menu {
-	background-color: #545454;
 	color: white;
 	position: relative;
 	z-index: 1;
@@ -29,7 +28,6 @@ body {
 .menu-list {
 	margin: 0 auto;
 	width: 100%;
-	background-color: #545454;
 	cursor: pointer;
 	padding: 0;
 }
@@ -51,7 +49,6 @@ body {
 
 /* Menu item */
 .menu-item {
-	background-color: #545454;
 	color: white;
 	display: block;
 	padding: 15px 15px;

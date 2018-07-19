@@ -29,6 +29,21 @@ body {
 }
 
 /**
+  * Partie consacree au menu
+  */
+#menu {
+	background-color: #424242;
+}
+
+.menu-list {
+	background-color: #424242;
+}
+
+.menu-item {
+	background-color: #424242;
+}
+
+/**
   * Partie consacree a l'element central (global)
   */
 #content {
@@ -77,7 +92,7 @@ body {
 	color: #fff;
 	padding-bottom: 30px;
 	padding-top: 30px;
-	background-color: #545454;
+	background-color: #424242;
 	margin-bottom: 0;
 }
 
