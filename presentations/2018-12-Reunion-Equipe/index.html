@@ -1,0 +1,410 @@
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Modélisation d'un réseau de transport multi-modal dans un système logistique</title>
+
+		<!-- TOC Progress CSS -->
+		<link rel="stylesheet" href="plugin/toc-progress/toc-progress.css">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/design.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/androidstudio.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div  id="header">
+				<div id="presenter_name">
+					Thibaut Démare - LITIS<br />
+					thibaut.demare@univ-lehavre.fr
+				</div>
+				<div id="title_div">
+					<span id="title">Modélisation d'un réseau de transport multi-modal dans un système logistique</span>
+				</div>
+				<div id="conf_name_date">
+					Réunion d'équipe
+					<br />
+					Le Havre
+					<br />
+					11 Décembre 2018
+				</div>
+				<div class="clear_div"></div>
+			</div>
+
+			<div class="slides" id="first_frame">
+				<section data-background="#fff" data-state="no-toc-progress">
+					<h1 class="no-toc-progress">Modélisation d'un réseau de transport multi-modal dans un système logistique</h1>
+					<p class="center">
+						Thibaut Démare
+						<br />
+						Stefan Balev, Cyrille Bertelle, Antoine Dutot, Dominique Fournier and Eric Sanlaville
+						<br />
+						Normandie Université
+						<br />
+						LITIS
+						<br />
+						Réunion d'équipe
+						<br />
+						11 Décembre 2018
+					</p>
+
+				</section>
+
+				<!-- ============ -->
+				<!-- = Overview = -->
+				<!-- ============ -->
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress frame_title">Plan</h2>  
+					<ol>
+						<li>Contexte et problématique</li>
+						<li>Retour sur le modèle initial et son implémentation</li>
+						<li>Modélisation du réseau de transport multi-modal</li>
+						<li>Résultats préliminaires</li>
+					</ol>
+				</section>
+
+				<!-- ================= -->
+				<!-- = Problématique = -->
+				<!-- ================= -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Contexte et problématique</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Présentation d'un système logistique</h3>
+						<ul>
+							<li>C'est une composante essentielle d'un système spatial dans lequel les acteurs s'organisent autour d'infrastructures pour faire circuler des flux de marchandises, d'information et financier sur un territoire.</li>
+							<li class="fragment" data-fragment-index="1">Ces systèmes possèdent des nœuds d'accès par lesquels la marchandise entre ou sort.</li>
+							<li class="fragment" data-fragment-index="2">Des métropoles, ou aires urbaines, attirent et génèrent les flux.</li>
+							<li class="fragment" data-fragment-index="3">Le système subit plusieurs contraintes de nature différente (spatiale, économique, politique, ou écologique).</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">Une organisation distribuée du flux</h3>
+							<div class="center">
+								<object type="image/svg+xml" data="images/diagramme_flux_physique_plus_acteurs_horizontal_en_backup.svg" id="DiagFluxPlusActors">
+								  Your browser does not support SVG
+								</object>
+								<br/>
+								<span class="legend">Figure 1 : Chaque acteur est responsable d'une partie seulement du flux auto-organisé de marchandises. Leurs interactions et méthodes de travail permettent une organisation cohérente.</span>
+							</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">L'interface port-métropole</h3>
+						<!-- 
+							On *propose* l'interface 
+							Logistique métropolitaine = logistique urbaine
+						-->
+						<div class="center">
+							<object type="image/svg+xml" data="images/interface_port_metropole_en.svg" id="InterfacePortMetro">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 2 : L'interface qui connecte les logistiques portuaire et métropolitaine.</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Problématique</h3>
+						<p class="fragment" data-fragment-index="1">
+							<ul>
+								<li>On cherche à comprendre, à de multiples échelles, comment des acteurs, autonomes et très hétérogènes, s'organisent collectivement autour des infrastructures à leurs dispositions pour gérer des flux soumis à un ensemble de contraintes.</li>
+								<li class="fragment" data-fragment-index="1">Nous proposons un modèle agent qui représente les propriétés, contraintes et comportements <em>locaux</em> d'un système logistique pour en reproduire le fonctionnement <em>global</em> grâce à la simulation.</li>
+								<li class="fragment" data-fragment-index="2">La simulation permet alors de tester différents scénarios pour comprendre comment des décisions locales impactent l'ensemble du système.</li>
+							</ul>
+						</p>
+					</section>
+
+				</section>
+
+				<!-- ============================ -->
+				<!-- = Modéle et implémentation = -->
+				<!-- ============================ -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Retour sur le modèle initial et son implémentation</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Une approche système complexe de la modélisation</h3>
+
+						<ul>
+							<li>Un modèle multi-agent qui représente chaque acteur et infrastructure par une entité autonome et réactive.</li>
+							<li class="fragment" data-fragment-index="1">Ces agents ont des règles prédéfinies qui décrivent comment ils se comportent et interagissent entre eux en fonction de leurs perceptions de leur environnement et de leurs besoins.</li>
+						</ul>
+
+						<ul>	
+							<li class="fragment" data-fragment-index="2">Un graphe dynamique représente le réseau de transport.</li>
+							<li class="fragment" data-fragment-index="3">On peut suivre le déplacement de chaque véhicule et observer l'évolution global du trafic.
+							</li>
+							<li class="fragment" data-fragment-index="4">Et on peut modifier le graphe en temps réel.
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Architecture générale</h3>
+						<!-- 
+						=> insister sur la rétro-action entre les trois niveaux
+						=> insister aussi sur la multi-modalité
+						=> citer quelques types d'acteur pour être plus concret
+						=> des structures/organisations émergent
+						-->
+						<div class="center">
+							<img src="images/resume_model_simplifie_fr.svg" id="ModelResume"/>
+							<br/>
+							<span class="legend">Figure 3 : Représentation générale du modèle</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">L'implémentation</h3>
+						<ul>
+							<li>Nous avons implémenté le modèle au sein de la plateforme de simulation GAMA. Une étape de la simulation équivaut à une heure.</li>
+							<li class="fragment" data-fragment-index="1">Nous avons utilisé des données réelles sur l'axe Seine (environ 12 000 agents) afin de valider le modèle et d'effectuer de premières analyses.</li>
+							<li class="fragment" data-fragment-index="2">L'axe Seine étant majoritairement représenté par le mode routier (environ 90% du trafic s'effectue par la route), dans un premier temps nous n'avions pas implémenté d'autre mode de transport.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Les agents</h3>
+						<div class="center">
+							<object type="image/svg+xml" data="images/agents_implementes_reseau_fr.svg" id="AgentsImpl">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 4 : Les agents implémentés.</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Impacts des stratégies de réapprovisionnement sur les ruptures de stock</h3>
+						<div class="center">
+							<video controls muted loop preload="auto" id="VideoReappro">
+								<source src="video/two_simulations_of_logistic_system.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Évolution du trafic dans un réseau dynamique</h3>
+						<div class="center">
+							<video controls muted loop preload="auto" id="VideoBlockedRoads">
+								<source src="video/blocked_roads.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video> 
+						</div>
+					</section>
+				</section>
+
+				<!-- ====================== -->
+				<!-- = Modéle multi-modal = -->
+				<!-- ====================== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Modélisation du réseau de transport multi-modal</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Les contraintes du multi-modal</h3>
+
+						<ul>
+							<li>Lors d'un transport multi-modal, la marchandise doit passer par des nœuds intermédiaires du réseau pour changer de véhicules : il s'agit des terminaux.</li>
+							<li class="fragment" data-fragment-index="1">Cela implique des coûts supplémentaires (financiers ou temps).</li>
+							<li class="fragment" data-fragment-index="2">Les véhicules doivent avoir des capacités en fonction du réseau sur lequel ils se déplacent.</li>
+							<li class="fragment" data-fragment-index="3">Les infrastructures ont des capacités limités pour faire rentrer (ou sortir) des véhicules par unité de temps.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Les agents</h3>
+						<div class="center">
+							<object type="image/svg+xml" data="images/agents_multi-modal.svg" id="AgentsMulti">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 5 : Les agents impliqués dans le multi-modal et leurs interactions.</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Un réseau de transport multi-modal</h3>
+						<div class="center">
+							<img src="images/multi-modal_dijsktra_fr.svg" id="ModelResume"/>
+							<br/>
+							<span class="legend">Figure 6 : un réseau multi-modal tel qu'il pourrait être observé</span>
+							<!-- exposé le problème du PCC avec le temps comme unité -->
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Représentation du réseau multi-modal par le commissionnaire</h3>
+						<div class="center">
+							<img src="images/multi-modal_dual_fr.svg" id="ModelResume"/>
+							<br/>
+							<span class="legend">Figure 7 : Représentation du réseau multi-modal par le commissionnaire</span>
+						</div>
+					</section>
+
+				</section>
+
+
+				<!-- =========================== -->
+				<!-- = Résultats préliminaires = -->
+				<!-- =========================== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Résultats préliminaires</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Évolution du trafic</h3>
+						<div class="center">
+							<object type="image/svg+xml" data="images/evolution_CSN_road_river.svg" id="EvoTrafficCSN">
+							  Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Figure 8 : Évolution du trafic suite à la mise en activité du canal Seine-Nord.</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Part modal en fonction du canal Seine Nord</h3>
+						<style type="text/css">
+						.tg  {border-collapse:collapse;border-spacing:0;}
+						.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;word-break:normal;border-color:black;}
+						.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+						.tg .tg-0lax{text-align:left;vertical-align:top}
+						</style>
+						<table class="tg">
+						  <tr>
+						    <th class="tg-0lax"></th>
+						    <th class="tg-0lax">Route</th>
+						    <th class="tg-0lax">Fluvial</th>
+						    <th class="tg-0lax">Maritime</th>
+						  </tr>
+						  <tr>
+						    <td class="tg-0lax">Part modal sur les 200 dernières étapes <br>(Canal Seine-Nord non actif)</td>
+						    <td class="tg-0lax">84,5%</td>
+						    <td class="tg-0lax">11,5%</td>
+						    <td class="tg-0lax">4%</td>
+						  </tr>
+						  <tr>
+						    <td class="tg-0lax">Part modal sur les 200 dernières étapes <br>(Canal Seine-Nord actif)</td>
+						    <td class="tg-0lax">79%</td>
+						    <td class="tg-0lax">16,5%</td>
+						    <td class="tg-0lax">4,5%</td>
+						  </tr>
+						</table>
+					</section>
+				</section>
+
+				<!-- ============== -->
+				<!-- = CONCLUSION = -->
+				<!-- ============== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Conclusion</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Pour résumer</h3>
+						<p>
+							<ul>
+								<li>Nous avions proposé un modèle multi-agent et des graphes dynamiques pour représenter un système logistique.</li>
+								<li class="fragment" data-fragment-index="1">L'implémentation a été réalisé au sein de la plateforme de simulation GAMA et utilise des données sur l'axe Seine.</li>
+								<li class="fragment" data-fragment-index="2">Le modèle et son implémentation permettent d'observer les effets de paramètres locaux sur les propriétés macroscopiques.</li>
+								<li class="fragment" data-fragment-index="3">Nous avons ensuite amélioré le modèle pour que le réseau de transport soit un réseau multi-modal.</li>
+								<li class="fragment" data-fragment-index="4">Cela nous a conduit à développer de nouveaux agents, une nouvelle manière de représenter le réseau, ainsi qu'un algorithme de plus court chemin sur cette représentation.</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h3 class="frame_title">Perspectives</h3>
+						<p>
+							<ul>
+								<li>On souhaite surtout explorer les résultats que l'on peut désormais obtenir.</li>
+								<li class="fragment" data-fragment-index="1">Pour cela, on va tirer profit du serveur de calcul du LITIS sur lequel on peut exécuter jusqu'à 8 simulations en parallèle grâce à des containers Docker.</li>
+							</ul>
+						</p>
+					</section>
+
+<!-- 					<section>
+						Détails techniques
+
+						Modèle open source et dispo sur github et sur le gitlab du litis
+							+ présence d'une release de GAMA incluant les plugins liés au modèle 
+						une version GUI  et une version "headless"
+						un container docker que je lance sur un serveur du litis (possibilité d'éxecuter 8 simus en parallèle)
+					</section> -->
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress">Merci pour votre attention</h2>
+					<br /><br /><br />
+					<p class="center">
+					thibaut.demare@univ-lehavre.fr
+					</p>
+					<br />
+					<img src="images/logos.png" id="logos"/>
+				</section>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				// Display presentation control arrows
+				controls: false,
+				// Display the page number of the current slide
+				slideNumber: true,
+				// Push each slide change to the browser history
+				history: true,
+				// Vertical centering of slides
+				center: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } }
+				]
+			});
+		</script>
+
+		<!-- Integration of MathJax -->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['\\[','\\]'], ['$$','$$']]}});
+		</script>
+		<script type="text/javascript"
+			src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+	</body>
+</html>
