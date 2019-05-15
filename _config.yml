@@ -4,3 +4,5 @@ markdown: kramdown
 
 plugins:
   - jekyll-redirect-from
+
+highlighter: rouge

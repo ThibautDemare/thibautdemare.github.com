@@ -4,8 +4,16 @@ body {
 
 #boids {
 	flex:1;
+	align-self: stretch;
+	max-width: 20%;
 }
 
 #graph {
 	flex:1;
+	align-self: stretch;
+	max-width: 20%;
+}
+
+#global {
+	max-width: 60%;
 }
