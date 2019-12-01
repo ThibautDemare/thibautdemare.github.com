@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Modelling a Multi-Modal Logistic Network with Agents and Dynamic Graphs</title>
+
+		<meta name="description" content="Séminaire SPLOTT - Modelling a Multi-Modal Logistic Network with Agents and Dynamic Graphs">
+		<meta name="author" content="Thibaut Démare">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/design.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div	id="header">
+				<div id="presenter_name">
+					Thibaut Démare - LITIS<br />
+					thibaut.demare@univ-lehavre.fr
+				</div>
+				<div id="title_div">
+					<span id="title">Modelling a Multi-Modal Logistic Network with Agents and Dynamic Graphs</span>
+				</div>
+				<div id="conf_name_date">
+					MODSIM 2019
+					<br />
+					Canberra, Australia
+					<br />
+					1st-6th December 2019
+				</div>
+				<div class="clear_div"></div>
+			</div>
+
+			<!-- => faire plus de transition quand on passe d'une slide à l'autre -->
+			<div class="slides">
+				<section data-background="#fff" data-state="no-toc-progress">
+					<h1 class="no-toc-progress">Modelling a Multi-Modal Logistic Network with Agents and Dynamic Graphs</h1>
+					<p class="center first_frame">
+						<strong>Thibaut Démare</strong>
+						<br />
+						Stefan Balev, Cyrille Bertelle, Antoine Dutot, Dominique Fournier and Eric Sanlaville
+						<br />
+						Université Le Havre Normandie - LITIS
+						<br />
+						MODSIM 2019, Canberra, Australia
+						<br />
+						1st-6th December 2019
+					</p>
+				</section>
+
+
+				<!-- ============ -->
+				<!-- = Overview = -->
+				<!-- ============ -->
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress frame_title">Plan</h2>	
+					<ol>
+						<li>Context</li>
+						<li>Modelling</li>
+						<li>Results</li>
+						<li>Conclusion</li>
+					</ol>
+				</section>
+
+
+				<!-- =========== -->
+				<!-- = CONTEXT = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Context</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Presentation of a logistic system</h3>
+						<ul>
+							<li>A logistic system is part of a geographical territory composed of urban areas and of logistic structures.</li>
+							<li class="fragment" data-fragment-index="1">The different kinds of flows (of goods, of information, or financial) are organized by actors and thanks to infrastructures (roads, warehouses, terminals,...).</li>
+							<li class="fragment" data-fragment-index="2">The goods enter and leave the system through well-known access nodes.</li>
+							<li class="fragment" data-fragment-index="3">Cities or urban areas attract and generate these flow.</li>
+							<li class="fragment" data-fragment-index="4">Different constraints (spatial, economical, political, or ecological) act over the system.</li>
+						</ul>
+
+						<p class="fragment" data-fragment-index="5">Design a model and its simulation to understand how such a system (with numerous stakeholders) behaves and evolves according to different constraints or scenarios.</p>
+					</section>
+
+					<section>
+						<h3 class="frame_title">The Seine axis territory</h3>
+						<div class="center">
+							<img src="images/carte_screenshot.svg" id="SceenshotSimu"/>
+							<br/>
+							<span class="legend">Fig. 1: Screenshot of the simulation with every agents</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Problematic and approach</h3>
+						<p class="fragment" data-fragment-index="1">
+							<ul>
+								<li>Tavasszy et al. (2012) explain that models in the litterature often lack of dynamism or simulate a reduced territory or number of actors. Finally, it is also difficult to access to data about flow of goods.</li>
+								<li class="fragment" data-fragment-index="1">We want to propose an agent-based model which represents the properties, constraints and behaviours at a local level of a logistic system in order to reproduce the global behaviours thanks to the simulation.</li>
+								<li class="fragment" data-fragment-index="2">We want our model to require a minimum quantity of data in open access.</li>
+								<li class="fragment" data-fragment-index="3">The simulation allows to test different scenarios to understand how local decisions and properties  impact the whole system.</li>
+							</ul>
+						</p>
+					</section>
+
+				</section>
+
+				<!-- =================================== -->
+				<!-- = MODELLING OF LOGISTIC CORRIDORS = -->
+				<!-- =================================== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Modelling</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Overall architecture</h3>
+						<div class="center">
+							<img src="images/resume_model_simplifie_en.svg" id="ModelResume"/>
+							<br/>
+							<span class="legend">Fig. 2: Simplified representation of our model</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Agents involved in stocks management</h3>
+						<div class="center">
+							<object type="image/svg+xml" data="images/agents_stocks_management_en.svg" id="AgentsImpl">
+								Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Fig. 3: Agents involved in stocks management.</span>
+						</div>
+					</section>
+
+					<section>
+						<!-- préciser ce qu'est le multi modal -->
+						<h3 class="frame_title">The multi modal transport network and its constraints</h3>
+						<ul>
+							<li>During a multi modal transport, goods may switch from one mode to another (e.g. from road to river network). To do so, they pass through particular agents which model multi-modal terminals.</li>
+							<li class="fragment" data-fragment-index="1">This involves additional costs (financial or time).</li>
+							<li class="fragment" data-fragment-index="2">Vehicles have capacities according to the mode they belong to.</li>
+							<li class="fragment" data-fragment-index="3">Terminals also have limited capacities at each step and for each mode to manage entering or leaving vehicles.</li>
+							<li class="fragment" data-fragment-index="4">We use dynamic graphs to model the transportation network, so, the topology can evolve in real time, as the travel times.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Agents involved in goods transportation</h3>
+						<div class="center">
+							<object type="image/svg+xml" data="images/agents_multi-modal_en.svg" id="AgentsMulti">
+								Your browser does not support SVG
+							</object>
+							<br/>
+							<span class="legend">Fig. 4: Agents involved in goods transportation.</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">A multi-modal transportation network</h3>
+						<div style="display: flex;flex-direction: row;align-items: flex-end;">
+							<div>
+								<img src="images/multi-modal_dijsktra.svg" id="MultiMode"/>
+								<br/>
+								<span class="legend">Fig. 5: Example of 3 transportation <br />modes connected by agents</span>
+							</div>
+							<div>
+								<img src="images/multi-modal_dual.svg"/>
+								<br/>
+								<span class="legend">Fig. 6: The obtained multi-modal network from fig. 5</span>
+							</div>
+						</div>
+					</section>
+
+				</section>
+
+				</section>
+
+				<!-- =========== -->
+				<!-- = Results = -->
+				<!-- =========== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Results</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">The simulation platform</h3>
+						<ul>
+							<li>The model has been implemented on the GAMA platform (a spatially agent-based simulations platform).</li>
+							<li class="fragment" data-fragment-index="1">The implementation simulates the system hour by hour thanks to reactive agents.</li>
+							<li class="fragment" data-fragment-index="2">To make this particular study :
+								<ul>
+									<li class="fragment" data-fragment-index="2">
+										We use real data about the Seine axis territory (up to around 13 000 agents) in order to make our analyses and to validate our model.
+										<ul class="fragment" data-fragment-index="3">
+											<li>3000 warehouses.</li>
+											<li>500 final consignees among 7700 wholesalers.</li>
+											<li>2250 logistics service providers.</li>
+											<li>Tens of terminals.</li>
+											<li>3 modes of transport: maritime, river and road.</li>
+											<li>Two foreign goods providers (one connected to the port of Le Havre (France), the other one connected to Antwerp (Belgium)).</li>
+										</ul>
+									</li>
+									<li class="fragment" data-fragment-index="4">
+										we executed 16 simulations for 6000 steps (around 8 months): 
+										<ul class="fragment" data-fragment-index="4">
+											<li>8 simulations with the Seine-Nord Europe Canal (SNC) opened</li>
+											<li>and 8 simulations without the SNC.</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Traffic</h3>
+						<div style="display: flex;flex-direction: row; ">
+							<div class="center">
+								<img src="images/CSNOff_Maritime and River traffic_size_1356x636_cycle_3000_time_1564005906984.png" id="EvoTrafficCSN"/>
+								<br/>
+								<span class="legend">Fig. 7: River traffic at step 125 when SNC is closed</span>
+							</div>
+
+							<div class="center">
+								<img src="images/CSNOn_Maritime and River traffic_size_1356x636_cycle_3000_time_1563639467554.png" id="EvoTrafficCSN"/>
+								<br/>
+								<span class="legend">Fig. 8: River traffic at step 125 when SNC is opened</span>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Traffic</h3>
+						<div style="display: flex;flex-direction: row; ">
+							<div class="center">
+								<img src="images/CSNOff_Road traffic_size_1356x636_cycle_3000_time_1564005907846.png" id="EvoTrafficCSN"/>
+								<br/>
+								<span class="legend">Fig. 9: Road traffic at step 125 when SNC is closed</span>
+							</div>
+
+							<div class="center">
+								<img src="images/CSNOn_Road traffic_size_1356x636_cycle_3000_time_1563639467861.png" id="EvoTrafficCSN"/>
+								<br/>
+								<span class="legend">Fig. 10: Road traffic at step 125 when SNC is opened</span>
+							</div>
+						</div>
+						
+					</section>
+
+					<section>
+						<h3 class="frame_title">Mode shares</h3>
+						<style type="text/css">
+						.tg  {border-collapse:collapse;border-spacing:0;}
+						.tg td{padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+						.tg th{font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+						.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+						.tg .tg-0a7q{border:none;}
+						.tg .tg-73oq{border-color:black;text-align:left;vertical-align:top}
+						.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+						</style>
+						<table class="tg">
+						  <tr>
+						    <th class="tg-0a7q"></th>
+						    <th class="tg-73oq">SNC closed</th>
+						    <th class="tg-lboi">SNC opened</th>
+						  </tr>
+						  <tr>
+						    <td class="tg-lboi">Road</td>
+						    <td class="tg-0pky">62%</td>
+						    <td class="tg-lboi">49.9%<br></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-lboi">River</td>
+						    <td class="tg-0pky">38%</td>
+						    <td class="tg-lboi">50.1%<br></td>
+						  </tr>
+						</table>
+						<br />
+						<div class="center">
+							<span class="legend">Fig. 11: Mode share between river and road traffic when the SNC is opened or closed.</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Evolution of the average financial costs</h3>
+						<div class="center">
+							<img src="images/couts_moyens.png" id="CoutsMoyens"/>
+							<br/>
+							<span class="legend">Figure 11: Evolution of the average financial costs when the SNC is opened or not. We notice an increase of 25% of the costs when the SNC is closed.</span>
+						</div>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Competition between Le Havre and Antwerp</h3>
+
+						<ul>
+							<li>2.9 times more agents who have chosen Le Havre compared to Antwerp when the SNC is closed.</li>
+							<li class="fragment" data-fragment-index="1">1.25 times more agents who have chosen Le Havre compared to Antwerp when the SNC is opened.</li>
+							<li class="fragment" data-fragment-index="2">According to the parameters of our simulation and its design, it is normal that Le Havre is preferred in both cases.</li>
+							<li class="fragment" data-fragment-index="3">But the simulation shows that the SNC project will have economical impacts on the competition between Le Havre and Antwerp since it allows to Antwerp to capture some market shares to the port of Le Havre.</li>
+							<li class="fragment" data-fragment-index="4">Moreover, this project will have environmental impact because it should reduce the number of trucks between Antwerp and Paris favouring river barges instead.</li>
+						</ul> 
+					</section>
+
+				</section>
+
+				<!-- ============== -->
+				<!-- = CONCLUSION = -->
+				<!-- ============== -->
+				<section>
+					<section data-background="#1b1b1b" class="section_title" data-state="no-toc-progress">
+						<h1>Conclusion and perspectives</h1>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Main points</h3>
+						<p>
+							<ul>
+								<li>We used an agent based model and dynamic graphs to represent and simulate a logistic system.</li>
+								<li class="fragment" data-fragment-index="1">This method is flexible because it allows to simulate numerous different scenarios.</li>
+								<li class="fragment" data-fragment-index="2">The dynamic graphs allows to have a really dynamic simulation with a transportation network which evolve in real time.</li>
+								<li class="fragment" data-fragment-index="3">The agents are auto-organized to manage to flow of goods and adapt themselves to modifications of the system.</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3 class="frame_title no-toc-progress">Main points</h3>
+						<p>
+							<ul>
+								<li>In particular, we highlighted, thanks to our simulation, the impacts of a major project in Europe : the Seine Nord Europe Canal which will link Antwerp to Paris by river barges.</li>
+								<li class="fragment" data-fragment-index="1">We showed that there will be economical and environmental effects.</li>
+								<li class="fragment" data-fragment-index="2">Nonetheless, the model has several limits in particular due to simplified interactions between the agents. These interactions cannot consider all the complexity of real actors of the logistics.</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3 class="frame_title">Perspectives</h3>
+						<p>
+							<ul>
+								<li>We are working on analyses of different scenarios thanks to data science methods.</li>
+								<li class="fragment" data-fragment-index="1">And we also want to study the short sea shipping capacities of the Seine axis territory thanks to a secondary maritime network.</li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h2 class="no-toc-progress">Thank you for your attention</h2>
+					<br /><br /><br />
+					<p class="center">
+					thibaut.demare@univ-lehavre.fr
+					</p>
+					<br />
+					<img src="images/logos.png" id="logos"/>
+				</section>
+
+				<section data-state="no-toc-progress">
+					<h3 class="no-toc-progress">Citations</h3>
+					<p>
+						<ul>
+							<li>Lóránt A Tavasszy, Ben Smeenk, and Cees J Ruijgrok. A dss for modelling logistic chains in freight transport policy analysis. International Transactions in Operational Research, 5(6):447 – 459, 1998. ISSN 0969-6016. doi : http://dx.doi.org/10.1016/S0969-6016(98)00045-8.</li>
+							<li>Barry Zondag, Pietro Bucci, Padideh Gützkow, and Gerard de Jong. Port competition modeling including maritime, port, and hinterland characteristics. Maritime Policy & Management, 37(3) :179–194, 2010.</li>
+							<li>Amir Samimi, Abolfazl Mohammadian, and Kazuya Kawamura. A behavioral freight movement microsimulation model : method and data. Transportation Letters, 2(1) :53–62, 2010. doi : 10.3328/TL.2010.02.01.53-62.</li>
+							<li>Francesco Parola and Anna Sciomachen. Intermodal container flows in a port system network: Analysis of possible growths via simulation models. International Journal of Production Economics, 97(1):75–88, 2005. ISSN 0925-5273. doi: http://dx.doi.org/10.1016/j.ijpe. 2004.06.051.</li>
+							<li>David L. Huff. Defining and estimating a trading area. Journal of Marketing, 28(3): pp. 34–38,1964.</li>
+							<li>Alfonso Shimbel. Structural parameters of communication networks. The bulletin of mathematical biophysics, 15(4): 501–507, 1953. doi: 10.1007/BF02476438.</li>
+						</ul>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				width: 1366,
+				height: 768,
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				transition: 'slide',
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/toc-progress/toc-progress.js', async: true, callback: function() { toc_progress.initialize(); toc_progress.create(); } }
+
+				]
+			});
+		</script>
+
+	</body>
+</html>
