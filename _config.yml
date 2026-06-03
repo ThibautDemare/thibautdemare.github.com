@@ -6,3 +6,7 @@ plugins:
   - jekyll-redirect-from
 
 highlighter: rouge
+
+# Fichiers non publiés (tests locaux)
+exclude:
+  - exercices/tests
